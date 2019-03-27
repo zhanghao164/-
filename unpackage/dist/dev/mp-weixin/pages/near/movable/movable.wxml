@@ -1,0 +1,2 @@
+<import src="./movable.vue.wxml" />
+    <template is="7b6e0cc3" data="{{ ...$root['0'], $root }}"/>

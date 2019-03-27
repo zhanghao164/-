@@ -1,0 +1,166 @@
+@charset "UTF-8";
+/**
+ * 这里是uni-app内置的常用样式变量
+ *
+ * uni-app 官方扩展插件及插件市场（https://ext.dcloud.net.cn）上很多三方插件均使用了这些样式变量
+ * 如果你是插件开发者，建议你使用scss预处理，并在插件代码中直接使用这些变量（无需 import 这个文件），方便用户通过搭积木的方式开发整体风格一致的App
+ *
+ */
+/**
+ * 如果你是App开发者（插件使用者），你可以通过修改这些变量来定制自己的插件主题，实现自定义主题功能
+ *
+ * 如果你的项目同样使用了scss预处理，你也可以直接在你的 scss 代码中使用如下变量，同时无需 import 这个文件
+ */
+/* 颜色变量 */
+/* 行为相关颜色 */
+/* 文字基本颜色 */
+/* 背景颜色 */
+/* 边框颜色 */
+/* 尺寸变量 */
+/* 文字尺寸 */
+/* 图片尺寸 */
+/* Border Radius */
+/* 水平间距 */
+/* 垂直间距 */
+/* 透明度 */
+/* 文章场景相关 */
+@font-face {
+  font-family: 'iconfont';  /* project id 1077313 */
+  src: url('https://at.alicdn.com/t/font_1077313_vql0ec52yo.eot');
+  src: url('https://at.alicdn.com/t/font_1077313_vql0ec52yo.eot?#iefix') format('embedded-opentype'),
+  url('https://at.alicdn.com/t/font_1077313_vql0ec52yo.woff2') format('woff2'),
+  url('https://at.alicdn.com/t/font_1077313_vql0ec52yo.woff') format('woff'),
+  url('https://at.alicdn.com/t/font_1077313_vql0ec52yo.ttf') format('truetype'),
+  url('https://at.alicdn.com/t/font_1077313_vql0ec52yo.svg#iconfont') format('svg');
+}
+.iconfont {
+	font-family: "iconfont" !important;
+	font-size: 16px;
+	font-style: normal;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+.icon-xiazai:before {
+	content: "\E601";
+}
+.icon-cuo:before {
+	content: "\E604";
+}
+.content-box {
+  position: relative;
+}
+.right-mask {
+  position: fixed;
+  right: 0;
+  width: 120rpx;
+  top: 40rpx;
+}
+.right-mask .mask {
+    height: 1148rpx;
+    position: absolute;
+}
+.right-mask .mask .top {
+      width: 120rpx;
+      height: 256rpx;
+      background: #7185EA;
+      border-radius: 0px 0px 0px 40rpx;
+      position: absolute;
+      top: 0;
+      -webkit-transition: all 0.2s;
+      -o-transition: all 0.2s;
+      transition: all 0.2s;
+}
+.right-mask .mask .top386 {
+      height: 386rpx;
+}
+.right-mask .mask .top516 {
+      height: 516rpx;
+}
+.right-mask .mask .top646 {
+      height: 646rpx;
+}
+.right-mask .mask .top776 {
+      height: 776rpx;
+}
+.right-mask .mask .bottom {
+      width: 120rpx;
+      height: 763rpx;
+      background: #7185EA;
+      border-radius: 40rpx 0px 0px 0px;
+      position: absolute;
+      bottom: 0rpx;
+      -webkit-transition: all 0.2s;
+      -o-transition: all 0.2s;
+      transition: all 0.2s;
+}
+.right-mask .mask .bottom633 {
+      height: 633rpx;
+}
+.right-mask .mask .bottom503 {
+      height: 503rpx;
+}
+.right-mask .mask .bottom373 {
+      height: 373rpx;
+}
+.right-mask .mask .bottom243 {
+      height: 243rpx;
+}
+.right-mask .right-nav {
+    position: absolute;
+    height: 1148rpx;
+    width: 120rpx;
+    padding-top: 256rpx;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+}
+.right-mask .right-nav .text-icon {
+      width: 100rpx;
+      height: 100rpx;
+      font-size: 24rpx;
+      text-align: center;
+      margin: 15rpx 0;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: column;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      color: #7185EA;
+}
+.right-mask .right-nav .text-icon .download-icon {
+        font-size: 70rpx;
+        line-height: 70rpx;
+        color: #fff;
+}
+.right-mask .right-nav .text-icon .downloadIconColor {
+        color: #7185EA;
+}
+.right-mask .right-nav .user-icon {
+      width: 100rpx;
+      height: 100rpx;
+      background: #fff;
+      position: absolute;
+      top: 77rpx;
+      left: 50%;
+      -webkit-transform: translateX(-50%);
+          -ms-transform: translateX(-50%);
+              transform: translateX(-50%);
+      border-radius: 50%;
+}
+

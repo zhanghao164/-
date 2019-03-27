@@ -1,0 +1,2 @@
+<import src="./selectDuration.vue.wxml" />
+    <template is="103b0e6d" data="{{ ...$root['0'], $root }}"/>

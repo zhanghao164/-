@@ -1,0 +1,2 @@
+<import src="./ChargePalOutRemind.vue.wxml" />
+    <template is="b56de160" data="{{ ...$root['0'], $root }}"/>

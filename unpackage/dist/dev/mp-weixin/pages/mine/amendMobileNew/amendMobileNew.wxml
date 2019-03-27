@@ -1,0 +1,2 @@
+<import src="./amendMobileNew.vue.wxml" />
+    <template is="cfee2120" data="{{ ...$root['0'], $root }}"/>

@@ -1,0 +1,1 @@
+(global["webpackJsonp"]=global["webpackJsonp"]||[]).push([["components/coupons/coupons"],{"8a2e":function(e,o,n){"use strict";n("e66e");var u=c(n("b0ce")),a=c(n("02e5"));function c(e){return e&&e.__esModule?e:{default:e}}Page((0,u.default)(a.default))}},[["8a2e","common/runtime","common/vendor"]]]);

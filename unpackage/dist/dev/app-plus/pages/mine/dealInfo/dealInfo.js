@@ -1,0 +1,13 @@
+
+      !(function(){
+        var uniAppViewReadyCallback = function(){
+          setCssToHead(["@charset \x22UTF-8\x22;\n@font-face { font-family: \x27iconfont\x27; src: url(\x27https://at.alicdn.com/t/font_1077313_vql0ec52yo.eot\x27); src: url(\x27https://at.alicdn.com/t/font_1077313_vql0ec52yo.eot?#iefix\x27) format(\x27embedded-opentype\x27),\n  url(\x27https://at.alicdn.com/t/font_1077313_vql0ec52yo.woff2\x27) format(\x27woff2\x27),\n  url(\x27https://at.alicdn.com/t/font_1077313_vql0ec52yo.woff\x27) format(\x27woff\x27),\n  url(\x27https://at.alicdn.com/t/font_1077313_vql0ec52yo.ttf\x27) format(\x27truetype\x27),\n  url(\x27https://at.alicdn.com/t/font_1077313_vql0ec52yo.svg#iconfont\x27) format(\x27svg\x27); }\n.",[1],"iconfont { font-family: \x22iconfont\x22 !important; font-size: 16px; font-style: normal; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }\n.",[1],"icon-xiazai:before { content: \x22\\E601\x22; }\n.",[1],"icon-cuo:before { content: \x22\\E604\x22; }\n.",[1],"content { padding: ",[0,90]," ",[0,48]," 0; -webkit-box-sizing: border-box; box-sizing: border-box; background: #f8f6ff; }\n.",[1],"content .",[1],"title { font-family: PingFang-SC-Medium; font-weight: bold; color: #474747; }\n.",[1],"content .",[1],"title wx-text { font-size: ",[0,32],"; float: left; margin-left: ",[0,224],"; }\n.",[1],"content .",[1],"title wx-navigator { float: left; font-size: ",[0,44],"; }\n.",[1],"content .",[1],"deal-list { padding-top: ",[0,49],"; }\n.",[1],"content .",[1],"deal-list .",[1],"deal-info { width: ",[0,654],"; height: ",[0,168],"; background: white; -webkit-box-shadow: 0px ",[0,7]," ",[0,16]," ",[0,0]," rgba(205, 197, 233, 0.42); box-shadow: 0px ",[0,7]," ",[0,16]," ",[0,0]," rgba(205, 197, 233, 0.42); border-radius: ",[0,20],"; font-size: ",[0,24],"; font-family: PingFang-SC-Light; font-weight: bold; color: #474747; -webkit-box-sizing: border-box; box-sizing: border-box; padding: ",[0,32]," ",[0,39]," ",[0,31]," ",[0,40],"; line-height: ",[0,38],"; margin-bottom: ",[0,28],"; }\n.",[1],"content .",[1],"deal-list .",[1],"deal-info wx-view wx-text:nth-child(2) { float: right; }\n.",[1],"content .",[1],"deal-list .",[1],"deal-info wx-view .",[1],"fon-color { color: #8066FF; }\n",],undefined,{path:"./pages/mine/dealInfo/dealInfo.wxss"})();
+document.dispatchEvent(new CustomEvent("generateFuncReady", { detail: { generateFunc: $gwx('./pages/mine/dealInfo/dealInfo.wxml') } }));
+        }
+        if(window.__uniAppViewReady__){
+          uniAppViewReadyCallback()
+        }else{
+          document.addEventListener('uniAppViewReady',uniAppViewReadyCallback)
+        }
+      })();
+      

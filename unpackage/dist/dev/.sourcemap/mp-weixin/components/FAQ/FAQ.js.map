@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack:///E:/webpack/test/test/main.js"],"names":["Page","App"],"mappings":";;;;;;;;;;AAAA;AACA;AACI,+I;AACAA,IAAI,CAAC,+BAAYC,YAAZ,CAAD,CAAJ,C","file":"components/FAQ/FAQ.js","sourcesContent":["import 'uni-pages';\nimport pageFactory from 'mpvue-page-factory'\n    import App from './components/FAQ/FAQ.vue'\n    Page(pageFactory(App))"],"sourceRoot":""}

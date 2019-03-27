@@ -1,0 +1,2 @@
+<import src="./theAgent.vue.wxml" />
+    <template is="3fd9a535" data="{{ ...$root['0'], $root }}"/>

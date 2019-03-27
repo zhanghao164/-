@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack:///E:/hcl/app/app/test/main.js"],"names":["Page","App"],"mappings":";;;;;;;;;;AAAA;AACA;AACI,+M;AACAA,IAAI,CAAC,+BAAYC,eAAZ,CAAD,CAAJ,C","file":"pages/tabBar/tabBar.js","sourcesContent":["import 'uni-pages';\nimport pageFactory from 'mpvue-page-factory'\n    import App from './pages/tabBar/tabBar.vue'\n    Page(pageFactory(App))"],"sourceRoot":""}

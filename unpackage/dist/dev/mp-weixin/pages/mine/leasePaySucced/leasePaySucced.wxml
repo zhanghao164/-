@@ -1,0 +1,2 @@
+<import src="./leasePaySucced.vue.wxml" />
+    <template is="0b5ed120" data="{{ ...$root['0'], $root }}"/>

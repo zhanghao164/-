@@ -1,0 +1,453 @@
+@charset "UTF-8";
+/**
+ * 这里是uni-app内置的常用样式变量
+ *
+ * uni-app 官方扩展插件及插件市场（https://ext.dcloud.net.cn）上很多三方插件均使用了这些样式变量
+ * 如果你是插件开发者，建议你使用scss预处理，并在插件代码中直接使用这些变量（无需 import 这个文件），方便用户通过搭积木的方式开发整体风格一致的App
+ *
+ */
+/**
+ * 如果你是App开发者（插件使用者），你可以通过修改这些变量来定制自己的插件主题，实现自定义主题功能
+ *
+ * 如果你的项目同样使用了scss预处理，你也可以直接在你的 scss 代码中使用如下变量，同时无需 import 这个文件
+ */
+/* 颜色变量 */
+/* 行为相关颜色 */
+/* 文字基本颜色 */
+/* 背景颜色 */
+/* 边框颜色 */
+/* 尺寸变量 */
+/* 文字尺寸 */
+/* 图片尺寸 */
+/* Border Radius */
+/* 水平间距 */
+/* 垂直间距 */
+/* 透明度 */
+/* 文章场景相关 */
+@font-face {
+  font-family: 'iconfont';  /* project id 1077313 */
+  src: url('https://at.alicdn.com/t/font_1077313_vql0ec52yo.eot');
+  src: url('https://at.alicdn.com/t/font_1077313_vql0ec52yo.eot?#iefix') format('embedded-opentype'),
+  url('https://at.alicdn.com/t/font_1077313_vql0ec52yo.woff2') format('woff2'),
+  url('https://at.alicdn.com/t/font_1077313_vql0ec52yo.woff') format('woff'),
+  url('https://at.alicdn.com/t/font_1077313_vql0ec52yo.ttf') format('truetype'),
+  url('https://at.alicdn.com/t/font_1077313_vql0ec52yo.svg#iconfont') format('svg');
+}
+.iconfont {
+	font-family: "iconfont" !important;
+	font-size: 16px;
+	font-style: normal;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+.icon-xiazai:before {
+	content: "\E601";
+}
+.icon-cuo:before {
+	content: "\E604";
+}
+.content {
+  padding: 119rpx 0 0 48rpx;
+  position: relative;
+  width: 534rpx;
+}
+.content .valid scroll-view {
+    width: 100%;
+    height: 880rpx;
+    padding-top: 40rpx;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+}
+.content .valid scroll-view .coupons-list {
+      width: 100%;
+}
+.content .valid scroll-view .coupons-list .coupons {
+        width: 534rpx;
+        height: 191rpx;
+        border-radius: 20rpx;
+        background: #acbbef;
+        margin-bottom: 24rpx;
+        -webkit-box-sizing: border-box;
+                box-sizing: border-box;
+        padding-right: 12rpx;
+        color: #fff;
+}
+.content .valid scroll-view .coupons-list .coupons .coupons-right {
+          width: 60rpx;
+          height: 100%;
+          float: right;
+          font-size: 20rpx;
+          font-family: PingFang-SC-Medium;
+          font-weight: bold;
+          display: -webkit-box;
+          display: -webkit-flex;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-orient: vertical;
+          -webkit-box-direction: normal;
+          -webkit-flex-direction: column;
+              -ms-flex-direction: column;
+                  flex-direction: column;
+          -webkit-box-pack: center;
+          -webkit-justify-content: center;
+              -ms-flex-pack: center;
+                  justify-content: center;
+          -webkit-box-align: center;
+          -webkit-align-items: center;
+              -ms-flex-align: center;
+                  align-items: center;
+          padding: 0 15rpx;
+          -webkit-box-sizing: border-box;
+                  box-sizing: border-box;
+          line-height: 28rpx;
+}
+.content .valid scroll-view .coupons-list .coupons .coupons-left {
+          width: 444rpx;
+          height: 100%;
+          display: -webkit-box;
+          display: -webkit-flex;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-orient: vertical;
+          -webkit-box-direction: normal;
+          -webkit-flex-direction: column;
+              -ms-flex-direction: column;
+                  flex-direction: column;
+          text-align: center;
+          -webkit-justify-content: space-around;
+              -ms-flex-pack: distribute;
+                  justify-content: space-around;
+          -webkit-box-sizing: border-box;
+                  box-sizing: border-box;
+          padding: 24rpx 0;
+          box-sizing: border-box;
+          position: relative;
+          border-right: #fff 1rpx dashed;
+}
+.content .valid scroll-view .coupons-list .coupons .coupons-left .tips {
+            width: 20rpx;
+            height: 100%;
+            overflow: hidden;
+            position: absolute;
+            top: 0;
+            left: 432rpx;
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -webkit-flex-direction: column;
+                -ms-flex-direction: column;
+                    flex-direction: column;
+            -webkit-justify-content: space-around;
+                -ms-flex-pack: distribute;
+                    justify-content: space-around;
+            -webkit-box-sizing: border-box;
+                    box-sizing: border-box;
+            padding-top: 10rpx;
+}
+.content .valid scroll-view .coupons-list .coupons .coupons-left .tips .top,
+            .content .valid scroll-view .coupons-list .coupons .coupons-left .tips .bottom {
+              width: 30rpx;
+              height: 30rpx;
+              border-radius: 50%;
+              background: #fff;
+              position: absolute;
+              left: 50%;
+              -webkit-transform: translateX(-50%);
+                  -ms-transform: translateX(-50%);
+                      transform: translateX(-50%);
+}
+.content .valid scroll-view .coupons-list .coupons .coupons-left .tips .top {
+              top: -24rpx;
+}
+.content .valid scroll-view .coupons-list .coupons .coupons-left .tips .bottom {
+              bottom: -24rpx;
+}
+.content .valid scroll-view .coupons-list .coupons .coupons-left text {
+            font-size: 28rpx;
+            font-family: PingFang-SC-Medium;
+            font-weight: bold;
+}
+.content .valid scroll-view .coupons-list .coupons .coupons-left text:last-child {
+            font-size: 20rpx;
+            font-family: PingFang-SC-Light;
+}
+.content .valid ::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+    color: transparent;
+}
+.content .exchange-btn {
+    height: 60rpx;
+    border-radius: 30rpx;
+    font-size: 28rpx;
+    color: #fff;
+    line-height: 60rpx;
+    width: 100%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+}
+.content .exchange-btn ._input {
+      width: 320rpx;
+      height: 60rpx;
+      background: #fff;
+      -webkit-box-shadow: 0px 0px 10rpx 0px rgba(130, 130, 130, 0.1);
+              box-shadow: 0px 0px 10rpx 0px rgba(130, 130, 130, 0.1);
+      border-radius: 30rpx;
+      -webkit-box-sizing: border-box;
+              box-sizing: border-box;
+      padding-left: 30rpx;
+      font-size: 20rpx;
+      font-family: PingFang-SC-Light;
+      font-weight: bold;
+      color: #999999;
+      text-align: center;
+}
+.content .exchange-btn text {
+      width: 150rpx;
+      height: 60rpx;
+      background: #7185ea;
+      border-radius: 30rpx;
+      font-size: 28rpx;
+      font-family: PingFang-SC-Medium;
+      font-weight: bold;
+      color: #fff;
+      text-align: center;
+}
+.content .expired {
+    font-size: 24rpx;
+    font-family: PingFang-SC-Medium;
+    font-weight: bold;
+    color: #7185ea;
+    position: absolute;
+    top: 1080rpx;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+            transform: translateX(-50%);
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+}
+.content .past-due.valid scroll-view .coupons-list .coupons {
+    color: #999;
+    background: #eef0f4;
+}
+
+@charset "UTF-8";
+/**
+ * 这里是uni-app内置的常用样式变量
+ *
+ * uni-app 官方扩展插件及插件市场（https://ext.dcloud.net.cn）上很多三方插件均使用了这些样式变量
+ * 如果你是插件开发者，建议你使用scss预处理，并在插件代码中直接使用这些变量（无需 import 这个文件），方便用户通过搭积木的方式开发整体风格一致的App
+ *
+ */
+/**
+ * 如果你是App开发者（插件使用者），你可以通过修改这些变量来定制自己的插件主题，实现自定义主题功能
+ *
+ * 如果你的项目同样使用了scss预处理，你也可以直接在你的 scss 代码中使用如下变量，同时无需 import 这个文件
+ */
+/* 颜色变量 */
+/* 行为相关颜色 */
+/* 文字基本颜色 */
+/* 背景颜色 */
+/* 边框颜色 */
+/* 尺寸变量 */
+/* 文字尺寸 */
+/* 图片尺寸 */
+/* Border Radius */
+/* 水平间距 */
+/* 垂直间距 */
+/* 透明度 */
+/* 文章场景相关 */
+@font-face {
+  font-family: 'iconfont';  /* project id 1077313 */
+  src: url('https://at.alicdn.com/t/font_1077313_vql0ec52yo.eot');
+  src: url('https://at.alicdn.com/t/font_1077313_vql0ec52yo.eot?#iefix') format('embedded-opentype'),
+  url('https://at.alicdn.com/t/font_1077313_vql0ec52yo.woff2') format('woff2'),
+  url('https://at.alicdn.com/t/font_1077313_vql0ec52yo.woff') format('woff'),
+  url('https://at.alicdn.com/t/font_1077313_vql0ec52yo.ttf') format('truetype'),
+  url('https://at.alicdn.com/t/font_1077313_vql0ec52yo.svg#iconfont') format('svg');
+}
+.iconfont {
+	font-family: "iconfont" !important;
+	font-size: 16px;
+	font-style: normal;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+.icon-xiazai:before {
+	content: "\E601";
+}
+.icon-cuo:before {
+	content: "\E604";
+}
+.content {
+  padding: 119rpx 0 0 48rpx;
+  width: 536rpx;
+  position: relative;
+}
+.content .FAQ-list {
+    font-size: 26rpx;
+    font-family: PingFang-SC-Light;
+    font-weight: bold;
+    color: #474747;
+}
+.content .FAQ-list .title {
+      height: 94rpx;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+      -webkit-justify-content: space-between;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
+}
+.content .FAQ-list .title text {
+        font-size: 26rpx;
+        line-height: 26rpx;
+}
+.content .FAQ-list .height55upx {
+      height: 55rpx;
+}
+.content .FAQ-list .text {
+      font-size: 24rpx;
+      font-family: PingFang-SC-Light;
+      font-weight: bold;
+      color: #999999;
+      line-height: 30rpx;
+      padding-bottom: 49rpx;
+      display: none;
+}
+.content .FAQ-list .text text {
+        display: block;
+}
+.content .FAQ-list .show.text {
+      display: block;
+}
+.content .bottom-btn {
+    padding-top: 16rpx;
+    text-align: center;
+}
+.content .bottom-btn navigator {
+      width: 230rpx;
+      height: 60rpx;
+      background: #7185EA;
+      border-radius: 30rpx;
+      font-size: 24rpx;
+      font-family: PingFang-SC-Light;
+      color: white;
+      line-height: 60rpx;
+      text-align: center;
+      margin: 0 auto 29rpx;
+}
+.content .bottom-btn text {
+      font-size: 24rpx;
+      font-family: PingFang-SC-Light;
+      font-weight: bold;
+      color: #999999;
+}
+.content .feedback-box {
+    z-index: 999;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: blue;
+    background: rgba(0, 0, 0, 0.2);
+    display: none;
+}
+.content .feedback-box .feedback {
+      width: 654rpx;
+      height: 400rpx;
+      background: white;
+      -webkit-box-shadow: 0px 0px 30rpx 2rpx rgba(174, 184, 216, 0.68);
+              box-shadow: 0px 0px 30rpx 2rpx rgba(174, 184, 216, 0.68);
+      border-radius: 20rpx;
+      position: absolute;
+      left: 50%;
+      -webkit-transform: translateX(-50%);
+          -ms-transform: translateX(-50%);
+              transform: translateX(-50%);
+      top: 467rpx;
+      padding: 70rpx 80rpx 44rpx;
+      -webkit-box-sizing: border-box;
+              box-sizing: border-box;
+      color: #999999;
+      font-size: 24rpx;
+      font-weight: bold;
+}
+.content .feedback-box .feedback-redact ._textarea {
+      width: 480rpx;
+      height: 170rpx;
+}
+.content .feedback-box .feedback-redact .num {
+      color: #999999;
+      text-align: right;
+}
+.content .feedback-box .feedback-redact .feedback-btn {
+      font-size: 26rpx;
+      font-family: PingFang-SC-Light;
+      -webkit-box-sizing: border-box;
+              box-sizing: border-box;
+      padding: 0 48rpx;
+      margin-top: 52rpx;
+}
+.content .feedback-box .feedback-redact .feedback-btn .confirm-btn {
+        float: right;
+        color: #8066ff;
+}
+.content .feedback-box .feedback-succed {
+      -webkit-box-sizing: border-box;
+              box-sizing: border-box;
+      padding: 0;
+      padding-top: 100rpx;
+      margin: 0 auto;
+}
+.content .feedback-box .feedback-succed .icon {
+        width: 100rpx;
+        height: 100rpx;
+        background: blue;
+        margin: 0 auto;
+}
+.content .feedback-box .feedback-succed .icon image {
+          width: 100%;
+          height: 100%;
+}
+.content .feedback-box .feedback-succed .text {
+        font-size: 30rpx;
+        font-family: PingFang-SC-Light;
+        font-weight: bold;
+        color: #666666;
+        margin-top: 23rpx;
+        text-align: center;
+}
+.content .feedback-box .feedback-succed .confirm-btn {
+        margin-top: 60rpx;
+        text-align: center;
+}
+.content .feedback-box .feedback-succed .confirm-btn text {
+          font-size: 26rpx;
+          font-family: PingFang-SC-Light;
+          font-weight: bold;
+          color: #8066ff;
+}
+.content .feedbackBoxShow {
+    display: block;
+}
+

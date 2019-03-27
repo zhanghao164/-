@@ -1,0 +1,13 @@
+
+      !(function(){
+        var uniAppViewReadyCallback = function(){
+          setCssToHead(["@charset \x22UTF-8\x22;\n.",[1],"content { padding-left: ",[0,47],"; }\n.",[1],"content .",[1],"top-title { font-size: ",[0,32],"; font-family: PingFang-SC-Medium; font-weight: bold; color: #474747; text-align: center; margin: ",[0,90]," 0 ",[0,166]," 0; }\n.",[1],"content .",[1],"balance { font-size: ",[0,36],"; font-family: PingFang-SC-Medium; font-weight: bold; color: #272727; display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; }\n.",[1],"content .",[1],"balance wx-text:nth-child(2) { color: #8066ff; display: block; padding: ",[0,6]," 0 0 ",[0,16],"; }\n.",[1],"content .",[1],"subtitle { font-size: ",[0,24],"; font-family: PingFang-SC-Light; font-weight: bold; color: #474747; margin: ",[0,80]," 0 ",[0,27]," 0; }\n.",[1],"content .",[1],"add-money-num { overflow: hidden; }\n.",[1],"content .",[1],"add-money-num wx-text { width: ",[0,206],"; height: ",[0,150],"; background: white; border-radius: ",[0,10],"; float: left; margin-right: ",[0,18],"; line-height: ",[0,150],"; text-align: center; margin-bottom: ",[0,18],"; }\n.",[1],"content .",[1],"add-money-num .",[1],"bgColor { background: #a896ff; color: #fff; }\n.",[1],"content .",[1],"add-money-num .",[1],"inputMoney { width: ",[0,206],"; height: ",[0,150],"; background: white; border-radius: ",[0,10],"; float: left; margin-right: ",[0,18],"; line-height: ",[0,150],"; text-align: center; margin-bottom: ",[0,18],"; display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-align: center; -webkit-align-items: center; -ms-flex-align: center; align-items: center; }\n.",[1],"content .",[1],"add-money-num .",[1],"bgInputMoney { background: #a896ff; color: #fff; }\n.",[1],"content .",[1],"pay-btn { width: ",[0,300],"; height: ",[0,80],"; background: #8066ff; -webkit-box-shadow: 0px ",[0,17]," ",[0,32]," 0px rgba(164, 128, 255, 0.77); box-shadow: 0px ",[0,17]," ",[0,32]," 0px rgba(164, 128, 255, 0.77); border-radius: ",[0,40],"; font-size: ",[0,28],"; font-family: PingFang-SC-Medium; font-weight: bold; color: white; margin: ",[0,92]," auto 0; text-align: center; line-height: ",[0,80],"; }\n",],undefined,{path:"./pages/mine/addMoney/addMoney.wxss"})();
+document.dispatchEvent(new CustomEvent("generateFuncReady", { detail: { generateFunc: $gwx('./pages/mine/addMoney/addMoney.wxml') } }));
+        }
+        if(window.__uniAppViewReady__){
+          uniAppViewReadyCallback()
+        }else{
+          document.addEventListener('uniAppViewReady',uniAppViewReadyCallback)
+        }
+      })();
+      

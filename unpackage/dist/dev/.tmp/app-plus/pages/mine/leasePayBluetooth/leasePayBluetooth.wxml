@@ -1,0 +1,2 @@
+<import src="./leasePayBluetooth.vue.wxml" />
+    <template is="087c4c6f" data="{{ ...$root['0'], $root }}"/>

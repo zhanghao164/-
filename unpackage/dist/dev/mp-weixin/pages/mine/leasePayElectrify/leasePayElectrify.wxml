@@ -1,0 +1,2 @@
+<import src="./leasePayElectrify.vue.wxml" />
+    <template is="366809a8" data="{{ ...$root['0'], $root }}"/>

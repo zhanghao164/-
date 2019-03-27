@@ -1,0 +1,13 @@
+
+      !(function(){
+        var uniAppViewReadyCallback = function(){
+          setCssToHead(["@charset \x22UTF-8\x22;\n.",[1],"content { -webkit-box-sizing: border-box; box-sizing: border-box; padding-top: ",[0,90],"; display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -webkit-flex-direction: column; -ms-flex-direction: column; flex-direction: column; -webkit-box-align: center; -webkit-align-items: center; -ms-flex-align: center; align-items: center; }\n.",[1],"content .",[1],"title { font-size: ",[0,32],"; font-family: PingFang-SC-Medium; font-weight: bold; color: #474747; }\n.",[1],"content .",[1],"select-time { width: 100%; margin-top: ",[0,208],"; display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -webkit-flex-direction: column; -ms-flex-direction: column; flex-direction: column; -webkit-box-align: center; -webkit-align-items: center; -ms-flex-align: center; align-items: center; }\n.",[1],"content .",[1],"select-time wx-text { width: ",[0,654],"; height: ",[0,79],"; background: white; border-radius: ",[0,40],"; font-size: ",[0,30],"; font-family: PingFang-SC-Light; font-weight: bold; color: #474747; margin-bottom: ",[0,54],"; text-align: center; line-height: ",[0,79],"; }\n.",[1],"content .",[1],"select-time .",[1],"bg-color { background: #a896ff; color: #fefefe; }\n.",[1],"content .",[1],"pay-btn { width: ",[0,300],"; height: ",[0,80],"; background: #8066ff; -webkit-box-shadow: 0px ",[0,17]," ",[0,32]," 0px rgba(164, 128, 255, 0.77); box-shadow: 0px ",[0,17]," ",[0,32]," 0px rgba(164, 128, 255, 0.77); border-radius: ",[0,40],"; font-size: ",[0,28],"; font-family: PingFang-SC-Medium; font-weight: bold; color: white; text-align: center; line-height: ",[0,80],"; margin-top: ",[0,56],"; }\n.",[1],"content .",[1],"tips { width: ",[0,604],"; font-size: ",[0,24],"; font-family: PingFang-SC-Light; font-weight: bold; color: #474747; line-height: ",[0,50],"; margin-top: ",[0,202],"; }\n",],undefined,{path:"./pages/mine/selectDuration/selectDuration.wxss"})();
+document.dispatchEvent(new CustomEvent("generateFuncReady", { detail: { generateFunc: $gwx('./pages/mine/selectDuration/selectDuration.wxml') } }));
+        }
+        if(window.__uniAppViewReady__){
+          uniAppViewReadyCallback()
+        }else{
+          document.addEventListener('uniAppViewReady',uniAppViewReadyCallback)
+        }
+      })();
+      

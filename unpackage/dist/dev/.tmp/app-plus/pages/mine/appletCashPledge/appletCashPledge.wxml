@@ -1,0 +1,2 @@
+<import src="./appletCashPledge.vue.wxml" />
+    <template is="864f8b26" data="{{ ...$root['0'], $root }}"/>

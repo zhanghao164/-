@@ -1,0 +1,1435 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*每个页面公共css */
+page {
+	background: #fff;
+}
+
+/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+
+/* Document
+   ========================================================================== */
+
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in iOS.
+ */
+
+page {
+  line-height: 1.15; /* 1 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+}
+
+/* Sections
+   ========================================================================== */
+
+/**
+ * Remove the margin in all browsers.
+ */
+
+page {
+  margin: 0;
+}
+
+/**
+ * Render the `main` element consistently in IE.
+ */
+
+._main {
+  display: block;
+}
+
+/**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+ */
+
+._h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/* Grouping content
+   ========================================================================== */
+
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+
+._hr {
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box; /* 1 */
+  height: 0; /* 1 */
+  overflow: visible; /* 2 */
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+
+._pre {
+  font-family: monospace, monospace; /* 1 */
+  font-size: 1em; /* 2 */
+}
+
+/* Text-level semantics
+   ========================================================================== */
+
+/**
+ * Remove the gray background on active links in IE 10.
+ */
+
+._a {
+  background-color: transparent;
+}
+
+/**
+ * 1. Remove the bottom border in Chrome 57-
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+
+._abbr[title] {
+  border-bottom: none; /* 1 */
+  text-decoration: underline; /* 2 */
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted; /* 2 */
+}
+
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+
+._b,
+._strong {
+  font-weight: bolder;
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+
+._code,
+._kbd,
+._samp {
+  font-family: monospace, monospace; /* 1 */
+  font-size: 1em; /* 2 */
+}
+
+/**
+ * Add the correct font size in all browsers.
+ */
+
+._small {
+  font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+
+._sub,
+._sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+._sub {
+  bottom: -0.25em;
+}
+
+._sup {
+  top: -0.5em;
+}
+
+/* Embedded content
+   ========================================================================== */
+
+/**
+ * Remove the border on images inside links in IE 10.
+ */
+
+._img {
+  border-style: none;
+}
+
+/* Forms
+   ========================================================================== */
+
+/**
+ * 1. Change the font styles in all browsers.
+ * 2. Remove the margin in Firefox and Safari.
+ */
+
+._button,
+._input,
+._optgroup,
+._select,
+._textarea {
+  font-family: inherit; /* 1 */
+  font-size: 100%; /* 1 */
+  line-height: 1.15; /* 1 */
+  margin: 0; /* 2 */
+}
+
+/**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
+
+._button,
+._input { /* 1 */
+  overflow: visible;
+}
+
+/**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
+
+._button,
+._select { /* 1 */
+  text-transform: none;
+}
+
+/**
+ * Correct the inability to style clickable types in iOS and Safari.
+ */
+
+._button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+}
+
+/**
+ * Remove the inner border and padding in Firefox.
+ */
+
+._button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+/**
+ * Restore the focus styles unset by the previous rule.
+ */
+
+._button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+/**
+ * Correct the padding in Firefox.
+ */
+
+._fieldset {
+  padding: 0.35em 0.75em 0.625em;
+}
+
+/**
+ * 1. Correct the text wrapping in Edge and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *    `fieldset` elements in all browsers.
+ */
+
+._legend {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; /* 1 */
+  color: inherit; /* 2 */
+  display: table; /* 1 */
+  max-width: 100%; /* 1 */
+  padding: 0; /* 3 */
+  white-space: normal; /* 1 */
+}
+
+/**
+ * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+
+._progress {
+  vertical-align: baseline;
+}
+
+/**
+ * Remove the default vertical scrollbar in IE 10+.
+ */
+
+._textarea {
+  overflow: auto;
+}
+
+/**
+ * 1. Add the correct box sizing in IE 10.
+ * 2. Remove the padding in IE 10.
+ */
+
+[type="checkbox"],
+[type="radio"] {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; /* 1 */
+  padding: 0; /* 2 */
+}
+
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * 1. Correct the odd appearance in Chrome and Safari.
+ * 2. Correct the outline style in Safari.
+ */
+
+[type="search"] {
+  -webkit-appearance: textfield; /* 1 */
+  outline-offset: -2px; /* 2 */
+}
+
+/**
+ * Remove the inner padding in Chrome and Safari on macOS.
+ */
+
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button; /* 1 */
+  font: inherit; /* 2 */
+}
+
+/* Interactive
+   ========================================================================== */
+
+/*
+ * Add the correct display in Edge, IE 10+, and Firefox.
+ */
+
+._details {
+  display: block;
+}
+
+/*
+ * Add the correct display in all browsers.
+ */
+
+._summary {
+  display: list-item;
+}
+
+/* Misc
+   ========================================================================== */
+
+/**
+ * Add the correct display in IE 10+.
+ */
+
+template {
+  display: none;
+}
+
+/**
+ * Add the correct display in IE 10.
+ */
+
+[hidden] {
+  display: none;
+}
+
+@charset "UTF-8";
+/**
+ * 这里是uni-app内置的常用样式变量
+ *
+ * uni-app 官方扩展插件及插件市场（https://ext.dcloud.net.cn）上很多三方插件均使用了这些样式变量
+ * 如果你是插件开发者，建议你使用scss预处理，并在插件代码中直接使用这些变量（无需 import 这个文件），方便用户通过搭积木的方式开发整体风格一致的App
+ *
+ */
+/**
+ * 如果你是App开发者（插件使用者），你可以通过修改这些变量来定制自己的插件主题，实现自定义主题功能
+ *
+ * 如果你的项目同样使用了scss预处理，你也可以直接在你的 scss 代码中使用如下变量，同时无需 import 这个文件
+ */
+/* 颜色变量 */
+/* 行为相关颜色 */
+/* 文字基本颜色 */
+/* 背景颜色 */
+/* 边框颜色 */
+/* 尺寸变量 */
+/* 文字尺寸 */
+/* 图片尺寸 */
+/* Border Radius */
+/* 水平间距 */
+/* 垂直间距 */
+/* 透明度 */
+/* 文章场景相关 */
+.content-box.data-v-37543a8b {
+  padding-top: 0;
+}
+.order-form-content.data-v-37543a8b {
+  padding: 47rpx 0 0 26rpx;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 24rpx;
+  font-family: PingFang-SC-Light;
+  font-weight: bold;
+  color: #474747;
+  width: 750rpx;
+}
+.order-form-content .order-list.data-v-37543a8b {
+    width: 580rpx;
+    height: 195rpx;
+    background: #acbbef;
+    border-radius: 15rpx;
+    -webkit-box-shadow: 0px 10rpx 20rpx 0px rgba(172, 187, 239, 0.77);
+            box-shadow: 0px 10rpx 20rpx 0px rgba(172, 187, 239, 0.77);
+    border-radius: 8rpx;
+    margin-bottom: 26rpx;
+    color: #fff;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    padding: 37rpx 39rpx 0;
+}
+.order-form-content .order-list view.data-v-37543a8b {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+      -webkit-justify-content: space-between;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
+}
+.order-form-content .order-list .order-num.data-v-37543a8b {
+      font-size: 20rpx;
+      font-family: PingFang-SC-Light;
+      font-weight: bold;
+}
+.order-form-content .order-list .order-site.data-v-37543a8b {
+      margin: 26rpx 0 28rpx 0;
+}
+
+@charset "UTF-8";
+/**
+ * 这里是uni-app内置的常用样式变量
+ *
+ * uni-app 官方扩展插件及插件市场（https://ext.dcloud.net.cn）上很多三方插件均使用了这些样式变量
+ * 如果你是插件开发者，建议你使用scss预处理，并在插件代码中直接使用这些变量（无需 import 这个文件），方便用户通过搭积木的方式开发整体风格一致的App
+ *
+ */
+/**
+ * 如果你是App开发者（插件使用者），你可以通过修改这些变量来定制自己的插件主题，实现自定义主题功能
+ *
+ * 如果你的项目同样使用了scss预处理，你也可以直接在你的 scss 代码中使用如下变量，同时无需 import 这个文件
+ */
+/* 颜色变量 */
+/* 行为相关颜色 */
+/* 文字基本颜色 */
+/* 背景颜色 */
+/* 边框颜色 */
+/* 尺寸变量 */
+/* 文字尺寸 */
+/* 图片尺寸 */
+/* Border Radius */
+/* 水平间距 */
+/* 垂直间距 */
+/* 透明度 */
+/* 文章场景相关 */
+@font-face {
+  font-family: 'iconfont';  /* project id 1077313 */
+  src: url('https://at.alicdn.com/t/font_1077313_cphg4fgnd3f.eot');
+  src: url('https://at.alicdn.com/t/font_1077313_cphg4fgnd3f.eot?#iefix') format('embedded-opentype'),
+  url('https://at.alicdn.com/t/font_1077313_cphg4fgnd3f.woff2') format('woff2'),
+  url('https://at.alicdn.com/t/font_1077313_cphg4fgnd3f.woff') format('woff'),
+  url('https://at.alicdn.com/t/font_1077313_cphg4fgnd3f.ttf') format('truetype'),
+  url('https://at.alicdn.com/t/font_1077313_cphg4fgnd3f.svg#iconfont') format('svg');
+}
+.iconfont.data-v-7558cffe {
+	font-family: "iconfont" !important;
+	font-size: 16px;
+	font-style: normal;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+.icon-xiazai.data-v-7558cffe:before {
+	content: "\E601";
+}
+.icon-cuo.data-v-7558cffe:before {
+	content: "\E604";
+}
+.content.data-v-7558cffe {
+  position: fixed;
+  top: 0;
+  left: 48rpx;
+  bottom: 0;
+  width: 534rpx;
+}
+.content scroll-view.data-v-7558cffe {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    height: 88%;
+}
+.content scroll-view .valid.data-v-7558cffe {
+      width: 100%;
+}
+.content scroll-view .valid .coupons.data-v-7558cffe {
+        -webkit-box-shadow: 0px 10rpx 20rpx 0px rgba(172, 187, 239, 0.77);
+                box-shadow: 0px 10rpx 20rpx 0px rgba(172, 187, 239, 0.77);
+        width: 534rpx;
+        height: 191rpx;
+        border-radius: 20rpx;
+        background: #acbbef;
+        margin-bottom: 24rpx;
+        -webkit-box-sizing: border-box;
+                box-sizing: border-box;
+        padding-right: 12rpx;
+        color: #fff;
+}
+.content scroll-view .valid .coupons .coupons-right.data-v-7558cffe {
+          width: 60rpx;
+          height: 100%;
+          float: right;
+          font-size: 20rpx;
+          font-family: PingFang-SC-Medium;
+          font-weight: bold;
+          display: -webkit-box;
+          display: -webkit-flex;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-orient: vertical;
+          -webkit-box-direction: normal;
+          -webkit-flex-direction: column;
+              -ms-flex-direction: column;
+                  flex-direction: column;
+          -webkit-box-pack: center;
+          -webkit-justify-content: center;
+              -ms-flex-pack: center;
+                  justify-content: center;
+          -webkit-box-align: center;
+          -webkit-align-items: center;
+              -ms-flex-align: center;
+                  align-items: center;
+          padding: 0 15rpx;
+          -webkit-box-sizing: border-box;
+                  box-sizing: border-box;
+          line-height: 28rpx;
+}
+.content scroll-view .valid .coupons .coupons-left.data-v-7558cffe {
+          width: 444rpx;
+          height: 100%;
+          display: -webkit-box;
+          display: -webkit-flex;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-orient: vertical;
+          -webkit-box-direction: normal;
+          -webkit-flex-direction: column;
+              -ms-flex-direction: column;
+                  flex-direction: column;
+          text-align: center;
+          -webkit-justify-content: space-around;
+              -ms-flex-pack: distribute;
+                  justify-content: space-around;
+          -webkit-box-sizing: border-box;
+                  box-sizing: border-box;
+          padding: 24rpx 0;
+          box-sizing: border-box;
+          position: relative;
+          border-right: #fff 1rpx dashed;
+}
+.content scroll-view .valid .coupons .coupons-left .tips.data-v-7558cffe {
+            width: 20rpx;
+            height: 100%;
+            overflow: hidden;
+            position: absolute;
+            top: 0;
+            left: 432rpx;
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -webkit-flex-direction: column;
+                -ms-flex-direction: column;
+                    flex-direction: column;
+            -webkit-justify-content: space-around;
+                -ms-flex-pack: distribute;
+                    justify-content: space-around;
+            -webkit-box-sizing: border-box;
+                    box-sizing: border-box;
+            padding-top: 10rpx;
+}
+.content scroll-view .valid .coupons .coupons-left .tips .top.data-v-7558cffe,
+            .content scroll-view .valid .coupons .coupons-left .tips .bottom.data-v-7558cffe {
+              width: 30rpx;
+              height: 30rpx;
+              border-radius: 50%;
+              background: #fff;
+              position: absolute;
+              left: 50%;
+              -webkit-transform: translateX(-50%);
+                  -ms-transform: translateX(-50%);
+                      transform: translateX(-50%);
+}
+.content scroll-view .valid .coupons .coupons-left .tips .top.data-v-7558cffe {
+              top: -24rpx;
+}
+.content scroll-view .valid .coupons .coupons-left .tips .bottom.data-v-7558cffe {
+              bottom: -24rpx;
+}
+.content scroll-view .valid .coupons .coupons-left text.data-v-7558cffe {
+            font-size: 28rpx;
+            font-family: PingFang-SC-Medium;
+            font-weight: bold;
+}
+.content scroll-view .valid .coupons .coupons-left text.data-v-7558cffe:last-child {
+            font-size: 20rpx;
+            font-family: PingFang-SC-Light;
+}
+.content scroll-view .valid .coupons .coupons-left .fontWeight.data-v-7558cffe {
+            font-weight: normal;
+}
+.content.data-v-7558cffe ::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+    color: transparent;
+}
+.content .exchange-btn.data-v-7558cffe {
+    height: 60rpx;
+    border-radius: 30rpx;
+    font-size: 28rpx;
+    color: #fff;
+    line-height: 60rpx;
+    width: 100%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding: 78rpx 0 40rpx;
+}
+.content .exchange-btn ._input.data-v-7558cffe {
+      width: 320rpx;
+      height: 60rpx;
+      background: #fff;
+      -webkit-box-shadow: 0px 0px 10rpx 0px rgba(130, 130, 130, 0.1);
+              box-shadow: 0px 0px 10rpx 0px rgba(130, 130, 130, 0.1);
+      border-radius: 30rpx;
+      -webkit-box-sizing: border-box;
+              box-sizing: border-box;
+      padding-left: 30rpx;
+      font-size: 20rpx;
+      font-family: PingFang-SC-Light;
+      font-weight: bold;
+      color: #999999;
+      text-align: center;
+}
+.content .exchange-btn text.data-v-7558cffe {
+      width: 150rpx;
+      height: 60rpx;
+      background: #7185ea;
+      border-radius: 30rpx;
+      font-size: 28rpx;
+      font-family: PingFang-SC-Medium;
+      font-weight: bold;
+      color: #fff;
+      text-align: center;
+}
+.content .expired.data-v-7558cffe {
+    font-size: 24rpx;
+    font-family: PingFang-SC-Medium;
+    font-weight: bold;
+    color: #7185ea;
+    position: absolute;
+    top: 93%;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+            transform: translateX(-50%);
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+}
+.content scroll-view .past-due.valid .coupons.data-v-7558cffe {
+    -webkit-box-shadow: 0px 10rpx 20rpx 0px rgba(146, 151, 183, 0.77);
+            box-shadow: 0px 10rpx 20rpx 0px rgba(146, 151, 183, 0.77);
+    color: #999;
+    background: #eef0f4;
+}
+
+@charset "UTF-8";
+/**
+ * 这里是uni-app内置的常用样式变量
+ *
+ * uni-app 官方扩展插件及插件市场（https://ext.dcloud.net.cn）上很多三方插件均使用了这些样式变量
+ * 如果你是插件开发者，建议你使用scss预处理，并在插件代码中直接使用这些变量（无需 import 这个文件），方便用户通过搭积木的方式开发整体风格一致的App
+ *
+ */
+/**
+ * 如果你是App开发者（插件使用者），你可以通过修改这些变量来定制自己的插件主题，实现自定义主题功能
+ *
+ * 如果你的项目同样使用了scss预处理，你也可以直接在你的 scss 代码中使用如下变量，同时无需 import 这个文件
+ */
+/* 颜色变量 */
+/* 行为相关颜色 */
+/* 文字基本颜色 */
+/* 背景颜色 */
+/* 边框颜色 */
+/* 尺寸变量 */
+/* 文字尺寸 */
+/* 图片尺寸 */
+/* Border Radius */
+/* 水平间距 */
+/* 垂直间距 */
+/* 透明度 */
+/* 文章场景相关 */
+@font-face {
+  font-family: 'iconfont';  /* project id 1077313 */
+  src: url('https://at.alicdn.com/t/font_1077313_cphg4fgnd3f.eot');
+  src: url('https://at.alicdn.com/t/font_1077313_cphg4fgnd3f.eot?#iefix') format('embedded-opentype'),
+  url('https://at.alicdn.com/t/font_1077313_cphg4fgnd3f.woff2') format('woff2'),
+  url('https://at.alicdn.com/t/font_1077313_cphg4fgnd3f.woff') format('woff'),
+  url('https://at.alicdn.com/t/font_1077313_cphg4fgnd3f.ttf') format('truetype'),
+  url('https://at.alicdn.com/t/font_1077313_cphg4fgnd3f.svg#iconfont') format('svg');
+}
+.iconfont.data-v-045e995a {
+	font-family: "iconfont" !important;
+	font-size: 16px;
+	font-style: normal;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+.icon-xiazai.data-v-045e995a:before {
+	content: "\E601";
+}
+.icon-cuo.data-v-045e995a:before {
+	content: "\E604";
+}
+.content.data-v-045e995a {
+  padding: 30rpx 0 0 48rpx;
+  width: 536rpx;
+}
+.content .FAQ-list.data-v-045e995a {
+    position: relative;
+    font-size: 26rpx;
+    font-family: PingFang-SC-Light;
+    font-weight: bold;
+    color: #474747;
+    height: 94rpx;
+    -webkit-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    transition: all 0.4s;
+    width: 100%;
+    overflow: hidden;
+}
+.content .FAQ-list .title.data-v-045e995a {
+      width: 100%;
+      height: 94rpx;
+      background: #fff;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+      -webkit-justify-content: space-between;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+          -ms-flex-align: center;
+              align-items: center;
+      -webkit-box-sizing: border-box;
+              box-sizing: border-box;
+      padding-top: 30rpx;
+      position: absolute;
+      top: 0;
+      z-index: 10;
+}
+.content .FAQ-list .title text.data-v-045e995a {
+        font-size: 26rpx;
+        line-height: 26rpx;
+}
+.content .FAQ-list .title .iconfont.data-v-045e995a {
+        -webkit-transition: all 0.4s;
+        -o-transition: all 0.4s;
+        transition: all 0.4s;
+}
+.content .FAQ-list .title .rotate180.data-v-045e995a {
+        -webkit-transform: rotate(180deg);
+            -ms-transform: rotate(180deg);
+                transform: rotate(180deg);
+        -webkit-transform-origin: 50% 50%;
+            -ms-transform-origin: 50% 50%;
+                transform-origin: 50% 50%;
+}
+.content .FAQ-list .text.data-v-045e995a {
+      width: 100%;
+      position: absolute;
+      bottom: 0;
+      font-size: 24rpx;
+      font-family: PingFang-SC-Light;
+      color: #999999;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: column;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      line-height: 36rpx;
+      height: 384rpx;
+}
+.content .FAQ-list .text text.data-v-045e995a {
+        margin-top: 8rpx;
+}
+.content .height500.data-v-045e995a {
+    height: 500rpx;
+}
+.content .bottom-btn.data-v-045e995a {
+    margin-top: 128rpx;
+    text-align: center;
+}
+.content .bottom-btn navigator.data-v-045e995a {
+      width: 230rpx;
+      height: 60rpx;
+      background: #7185ea;
+      border-radius: 30rpx;
+      font-size: 24rpx;
+      font-family: PingFang-SC-Light;
+      color: white;
+      line-height: 60rpx;
+      text-align: center;
+      margin: 0 auto 29rpx;
+}
+.content .bottom-btn text.data-v-045e995a {
+      font-size: 24rpx;
+      font-family: PingFang-SC-Light;
+      font-weight: bold;
+      color: #999999;
+}
+.content .feedback-box.data-v-045e995a {
+    z-index: 88;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: blue;
+    background: rgba(0, 0, 0, 0.2);
+    display: none;
+}
+.content .feedback-box .feedback.data-v-045e995a {
+      width: 654rpx;
+      height: 400rpx;
+      background: white;
+      -webkit-box-shadow: 0px 0px 30rpx 2rpx rgba(174, 184, 216, 0.68);
+              box-shadow: 0px 0px 30rpx 2rpx rgba(174, 184, 216, 0.68);
+      border-radius: 20rpx;
+      position: absolute;
+      left: 50%;
+      -webkit-transform: translateX(-50%);
+          -ms-transform: translateX(-50%);
+              transform: translateX(-50%);
+      top: 467rpx;
+      padding: 70rpx 80rpx 44rpx;
+      -webkit-box-sizing: border-box;
+              box-sizing: border-box;
+      color: #999999;
+      font-size: 24rpx;
+      font-weight: bold;
+}
+.content .feedback-box .feedback-redact ._textarea.data-v-045e995a {
+      width: 480rpx;
+      height: 170rpx;
+}
+.content .feedback-box .feedback-redact .num.data-v-045e995a {
+      color: #999999;
+      text-align: right;
+}
+.content .feedback-box .feedback-redact .feedback-btn.data-v-045e995a {
+      font-size: 26rpx;
+      font-family: PingFang-SC-Light;
+      -webkit-box-sizing: border-box;
+              box-sizing: border-box;
+      padding: 0 48rpx;
+      margin-top: 52rpx;
+}
+.content .feedback-box .feedback-redact .feedback-btn .confirm-btn.data-v-045e995a {
+        float: right;
+        color: #8066ff;
+}
+.content .feedback-box .feedback-succed.data-v-045e995a {
+      -webkit-box-sizing: border-box;
+              box-sizing: border-box;
+      padding: 0;
+      padding-top: 100rpx;
+      margin: 0 auto;
+}
+.content .feedback-box .feedback-succed .icon.data-v-045e995a {
+        width: 100rpx;
+        height: 100rpx;
+        background: blue;
+        margin: 0 auto;
+}
+.content .feedback-box .feedback-succed .text.data-v-045e995a {
+        font-size: 30rpx;
+        font-family: PingFang-SC-Light;
+        font-weight: bold;
+        color: #666666;
+        margin-top: 23rpx;
+        text-align: center;
+}
+.content .feedback-box .feedback-succed .confirm-btn.data-v-045e995a {
+        margin-top: 60rpx;
+        text-align: center;
+}
+.content .feedback-box .feedback-succed .confirm-btn text.data-v-045e995a {
+          font-size: 26rpx;
+          font-family: PingFang-SC-Light;
+          font-weight: bold;
+          color: #8066ff;
+}
+.content .feedbackBoxShow.data-v-045e995a {
+    display: block;
+}
+@-webkit-keyframes accordion-data-v-045e995a {
+from {
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+}
+to {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+}
+}
+@keyframes accordion-data-v-045e995a {
+from {
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+}
+to {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+}
+}
+
+@charset "UTF-8";
+/**
+ * 这里是uni-app内置的常用样式变量
+ *
+ * uni-app 官方扩展插件及插件市场（https://ext.dcloud.net.cn）上很多三方插件均使用了这些样式变量
+ * 如果你是插件开发者，建议你使用scss预处理，并在插件代码中直接使用这些变量（无需 import 这个文件），方便用户通过搭积木的方式开发整体风格一致的App
+ *
+ */
+/**
+ * 如果你是App开发者（插件使用者），你可以通过修改这些变量来定制自己的插件主题，实现自定义主题功能
+ *
+ * 如果你的项目同样使用了scss预处理，你也可以直接在你的 scss 代码中使用如下变量，同时无需 import 这个文件
+ */
+/* 颜色变量 */
+/* 行为相关颜色 */
+/* 文字基本颜色 */
+/* 背景颜色 */
+/* 边框颜色 */
+/* 尺寸变量 */
+/* 文字尺寸 */
+/* 图片尺寸 */
+/* Border Radius */
+/* 水平间距 */
+/* 垂直间距 */
+/* 透明度 */
+/* 文章场景相关 */
+@font-face {
+  font-family: 'iconfont';  /* project id 1077313 */
+  src: url('https://at.alicdn.com/t/font_1077313_cphg4fgnd3f.eot');
+  src: url('https://at.alicdn.com/t/font_1077313_cphg4fgnd3f.eot?#iefix') format('embedded-opentype'),
+  url('https://at.alicdn.com/t/font_1077313_cphg4fgnd3f.woff2') format('woff2'),
+  url('https://at.alicdn.com/t/font_1077313_cphg4fgnd3f.woff') format('woff'),
+  url('https://at.alicdn.com/t/font_1077313_cphg4fgnd3f.ttf') format('truetype'),
+  url('https://at.alicdn.com/t/font_1077313_cphg4fgnd3f.svg#iconfont') format('svg');
+}
+.iconfont.data-v-3f31fffd {
+	font-family: "iconfont" !important;
+	font-size: 16px;
+	font-style: normal;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+.icon-xiazai.data-v-3f31fffd:before {
+	content: "\E601";
+}
+.icon-cuo.data-v-3f31fffd:before {
+	content: "\E604";
+}
+.FAQ-list.data-v-3f31fffd {
+  position: relative;
+  height: 60rpx;
+  -webkit-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s;
+  width: 100%;
+  overflow: hidden;
+}
+.height60.data-v-3f31fffd {
+  height: 152rpx;
+}
+.cooperative-content.data-v-3f31fffd {
+  padding-top: 151rpx;
+  width: 630rpx;
+  position: relative;
+}
+.cooperative-content .logo.data-v-3f31fffd {
+    width: 136rpx;
+    height: 105rpx;
+    margin: 0 auto;
+    background: #ccc;
+}
+.cooperative-content .edition.data-v-3f31fffd {
+    font-size: 24rpx;
+    font-family: PingFang-SC-Medium;
+    font-weight: bold;
+    color: #474747;
+    text-align: center;
+    margin-top: 39rpx;
+}
+.cooperative-content .cooperation.data-v-3f31fffd {
+    font-size: 26rpx;
+    font-family: PingFang-SC-Medium;
+    font-weight: bold;
+    color: #474747;
+    margin-top: 150rpx;
+    padding: 0 48rpx;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+}
+.cooperative-content .cooperation .title.data-v-3f31fffd {
+      height: 60rpx;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+      -webkit-justify-content: space-between;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
+      background: #fff;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+          -ms-flex-align: center;
+              align-items: center;
+      position: absolute;
+      top: 0;
+      z-index: 10;
+      width: 100%;
+}
+.cooperative-content .cooperation .title .iconfont.data-v-3f31fffd {
+        -webkit-transition: all 0.2s;
+        -o-transition: all 0.2s;
+        transition: all 0.2s;
+        width: 26rpx;
+        height: 26rpx;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+            -ms-flex-align: center;
+                align-items: center;
+        margin-right: 10rpx;
+}
+.cooperative-content .cooperation .title .iconRotate.data-v-3f31fffd {
+        -webkit-transform: rotateZ(-180deg);
+            -ms-transform: rotate(-180deg);
+                transform: rotateZ(-180deg);
+        -webkit-transform-origin: 50% 50%;
+            -ms-transform-origin: 50% 50%;
+                transform-origin: 50% 50%;
+}
+.cooperative-content .cooperation .text.data-v-3f31fffd {
+      font-size: 24rpx;
+      font-family: PingFang-SC-Light;
+      font-weight: normal;
+      height: 0;
+      line-height: 36rpx;
+      -webkit-transition: all 1s;
+      -o-transition: all 1s;
+      transition: all 1s;
+      overflow: hidden;
+      height: 82rpx;
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+}
+.cooperative-content .footer.data-v-3f31fffd {
+    text-align: center;
+    position: fixed;
+    width: 534rpx;
+    bottom: 88rpx;
+    line-height: 40rpx;
+    left: 55rpx;
+}
+.cooperative-content .footer .agreement.data-v-3f31fffd {
+      font-size: 24rpx;
+      font-family: PingFang-SC-Light;
+      font-weight: normal;
+      color: #7185ea;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+      -webkit-justify-content: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      text-align: center;
+}
+.cooperative-content .footer .foot.data-v-3f31fffd {
+      font-size: 20rpx;
+      font-family: PingFang-SC-Light;
+      font-weight: normal;
+      color: #999999;
+      line-height: 36rpx;
+}
+
+@charset "UTF-8";
+/**
+ * 这里是uni-app内置的常用样式变量
+ *
+ * uni-app 官方扩展插件及插件市场（https://ext.dcloud.net.cn）上很多三方插件均使用了这些样式变量
+ * 如果你是插件开发者，建议你使用scss预处理，并在插件代码中直接使用这些变量（无需 import 这个文件），方便用户通过搭积木的方式开发整体风格一致的App
+ *
+ */
+/**
+ * 如果你是App开发者（插件使用者），你可以通过修改这些变量来定制自己的插件主题，实现自定义主题功能
+ *
+ * 如果你的项目同样使用了scss预处理，你也可以直接在你的 scss 代码中使用如下变量，同时无需 import 这个文件
+ */
+/* 颜色变量 */
+/* 行为相关颜色 */
+/* 文字基本颜色 */
+/* 背景颜色 */
+/* 边框颜色 */
+/* 尺寸变量 */
+/* 文字尺寸 */
+/* 图片尺寸 */
+/* Border Radius */
+/* 水平间距 */
+/* 垂直间距 */
+/* 透明度 */
+/* 文章场景相关 */
+@font-face {
+  font-family: 'iconfont';  /* project id 1077313 */
+  src: url('https://at.alicdn.com/t/font_1077313_cphg4fgnd3f.eot');
+  src: url('https://at.alicdn.com/t/font_1077313_cphg4fgnd3f.eot?#iefix') format('embedded-opentype'),
+  url('https://at.alicdn.com/t/font_1077313_cphg4fgnd3f.woff2') format('woff2'),
+  url('https://at.alicdn.com/t/font_1077313_cphg4fgnd3f.woff') format('woff'),
+  url('https://at.alicdn.com/t/font_1077313_cphg4fgnd3f.ttf') format('truetype'),
+  url('https://at.alicdn.com/t/font_1077313_cphg4fgnd3f.svg#iconfont') format('svg');
+}
+.iconfont.data-v-26476136 {
+	font-family: "iconfont" !important;
+	font-size: 16px;
+	font-style: normal;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+.icon-xiazai.data-v-26476136:before {
+	content: "\E601";
+}
+.icon-cuo.data-v-26476136:before {
+	content: "\E604";
+}
+page.data-v-26476136 {
+  background: #fff;
+  height: 1334rpx;
+}
+.content.data-v-26476136 {
+  position: relative;
+  width: 582rpx;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 78rpx 0 0 48rpx;
+}
+.drawingsMask.data-v-26476136 {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.2);
+  z-index: 999;
+}
+.drawingsMask .drawings.data-v-26476136 {
+    width: 654rpx;
+    height: 400rpx;
+    background: white;
+    border-radius: 20rpx;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    font-size: 26rpx;
+    font-family: PingFang-SC-Light;
+    font-weight: bold;
+}
+.drawingsMask .drawings-hint .drawings-text.data-v-26476136 {
+    color: #666666;
+    line-height: 48rpx;
+    margin-top: 124rpx;
+    text-align: center;
+}
+.drawingsMask .drawings-hint .drawings-btn.data-v-26476136 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding: 0 139rpx;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    line-height: 26rpx;
+    margin-top: 100rpx;
+    color: #999;
+}
+.drawingsMask .drawings-hint .drawings-btn text.data-v-26476136:nth-child(2) {
+      color: #7185ea;
+}
+.drawingsMask .extract-succeed.data-v-26476136 {
+    display: none;
+}
+.drawingsMask .extract-succeed .download-icon.data-v-26476136 {
+      display: block;
+      text-align: center;
+      font-size: 100rpx;
+      line-height: 100rpx;
+      background: -webkit-gradient(linear, left top, left bottom, from(#b0b8e9), to(#7681d3));
+      background: -o-linear-gradient(top, #b0b8e9 0%, #7681d3 100%);
+      background: linear-gradient(to bottom, #b0b8e9 0%, #7681d3 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-fill-color: transparent;
+      margin: 30rpx 0 25rpx 0;
+}
+.drawingsMask .extract-succeed .title.data-v-26476136 {
+      font-size: 34rpx;
+      font-family: PingFang-SC-Bold;
+      font-weight: bold;
+      color: #7681d3;
+      line-height: 34rpx;
+      margin-bottom: 25rpx;
+      text-align: center;
+}
+.drawingsMask .extract-succeed .text.data-v-26476136 {
+      font-size: 20rpx;
+      font-family: PingFang-SC-Light;
+      font-weight: bold;
+      color: #666666;
+      line-height: 36rpx;
+      text-align: center;
+}
+.drawingsMask .extract-succeed .confirm-btn.data-v-26476136 {
+      font-size: 30rpx;
+      font-family: PingFang-SC-Medium;
+      font-weight: bold;
+      color: #7681d3;
+      text-align: center;
+      height: 100px;
+      line-height: 100rpx;
+      width: 120rpx;
+      margin: 0 auto;
+}
+.drawingsMask .showDrawingsPoP.data-v-26476136 {
+    display: block;
+}
+.drawingsMask .extract-fali .download-icon.data-v-26476136 {
+    background: -webkit-gradient(linear, left top, left bottom, from(#B0B8E9), to(#F07D7D));
+    background: -o-linear-gradient(top, #B0B8E9 0%, #F07D7D 100%);
+    background: linear-gradient(to bottom, #B0B8E9 0%, #F07D7D 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-fill-color: transparent;
+    margin: 30rpx 0 25rpx 0;
+}
+.drawingsMask .extract-fali .title.data-v-26476136 {
+    color: #F07D7D;
+}
+.drawingsMask .extract-fali .text.data-v-26476136 {
+    margin: 20rpx 0;
+}
+.showMask.data-v-26476136 {
+  display: block;
+}
+.user-mobile.data-v-26476136 {
+  width: 100%;
+  font-size: 28rpx;
+  margin-top: 202rpx;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-weight: bold;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding-left: 95rpx;
+}
+.user-mobile text.data-v-26476136 {
+    font-family: PingFang-SC-Medium;
+    font-weight: bold;
+    color: #474747;
+}
+.user-mobile .change-mobile.data-v-26476136 {
+    margin-top: 15rpx;
+    text-align: center;
+    font-size: 24rpx;
+    font-family: PingFang-SC-Light;
+    color: #666666;
+    width: 160rpx;
+    height: 45rpx;
+    line-height: 45rpx;
+    background: white;
+    border: 2rpx solid #eef0f4;
+    border-radius: 22rpx;
+}
+.uni-list.data-v-26476136 {
+  margin-top: 71rpx;
+  width: 534rpx;
+  font-size: 24rpx;
+  font-family: PingFang-SC-Light;
+  font-weight: bold;
+  color: #666666;
+}
+.uni-list .tips2.data-v-26476136 {
+    overflow: hidden;
+    margin-bottom: 60rpx;
+}
+.uni-list .tips2 text.data-v-26476136:first-child {
+      font-size: 32rpx;
+      font-family: PingFang-SC-Medium;
+      color: #272727;
+}
+.uni-list .tips2 text.data-v-26476136:nth-child(2) {
+      font-size: 32rpx;
+      font-family: PingFang-SC-Medium;
+      font-weight: bold;
+      color: #7185ea;
+      margin-left: 23rpx;
+}
+.uni-list .tips2 text.data-v-26476136:nth-child(3) {
+      float: right;
+}
+.uni-list .tips2 .bg-grey.data-v-26476136 {
+      width: 140rpx;
+      height: 45rpx;
+      background: white;
+      border: 2rpx solid #eef0f4;
+      border-radius: 22rpx;
+      line-height: 45rpx;
+      text-align: center;
+      float: right;
+}
+.uni-list .tips1.data-v-26476136 {
+    overflow: hidden;
+    margin-bottom: 60rpx;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+}
+.uni-list .tips1 navigator.data-v-26476136 {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+          -ms-flex-align: center;
+              align-items: center;
+}
+.add-money-btn.data-v-26476136 {
+  width: 300rpx;
+  height: 80rpx;
+  background: #7185ea;
+  -webkit-box-shadow: 0px 17rpx 32rpx 0px rgba(113, 133, 234, 0.53);
+          box-shadow: 0px 17rpx 32rpx 0px rgba(113, 133, 234, 0.53);
+  border-radius: 40rpx;
+  font-size: 28rpx;
+  font-family: PingFang-SC-Medium;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+  line-height: 80rpx;
+  margin: 100rpx auto 0;
+}
+

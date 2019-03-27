@@ -1,0 +1,2 @@
+<import src="./amendMobileFormer.vue.wxml" />
+    <template is="a3e2ce54" data="{{ ...$root['0'], $root }}"/>

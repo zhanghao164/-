@@ -1,0 +1,500 @@
+@charset "UTF-8";
+/**
+ * 这里是uni-app内置的常用样式变量
+ *
+ * uni-app 官方扩展插件及插件市场（https://ext.dcloud.net.cn）上很多三方插件均使用了这些样式变量
+ * 如果你是插件开发者，建议你使用scss预处理，并在插件代码中直接使用这些变量（无需 import 这个文件），方便用户通过搭积木的方式开发整体风格一致的App
+ *
+ */
+/**
+ * 如果你是App开发者（插件使用者），你可以通过修改这些变量来定制自己的插件主题，实现自定义主题功能
+ *
+ * 如果你的项目同样使用了scss预处理，你也可以直接在你的 scss 代码中使用如下变量，同时无需 import 这个文件
+ */
+/* 颜色变量 */
+/* 行为相关颜色 */
+/* 文字基本颜色 */
+/* 背景颜色 */
+/* 边框颜色 */
+/* 尺寸变量 */
+/* 文字尺寸 */
+/* 图片尺寸 */
+/* Border Radius */
+/* 水平间距 */
+/* 垂直间距 */
+/* 透明度 */
+/* 文章场景相关 */
+@font-face {
+  font-family: 'iconfont';  /* project id 1077313 */
+  src: url('https://at.alicdn.com/t/font_1077313_cphg4fgnd3f.eot');
+  src: url('https://at.alicdn.com/t/font_1077313_cphg4fgnd3f.eot?#iefix') format('embedded-opentype'),
+  url('https://at.alicdn.com/t/font_1077313_cphg4fgnd3f.woff2') format('woff2'),
+  url('https://at.alicdn.com/t/font_1077313_cphg4fgnd3f.woff') format('woff'),
+  url('https://at.alicdn.com/t/font_1077313_cphg4fgnd3f.ttf') format('truetype'),
+  url('https://at.alicdn.com/t/font_1077313_cphg4fgnd3f.svg#iconfont') format('svg');
+}
+.iconfont {
+	font-family: "iconfont" !important;
+	font-size: 16px;
+	font-style: normal;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+.icon-xiazai:before {
+	content: "\E601";
+}
+.icon-cuo:before {
+	content: "\E604";
+}
+@-webkit-keyframes myfirst {
+0% {
+    right: -372rpx;
+    height: 140rpx;
+}
+100% {
+    height: 342rpx;
+    right: 0rpx;
+    -webkit-transition: 0.5 linear;
+    -o-transition: 0.5 linear;
+    transition: 0.5 linear;
+}
+}
+@keyframes myfirst {
+0% {
+    right: -372rpx;
+    height: 140rpx;
+}
+100% {
+    height: 342rpx;
+    right: 0rpx;
+    -webkit-transition: 0.5 linear;
+    -o-transition: 0.5 linear;
+    transition: 0.5 linear;
+}
+}
+@-webkit-keyframes return-myfirst {
+0% {
+    position: relative;
+    margin-left: -100rpx;
+}
+100% {
+    margin: 26rpx 34rpx 25rpx 48rpx;
+    -webkit-transition: 0.5 linear;
+    -o-transition: 0.5 linear;
+    transition: 0.5 linear;
+}
+}
+@keyframes return-myfirst {
+0% {
+    position: relative;
+    margin-left: -100rpx;
+}
+100% {
+    margin: 26rpx 34rpx 25rpx 48rpx;
+    -webkit-transition: 0.5 linear;
+    -o-transition: 0.5 linear;
+    transition: 0.5 linear;
+}
+}
+@-webkit-keyframes distance {
+0% {
+    top: 0rpx;
+    right: -372rpx;
+}
+100% {
+    width: 104rpx;
+    height: 130rpx;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 20rpx 20rpx 0 0;
+    position: absolute;
+    right: 237rpx;
+    top: 212rpx;
+    bottom: 0;
+    -webkit-transition: 0.5 linear;
+    -o-transition: 0.5 linear;
+    transition: 0.5 linear;
+}
+}
+@keyframes distance {
+0% {
+    top: 0rpx;
+    right: -372rpx;
+}
+100% {
+    width: 104rpx;
+    height: 130rpx;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 20rpx 20rpx 0 0;
+    position: absolute;
+    right: 237rpx;
+    top: 212rpx;
+    bottom: 0;
+    -webkit-transition: 0.5 linear;
+    -o-transition: 0.5 linear;
+    transition: 0.5 linear;
+}
+}
+@-webkit-keyframes return-distance {
+0% {
+    width: 104rpx;
+    height: 130rpx;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 20rpx 20rpx 0 0;
+    position: absolute;
+    right: 237rpx;
+    top: 212rpx;
+    bottom: 0;
+    -webkit-transition: 0.5 linear;
+    -o-transition: 0.5 linear;
+    transition: 0.5 linear;
+}
+100% {
+    position: absolute;
+    top: 34rpx;
+    right: 48rpx;
+}
+}
+@keyframes return-distance {
+0% {
+    width: 104rpx;
+    height: 130rpx;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 20rpx 20rpx 0 0;
+    position: absolute;
+    right: 237rpx;
+    top: 212rpx;
+    bottom: 0;
+    -webkit-transition: 0.5 linear;
+    -o-transition: 0.5 linear;
+    transition: 0.5 linear;
+}
+100% {
+    position: absolute;
+    top: 34rpx;
+    right: 48rpx;
+}
+}
+@-webkit-keyframes information {
+0% {
+    display: inline-block;
+    width: 267px;
+    height: 342rpx;
+    margin-left: 152rpx;
+    -webkit-transform: scale(0.2, 0.2);
+            transform: scale(0.2, 0.2);
+}
+100% {
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+    -webkit-transition: 0.5 linear;
+    -o-transition: 0.5 linear;
+    transition: 0.5 linear;
+}
+}
+@keyframes information {
+0% {
+    display: inline-block;
+    width: 267px;
+    height: 342rpx;
+    margin-left: 152rpx;
+    -webkit-transform: scale(0.2, 0.2);
+            transform: scale(0.2, 0.2);
+}
+100% {
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+    -webkit-transition: 0.5 linear;
+    -o-transition: 0.5 linear;
+    transition: 0.5 linear;
+}
+}
+@-webkit-keyframes Drag {
+0% {
+    height: 155rpx;
+}
+100% {
+    height: 342rpx;
+    -webkit-transition: 0.5 linear;
+    -o-transition: 0.5 linear;
+    transition: 0.5 linear;
+}
+}
+@keyframes Drag {
+0% {
+    height: 155rpx;
+}
+100% {
+    height: 342rpx;
+    -webkit-transition: 0.5 linear;
+    -o-transition: 0.5 linear;
+    transition: 0.5 linear;
+}
+}
+@-webkit-keyframes return-Drag {
+0% {
+    height: 342rpx;
+    -webkit-transition: 0.5 linear;
+    -o-transition: 0.5 linear;
+    transition: 0.5 linear;
+}
+100% {
+    height: 155rpx;
+}
+}
+@keyframes return-Drag {
+0% {
+    height: 342rpx;
+    -webkit-transition: 0.5 linear;
+    -o-transition: 0.5 linear;
+    transition: 0.5 linear;
+}
+100% {
+    height: 155rpx;
+}
+}
+@-webkit-keyframes borrow {
+0% {
+    left: 0rpx;
+}
+100% {
+    left: 204rpx;
+    -webkit-transition: 0.8 linear;
+    -o-transition: 0.8 linear;
+    transition: 0.8 linear;
+}
+}
+@keyframes borrow {
+0% {
+    left: 0rpx;
+}
+100% {
+    left: 204rpx;
+    -webkit-transition: 0.8 linear;
+    -o-transition: 0.8 linear;
+    transition: 0.8 linear;
+}
+}
+.shops-list {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #f4f6fb;
+  overflow: auto;
+}
+.shops-list scroll-view {
+    height: 100%;
+}
+.shops-list scroll-view .bg_color {
+      width: 100%;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 99;
+}
+.shops-list scroll-view .fanhui {
+      display: block;
+      width: 64rpx;
+      height: 64rpx;
+      line-height: 64rpx;
+      position: fixed;
+      left: 36rpx;
+      color: #7185EA;
+      -webkit-box-shadow: 0px 4px 13px 0px rgba(159, 167, 215, 0.45);
+              box-shadow: 0px 4px 13px 0px rgba(159, 167, 215, 0.45);
+      border-radius: 50%;
+      text-align: center;
+      background-color: #fff;
+      z-index: 999;
+}
+.shops-list scroll-view .search {
+      width: 375rpx;
+      height: 64rpx;
+      line-height: 64rpx;
+      border-radius: 32rpx;
+      position: fixed;
+      left: 122rpx;
+      background-color: #fff;
+      -webkit-box-shadow: 0px 4px 13px 0px rgba(159, 167, 215, 0.45);
+              box-shadow: 0px 4px 13px 0px rgba(159, 167, 215, 0.45);
+      padding-left: 42rpx;
+      color: #7185EA;
+      z-index: 999;
+      -webkit-box-sizing: border-box;
+              box-sizing: border-box;
+}
+.shops-list scroll-view .search ._input {
+        display: inline-block;
+        width: 270rpx;
+        border-radius: 0 32rpx 32rpx 0;
+        color: #7185EA;
+        margin-left: 10rpx;
+        font-size: 24rpx;
+}
+.shops-list ::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+    color: transparent;
+}
+.shops-list_view {
+  width: 100%;
+  padding: 200rpx 0 900rpx;
+}
+.shops-list_view .Drag {
+    width: 100%;
+    height: 342rpx;
+    background-color: #f4f6fb;
+    -webkit-animation: Drag 0.55s;
+            animation: Drag 0.55s;
+}
+.shops-list_view .Drag ._img {
+      position: absolute;
+      width: 372rpx;
+      height: 342rpx;
+      -webkit-animation: myfirst 0.55s;
+              animation: myfirst 0.55s;
+      border-radius: 0%;
+      background-color: #000;
+      margin: 0;
+      right: 0;
+      border-radius: 20rpx 0 0 20rpx;
+}
+.shops-list_view .Drag .information {
+      display: inline-block;
+      width: 267px;
+      height: 342rpx;
+      margin-left: 72rpx;
+      -webkit-animation: information 0.55s;
+              animation: information 0.55s;
+}
+.shops-list_view .Drag .information ._h2 {
+        overflow: hidden;
+        height: 80rpx;
+        font-size: 35rpx;
+        color: #474747;
+        position: absolute;
+        top: 26rpx;
+        font-weight: 700;
+        line-height: 36rpx;
+}
+.shops-list_view .Drag .information ._span {
+        font-size: 28rpx;
+        position: absolute;
+        bottom: 36rpx;
+        -webkit-transition: 0.5 linear;
+        -o-transition: 0.5 linear;
+        transition: 0.5 linear;
+}
+.shops-list_view .Drag .information .also {
+        color: #a5a5a5;
+}
+.shops-list_view .Drag .information .borrow {
+        color: #4680ff;
+        left: 274rpx;
+        -webkit-animation: borrow 0.55s;
+                animation: borrow 0.55s;
+}
+.shops-list_view .Drag .information .address {
+        position: absolute;
+        top: 122rpx;
+        font-size: 20rpx;
+        color: #474747;
+        width: 270rpx;
+        height: 92rpx;
+        line-height: 36rpx;
+}
+.shops-list_view .Drag .information .address ._p {
+          color: #434343;
+          height: 108rpx;
+          overflow: hidden;
+}
+.shops-list_view .Drag .distance {
+      width: 104rpx;
+      height: 110rpx;
+      text-align: center;
+      background-color: #fff;
+      border-radius: 20rpx 20rpx 0 0;
+      position: absolute;
+      right: 237rpx;
+      top: 212rpx;
+      bottom: 0;
+      -webkit-animation: distance 0.55s;
+              animation: distance 0.55s;
+      -webkit-transition: 0.5 linear;
+      -o-transition: 0.5 linear;
+      transition: 0.5 linear;
+      padding-top: 21rpx;
+}
+.list {
+  margin: 0 auto 32rpx;
+  position: relative;
+  width: 654rpx;
+  height: 155rpx;
+  border-radius: 20rpx;
+  background-color: #fff;
+  -webkit-animation: return-Drag 0.55s;
+          animation: return-Drag 0.55s;
+  overflow: hidden;
+}
+.list ._img {
+    display: inline-block;
+    width: 104rpx;
+    height: 104rpx;
+    border-radius: 50%;
+    background-color: #000;
+    margin: 26rpx 34rpx 25rpx 48rpx;
+    -webkit-animation: return-myfirst 0.55s;
+            animation: return-myfirst 0.55s;
+}
+.list .information {
+    display: inline-block;
+    -webkit-transition: 0.5 linear;
+    -o-transition: 0.5 linear;
+    transition: 0.5 linear;
+}
+.list .information ._h2 {
+      font-size: 24rpx;
+      width: 280rpx;
+      height: 30rpx;
+      line-height: 30rpx;
+      overflow: hidden;
+      -o-text-overflow: ellipsis;
+         text-overflow: ellipsis;
+      white-space: nowrap;
+      color: #474747;
+      position: absolute;
+      top: 49rpx;
+      font-weight: 700;
+}
+.list .information ._span {
+      font-size: 20rpx;
+      position: absolute;
+      bottom: 31rpx;
+}
+.list .information .also {
+      color: #a5a5a5;
+}
+.list .information .borrow {
+      color: #4680ff;
+      left: 274rpx;
+}
+.list .distance {
+    position: absolute;
+    top: 34rpx;
+    right: 48rpx;
+}
+.list .distance view {
+      font-size: 54rpx;
+      color: #92b4ff;
+}
+.list .distance .detailedDistance {
+      margin-top: 21rpx;
+      font-size: 18rpx;
+      color: #878383;
+}
+

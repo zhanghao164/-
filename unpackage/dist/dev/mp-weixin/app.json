@@ -1,0 +1,62 @@
+{
+  "pages": [
+    "pages/near/near",
+    "pages/near/list/list",
+    "pages/mine/mineRightNav/mineRightNav",
+    "pages/mine/ChargePalOutRemind/ChargePalOutRemind",
+    "pages/mine/leasePayElectrify/leasePayElectrify",
+    "pages/mine/leasePayBluetooth/leasePayBluetooth",
+    "pages/mine/leasePaySucced/leasePaySucced",
+    "pages/mine/selectDuration/selectDuration",
+    "pages/mine/amendMobileNew/amendMobileNew",
+    "pages/mine/amendMobileFormer/amendMobileFormer",
+    "pages/mine/cashPledge/cashPledge",
+    "pages/mine/appletCashPledge/appletCashPledge",
+    "pages/mine/orderInfo/orderInfo",
+    "pages/mine/dealInfo/dealInfo",
+    "pages/mine/toUpSucced/toUpSucced",
+    "pages/mine/toUpFailed/toUpFailed",
+    "pages/mine/addMoney/addMoney",
+    "pages/theAgent/theAgent",
+    "pages/theLoan/theLoan",
+    "pages/login/login",
+    "pages/near/movable/movable"
+  ],
+  "subPackages": [],
+  "window": {
+    "navigationStyle": "custom"
+  },
+  "usingComponents": {},
+  "tabBar": {
+    "color": "#A4B8EA",
+    "selectedColor": "#7185EA",
+    "borderStyle": "black",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/near/near",
+        "iconPath": "static/tabIcon/nearby@2x.png",
+        "selectedIconPath": "static/tabIcon/selecd-nearby@2x.png",
+        "text": "附近"
+      },
+      {
+        "pagePath": "pages/theLoan/theLoan",
+        "iconPath": "static/tabIcon/rent@2x.png",
+        "selectedIconPath": "static/tabIcon/selecd-rent@2.png",
+        "text": "租借"
+      },
+      {
+        "pagePath": "pages/theAgent/theAgent",
+        "iconPath": "static/tabIcon/money@2x.png",
+        "selectedIconPath": "static/tabIcon/selecd-money@2x.png",
+        "text": "赚钱"
+      },
+      {
+        "pagePath": "pages/mine/mineRightNav/mineRightNav",
+        "iconPath": "static/tabIcon/mine@2x.png",
+        "selectedIconPath": "static/tabIcon/selecd-mine@2x.png",
+        "text": "个人"
+      }
+    ]
+  }
+}

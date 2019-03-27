@@ -1,0 +1,13 @@
+
+      !(function(){
+        var uniAppViewReadyCallback = function(){
+          setCssToHead(["@charset \x22UTF-8\x22;\n.",[1],"content { display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-sizing: border-box; box-sizing: border-box; background: #f8f6ff; padding-top: ",[0,90],"; -webkit-box-orient: vertical; -webkit-box-direction: normal; -webkit-flex-direction: column; -ms-flex-direction: column; flex-direction: column; -webkit-box-align: center; -webkit-align-items: center; -ms-flex-align: center; align-items: center; }\n.",[1],"content .",[1],"title { font-size: ",[0,32],"; font-family: PingFang-SC-Medium; font-weight: bold; color: #474747; margin-bottom: ",[0,232],"; }\n.",[1],"content .",[1],"tips { display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -webkit-flex-direction: column; -ms-flex-direction: column; flex-direction: column; -webkit-box-align: center; -webkit-align-items: center; -ms-flex-align: center; align-items: center; }\n.",[1],"content .",[1],"tips .",[1],"subtitle { font-size: ",[0,36],"; font-family: PingFang-SC-Medium; font-weight: bold; color: #474747; line-height: ",[0,72],"; }\n.",[1],"content .",[1],"tips .",[1],"money { font-size: ",[0,72],"; font-family: PingFang-SC-Medium; font-weight: bold; color: #8066ff; line-height: ",[0,72],"; }\n.",[1],"content .",[1],"pay-btn { width: ",[0,300],"; height: ",[0,80],"; background: #8066ff; -webkit-box-shadow: 0px ",[0,17]," ",[0,32]," ",[0,0]," rgba(164, 128, 255, 0.77); box-shadow: 0px ",[0,17]," ",[0,32]," ",[0,0]," rgba(164, 128, 255, 0.77); border-radius: ",[0,40],"; font-size: ",[0,28],"; font-family: PingFang-SC-Medium; font-weight: bold; color: white; text-align: center; line-height: ",[0,80],"; margin-top: ",[0,196],"; }\n.",[1],"content .",[1],"hint { width: ",[0,359],"; height: ",[0,64],"; font-size: ",[0,24],"; font-family: PingFang-SC-Light; font-weight: bold; color: #474747; line-height: ",[0,40],"; text-align: center; margin-top: ",[0,55],"; }\n",],undefined,{path:"./pages/mine/appletCashPledge/appletCashPledge.wxss"})();
+document.dispatchEvent(new CustomEvent("generateFuncReady", { detail: { generateFunc: $gwx('./pages/mine/appletCashPledge/appletCashPledge.wxml') } }));
+        }
+        if(window.__uniAppViewReady__){
+          uniAppViewReadyCallback()
+        }else{
+          document.addEventListener('uniAppViewReady',uniAppViewReadyCallback)
+        }
+      })();
+      
