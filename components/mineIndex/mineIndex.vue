@@ -91,7 +91,7 @@ export default {
 	data() {
 		return {
 			showMask: false,
-			userName: '输入手机',
+			userName: '',
 			extractSucceed: false, //  判断用户是否  用户是否需要提现
 		};
 	},
@@ -129,10 +129,7 @@ export default {
 		}
 	},
 	onShow() {
-		if (uni.getStorageSync('userMobile')) {
-			//到本地  取出用户昵称
-			this.userName = uni.getStorageSync('userMobile');
-		}
+		
 
 		// 隐藏遮罩层
 		this.showMask = false;
@@ -145,6 +142,14 @@ export default {
 		// 		setTimeout(function() {
 		// 			uni.hideLoading();
 		// 		}, 500);
+		
+		const userInfo = uni.getStorageSync('userInfo');
+		
+		if (userInfo.nickName) {
+			this.userName = userInfo.nickName;
+		}
+		
+		
 	}
 };
 </script>
@@ -158,9 +163,9 @@ body {
 }
 .content {
 	position: relative;
-	width: 582upx;
+	width: 630upx;
 	box-sizing: border-box;
-	padding: 78upx 0 0 48upx;
+	padding: 78upx  48upx 0;
 }
 .drawingsMask {
 	display: none;
@@ -293,7 +298,6 @@ body {
 	font-weight: bold;
 	align-items: center;
 	box-sizing: border-box;
-	padding-left: 95upx;
 
 	text {
 		font-family: PingFang-SC-Medium;

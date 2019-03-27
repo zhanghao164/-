@@ -105,6 +105,39 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "../../../../webpack/theElectricity/static/daili/bottom.png":
+/*!*********************************************************!*\
+  !*** E:/webpack/theElectricity/static/daili/bottom.png ***!
+  \*********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "static/img/bottom.5a0de8f8.png";
+
+/***/ }),
+
+/***/ "../../../../webpack/theElectricity/static/daili/center.png":
+/*!*********************************************************!*\
+  !*** E:/webpack/theElectricity/static/daili/center.png ***!
+  \*********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "static/img/center.c34fdf1e.png";
+
+/***/ }),
+
+/***/ "../../../../webpack/theElectricity/static/daili/theAgentfive.png":
+/*!***************************************************************!*\
+  !*** E:/webpack/theElectricity/static/daili/theAgentfive.png ***!
+  \***************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "static/img/theAgentfive.f980c5e5.png";
+
+/***/ }),
+
 /***/ "../../../../webpack/theElectricity/static/daili/theAgentfour.png":
 /*!***************************************************************!*\
   !*** E:/webpack/theElectricity/static/daili/theAgentfour.png ***!
@@ -112,7 +145,7 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "static/img/theAgentfour.f4c3f7c6.png";
+module.exports = __webpack_require__.p + "static/img/theAgentfour.afb3bc3d.png";
 
 /***/ }),
 
@@ -123,7 +156,7 @@ module.exports = __webpack_require__.p + "static/img/theAgentfour.f4c3f7c6.png";
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "static/img/theAgentone.8fd3fbb1.png";
+module.exports = __webpack_require__.p + "static/img/theAgentone.9867d7ab.png";
 
 /***/ }),
 
@@ -134,7 +167,7 @@ module.exports = __webpack_require__.p + "static/img/theAgentone.8fd3fbb1.png";
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "static/img/theAgentthree.120203af.png";
+module.exports = __webpack_require__.p + "static/img/theAgentthree.7fbaac84.png";
 
 /***/ }),
 
@@ -145,7 +178,18 @@ module.exports = __webpack_require__.p + "static/img/theAgentthree.120203af.png"
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "static/img/theAgenttwo.7f1f54cf.png";
+module.exports = __webpack_require__.p + "static/img/theAgenttwo.86644732.png";
+
+/***/ }),
+
+/***/ "../../../../webpack/theElectricity/static/daili/top.png":
+/*!******************************************************!*\
+  !*** E:/webpack/theElectricity/static/daili/top.png ***!
+  \******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "static/img/top.b366b1ae.png";
 
 /***/ }),
 
@@ -158,33 +202,6 @@ module.exports = __webpack_require__.p + "static/img/theAgenttwo.7f1f54cf.png";
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -241,7 +258,7 @@ var _vuex = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.j
     // 修改底部stab样式
     uni.setTabBarItem({
       index: this.theIndex,
-      selectedIconPath: "/static/tab/daili.png" });
+      selectedIconPath: '/static/tab/daili.png' });
 
   } };exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ "./node_modules/@dcloudio/uni-mp-weixin/dist/index.js")["default"]))
@@ -282,119 +299,88 @@ var render = function() {
         "swiper",
         {
           staticClass: "swiper",
-          attrs: { circular: "true", vertical: "true" }
+          attrs: { "skip-hidden-item-layout": "true", circular: "true" }
         },
         [
           _c("swiper-item", { attrs: { mpcomid: "6c0cc7f2-0" } }, [
             _c("view", { staticClass: "theAgent-view" }, [
-              _c("view", { staticClass: "top-one" }, [
-                _vm._v("吉电诚邀代理 百元创业好项目")
-              ]),
-              _c("view", { staticClass: "top-two" }, [
-                _vm._v("快至16天回本，15-20倍回报率拥有国内外万家合作商家")
-              ]),
-              _c(
-                "view",
-                { staticClass: "top-three" },
-                [_vm._v("不收取任何分润，快速回本"), _c("br")],
-                1
-              ),
-              _c("view", { staticClass: "top-four" }, [
-                _vm._v("不收取"),
-                _c("span", [_vm._v("然后分润")]),
-                _vm._v(",代理商可自定义租金。平均"),
-                _c("span", [_vm._v("一个月")]),
-                _vm._v("收回成本。")
-              ]),
-              _c("view", { staticClass: "bottom-one" }, [
-                _vm._v("打造自己品牌")
-              ]),
-              _c("view", { staticClass: "bottom-two" }, [
-                _vm._v("代理商可展示"),
-                _c("span", [_vm._v("广告")]),
-                _vm._v("及"),
-                _c("span", [_vm._v("自定义品牌")]),
-                _vm._v("。大大"),
-                _c("span", [_vm._v("增加产品使用率")]),
-                _vm._v("。")
-              ]),
-              _c("view", { staticClass: "bottom-three" }, [
-                _vm._v("低成本起步代理商")
-              ]),
-              _c(
-                "view",
-                { staticClass: "bottom-four" },
-                [
-                  _vm._v("任何人都可以低成本成为代理商。并且实力保证："),
-                  _c("p", [
-                    _vm._v("软件"),
-                    _c("span", [_vm._v("免费")]),
-                    _vm._v("提供。硬件"),
-                    _c("span", [_vm._v("保质一年")]),
-                    _vm._v("。")
-                  ])
-                ],
-                1
-              )
+              _c("img", {
+                staticClass: "img-top",
+                attrs: { src: __webpack_require__(/*! ../../static/daili/top.png */ "../../../../webpack/theElectricity/static/daili/top.png"), alt: "" }
+              }),
+              _c("img", {
+                staticClass: "img-center",
+                attrs: {
+                  src: __webpack_require__(/*! ../../static/daili/center.png */ "../../../../webpack/theElectricity/static/daili/center.png"),
+                  alt: ""
+                }
+              }),
+              _c("img", {
+                staticClass: "img-bottom",
+                attrs: {
+                  src: __webpack_require__(/*! ../../static/daili/bottom.png */ "../../../../webpack/theElectricity/static/daili/bottom.png"),
+                  alt: ""
+                }
+              })
             ])
           ]),
-          _c(
-            "swiper-item",
-            { attrs: { mpcomid: "6c0cc7f2-5" } },
-            [
-              _c(
-                "swiper",
-                {
-                  staticClass: "swiper",
-                  attrs: { "skip-hidden-item-layout": "true", circular: "true" }
-                },
-                [
-                  _c("swiper-item", { attrs: { mpcomid: "6c0cc7f2-1" } }, [
-                    _c("view", { staticClass: "theAgent theAgentone" }, [
-                      _c("img", {
-                        attrs: {
-                          src: __webpack_require__(/*! ../../static/daili/theAgentone.png */ "../../../../webpack/theElectricity/static/daili/theAgentone.png"),
-                          alt: ""
-                        }
-                      })
-                    ])
-                  ]),
-                  _c("swiper-item", { attrs: { mpcomid: "6c0cc7f2-2" } }, [
-                    _c("view", { staticClass: "theAgent theAgenttwo" }, [
-                      _c("img", {
-                        attrs: {
-                          src: __webpack_require__(/*! ../../static/daili/theAgenttwo.png */ "../../../../webpack/theElectricity/static/daili/theAgenttwo.png"),
-                          alt: ""
-                        }
-                      })
-                    ])
-                  ]),
-                  _c("swiper-item", { attrs: { mpcomid: "6c0cc7f2-3" } }, [
-                    _c("view", { staticClass: "theAgent theAgentthree" }, [
-                      _c("img", {
-                        attrs: {
-                          src: __webpack_require__(/*! ../../static/daili/theAgentthree.png */ "../../../../webpack/theElectricity/static/daili/theAgentthree.png"),
-                          alt: ""
-                        }
-                      })
-                    ])
-                  ]),
-                  _c("swiper-item", { attrs: { mpcomid: "6c0cc7f2-4" } }, [
-                    _c("view", { staticClass: "theAgent theAgentfour" }, [
-                      _c("img", {
-                        attrs: {
-                          src: __webpack_require__(/*! ../../static/daili/theAgentfour.png */ "../../../../webpack/theElectricity/static/daili/theAgentfour.png"),
-                          alt: ""
-                        }
-                      })
-                    ])
-                  ])
-                ],
-                1
-              )
-            ],
-            1
-          )
+          _c("swiper-item", { attrs: { mpcomid: "6c0cc7f2-1" } }, [
+            _c("view", { staticClass: "theAgents theAgentone" }, [
+              _c("span", { staticClass: "spanone" }, [
+                _vm._v("猜猜你的月收入多少")
+              ]),
+              _c("img", {
+                attrs: {
+                  src: __webpack_require__(/*! ../../static/daili/theAgentone.png */ "../../../../webpack/theElectricity/static/daili/theAgentone.png"),
+                  alt: ""
+                }
+              })
+            ])
+          ]),
+          _c("swiper-item", { attrs: { mpcomid: "6c0cc7f2-2" } }, [
+            _c("view", { staticClass: "theAgents theAgenttwo" }, [
+              _c("span", [_vm._v("猜猜你的月收入多少")]),
+              _c("img", {
+                attrs: {
+                  src: __webpack_require__(/*! ../../static/daili/theAgenttwo.png */ "../../../../webpack/theElectricity/static/daili/theAgenttwo.png"),
+                  alt: ""
+                }
+              })
+            ])
+          ]),
+          _c("swiper-item", { attrs: { mpcomid: "6c0cc7f2-3" } }, [
+            _c("view", { staticClass: "theAgents theAgentthree" }, [
+              _c("span", [_vm._v("猜猜你的月收入多少")]),
+              _c("img", {
+                attrs: {
+                  src: __webpack_require__(/*! ../../static/daili/theAgentthree.png */ "../../../../webpack/theElectricity/static/daili/theAgentthree.png"),
+                  alt: ""
+                }
+              })
+            ])
+          ]),
+          _c("swiper-item", { attrs: { mpcomid: "6c0cc7f2-4" } }, [
+            _c("view", { staticClass: "theAgents theAgentfour" }, [
+              _c("span", [_vm._v("猜猜你的月收入多少")]),
+              _c("img", {
+                attrs: {
+                  src: __webpack_require__(/*! ../../static/daili/theAgentfour.png */ "../../../../webpack/theElectricity/static/daili/theAgentfour.png"),
+                  alt: ""
+                }
+              })
+            ])
+          ]),
+          _c("swiper-item", { attrs: { mpcomid: "6c0cc7f2-5" } }, [
+            _c("view", { staticClass: "theAgents theAgentfour" }, [
+              _c("span", [_vm._v("猜猜你的月收入多少")]),
+              _c("img", {
+                attrs: {
+                  src: __webpack_require__(/*! ../../static/daili/theAgentfive.png */ "../../../../webpack/theElectricity/static/daili/theAgentfive.png"),
+                  alt: ""
+                }
+              })
+            ])
+          ])
         ],
         1
       )

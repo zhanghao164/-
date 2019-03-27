@@ -1,12 +1,10 @@
 {
   "pages": [
+    "pages/wxLonig/wxLonig",
     "pages/near/near",
     "pages/near/list/list",
     "pages/mine/mineRightNav/mineRightNav",
     "pages/mine/ChargePalOutRemind/ChargePalOutRemind",
-    "pages/mine/leasePayElectrify/leasePayElectrify",
-    "pages/mine/leasePayBluetooth/leasePayBluetooth",
-    "pages/mine/leasePaySucced/leasePaySucced",
     "pages/mine/selectDuration/selectDuration",
     "pages/mine/amendMobileNew/amendMobileNew",
     "pages/mine/amendMobileFormer/amendMobileFormer",
@@ -20,7 +18,10 @@
     "pages/theAgent/theAgent",
     "pages/theLoan/theLoan",
     "pages/login/login",
-    "pages/near/movable/movable"
+    "pages/mine/connectGif/connectGif",
+    "pages/theLoan/theLoanOne/theLoanOne",
+    "pages/theLoan/theLoanTwo/theLoanTwo",
+    "pages/theLoan/theLoanThree/theLoanThree"
   ],
   "subPackages": [],
   "window": {

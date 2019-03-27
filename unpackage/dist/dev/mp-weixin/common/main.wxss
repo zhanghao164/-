@@ -13,7 +13,76 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*每个页面公共css */
+.masking {
+	position: absolute;
+	background: #000;
+	opacity: 0.1;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	    -ms-transform: translateY(-50%);
+	        transform: translateY(-50%);
+	border-radius: 97rpx;
+	width: 0;
+	height: 100%;
+	z-index: 99;
+}
+.maskingLeft {
+	right: 20%;
+}
+.maskingLeftShow {
+	-webkit-transition: all 0.3s;
+	-o-transition: all 0.3s;
+	transition: all 0.3s;
+	width: 780rpx;
+
+	right: -100rpx;
+	top: 0;
+	-webkit-transform: translateY(0);
+	    -ms-transform: translateY(0);
+	        transform: translateY(0);
+}
+.maskingRight {
+	left: 20%;
+}
+.maskingRightShow {
+	-webkit-transition: all 0.2s;
+	-o-transition: all 0.2s;
+	transition: all 0.2s;
+	width: 780rpx;
+	left: -100rpx;
+	top: 0;
+
+	-webkit-transform: translateY(0);
+
+	    -ms-transform: translateY(0);
+
+	        transform: translateY(0);
+}
 page {
 	background: #fff;
 }
@@ -407,7 +476,6 @@ template {
           box-sizing: border-box;
   font-size: 24rpx;
   font-family: PingFang-SC-Light;
-  font-weight: bold;
   color: #474747;
   width: 750rpx;
 }
@@ -424,6 +492,8 @@ template {
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
     padding: 37rpx 39rpx 0;
+    position: relative;
+    overflow: hidden;
 }
 .order-form-content .order-list view.data-v-37543a8b {
       display: -webkit-box;
@@ -438,7 +508,6 @@ template {
 .order-form-content .order-list .order-num.data-v-37543a8b {
       font-size: 20rpx;
       font-family: PingFang-SC-Light;
-      font-weight: bold;
 }
 .order-form-content .order-list .order-site.data-v-37543a8b {
       margin: 26rpx 0 28rpx 0;
@@ -472,12 +541,12 @@ template {
 /* 文章场景相关 */
 @font-face {
   font-family: 'iconfont';  /* project id 1077313 */
-  src: url('https://at.alicdn.com/t/font_1077313_cphg4fgnd3f.eot');
-  src: url('https://at.alicdn.com/t/font_1077313_cphg4fgnd3f.eot?#iefix') format('embedded-opentype'),
-  url('https://at.alicdn.com/t/font_1077313_cphg4fgnd3f.woff2') format('woff2'),
-  url('https://at.alicdn.com/t/font_1077313_cphg4fgnd3f.woff') format('woff'),
-  url('https://at.alicdn.com/t/font_1077313_cphg4fgnd3f.ttf') format('truetype'),
-  url('https://at.alicdn.com/t/font_1077313_cphg4fgnd3f.svg#iconfont') format('svg');
+  src: url('https://at.alicdn.com/t/font_1077313_d5nwzskdlee.eot');
+  src: url('https://at.alicdn.com/t/font_1077313_d5nwzskdlee.eot?#iefix') format('embedded-opentype'),
+  url('https://at.alicdn.com/t/font_1077313_d5nwzskdlee.woff2') format('woff2'),
+  url('https://at.alicdn.com/t/font_1077313_d5nwzskdlee.woff') format('woff'),
+  url('https://at.alicdn.com/t/font_1077313_d5nwzskdlee.ttf') format('truetype'),
+  url('https://at.alicdn.com/t/font_1077313_d5nwzskdlee.svg#iconfont') format('svg');
 }
 .iconfont.data-v-7558cffe {
 	font-family: "iconfont" !important;
@@ -519,6 +588,8 @@ template {
                 box-sizing: border-box;
         padding-right: 12rpx;
         color: #fff;
+        overflow: hidden;
+        position: relative;
 }
 .content scroll-view .valid .coupons .coupons-right.data-v-7558cffe {
           width: 60rpx;
@@ -526,7 +597,6 @@ template {
           float: right;
           font-size: 20rpx;
           font-family: PingFang-SC-Medium;
-          font-weight: bold;
           display: -webkit-box;
           display: -webkit-flex;
           display: -ms-flexbox;
@@ -616,7 +686,6 @@ template {
 .content scroll-view .valid .coupons .coupons-left text.data-v-7558cffe {
             font-size: 28rpx;
             font-family: PingFang-SC-Medium;
-            font-weight: bold;
 }
 .content scroll-view .valid .coupons .coupons-left text.data-v-7558cffe:last-child {
             font-size: 20rpx;
@@ -659,7 +728,6 @@ template {
       padding-left: 30rpx;
       font-size: 20rpx;
       font-family: PingFang-SC-Light;
-      font-weight: bold;
       color: #999999;
       text-align: center;
 }
@@ -670,14 +738,12 @@ template {
       border-radius: 30rpx;
       font-size: 28rpx;
       font-family: PingFang-SC-Medium;
-      font-weight: bold;
       color: #fff;
       text-align: center;
 }
 .content .expired.data-v-7558cffe {
     font-size: 24rpx;
     font-family: PingFang-SC-Medium;
-    font-weight: bold;
     color: #7185ea;
     position: absolute;
     top: 93%;
@@ -729,12 +795,12 @@ template {
 /* 文章场景相关 */
 @font-face {
   font-family: 'iconfont';  /* project id 1077313 */
-  src: url('https://at.alicdn.com/t/font_1077313_cphg4fgnd3f.eot');
-  src: url('https://at.alicdn.com/t/font_1077313_cphg4fgnd3f.eot?#iefix') format('embedded-opentype'),
-  url('https://at.alicdn.com/t/font_1077313_cphg4fgnd3f.woff2') format('woff2'),
-  url('https://at.alicdn.com/t/font_1077313_cphg4fgnd3f.woff') format('woff'),
-  url('https://at.alicdn.com/t/font_1077313_cphg4fgnd3f.ttf') format('truetype'),
-  url('https://at.alicdn.com/t/font_1077313_cphg4fgnd3f.svg#iconfont') format('svg');
+  src: url('https://at.alicdn.com/t/font_1077313_d5nwzskdlee.eot');
+  src: url('https://at.alicdn.com/t/font_1077313_d5nwzskdlee.eot?#iefix') format('embedded-opentype'),
+  url('https://at.alicdn.com/t/font_1077313_d5nwzskdlee.woff2') format('woff2'),
+  url('https://at.alicdn.com/t/font_1077313_d5nwzskdlee.woff') format('woff'),
+  url('https://at.alicdn.com/t/font_1077313_d5nwzskdlee.ttf') format('truetype'),
+  url('https://at.alicdn.com/t/font_1077313_d5nwzskdlee.svg#iconfont') format('svg');
 }
 .iconfont.data-v-045e995a {
 	font-family: "iconfont" !important;
@@ -757,7 +823,6 @@ template {
     position: relative;
     font-size: 26rpx;
     font-family: PingFang-SC-Light;
-    font-weight: bold;
     color: #474747;
     height: 94rpx;
     -webkit-transition: all 0.4s;
@@ -850,7 +915,6 @@ template {
 .content .bottom-btn text.data-v-045e995a {
       font-size: 24rpx;
       font-family: PingFang-SC-Light;
-      font-weight: bold;
       color: #999999;
 }
 .content .feedback-box.data-v-045e995a {
@@ -882,7 +946,6 @@ template {
               box-sizing: border-box;
       color: #999999;
       font-size: 24rpx;
-      font-weight: bold;
 }
 .content .feedback-box .feedback-redact ._textarea.data-v-045e995a {
       width: 480rpx;
@@ -920,7 +983,6 @@ template {
 .content .feedback-box .feedback-succed .text.data-v-045e995a {
         font-size: 30rpx;
         font-family: PingFang-SC-Light;
-        font-weight: bold;
         color: #666666;
         margin-top: 23rpx;
         text-align: center;
@@ -932,7 +994,6 @@ template {
 .content .feedback-box .feedback-succed .confirm-btn text.data-v-045e995a {
           font-size: 26rpx;
           font-family: PingFang-SC-Light;
-          font-weight: bold;
           color: #8066ff;
 }
 .content .feedbackBoxShow.data-v-045e995a {
@@ -987,12 +1048,12 @@ to {
 /* 文章场景相关 */
 @font-face {
   font-family: 'iconfont';  /* project id 1077313 */
-  src: url('https://at.alicdn.com/t/font_1077313_cphg4fgnd3f.eot');
-  src: url('https://at.alicdn.com/t/font_1077313_cphg4fgnd3f.eot?#iefix') format('embedded-opentype'),
-  url('https://at.alicdn.com/t/font_1077313_cphg4fgnd3f.woff2') format('woff2'),
-  url('https://at.alicdn.com/t/font_1077313_cphg4fgnd3f.woff') format('woff'),
-  url('https://at.alicdn.com/t/font_1077313_cphg4fgnd3f.ttf') format('truetype'),
-  url('https://at.alicdn.com/t/font_1077313_cphg4fgnd3f.svg#iconfont') format('svg');
+  src: url('https://at.alicdn.com/t/font_1077313_d5nwzskdlee.eot');
+  src: url('https://at.alicdn.com/t/font_1077313_d5nwzskdlee.eot?#iefix') format('embedded-opentype'),
+  url('https://at.alicdn.com/t/font_1077313_d5nwzskdlee.woff2') format('woff2'),
+  url('https://at.alicdn.com/t/font_1077313_d5nwzskdlee.woff') format('woff'),
+  url('https://at.alicdn.com/t/font_1077313_d5nwzskdlee.ttf') format('truetype'),
+  url('https://at.alicdn.com/t/font_1077313_d5nwzskdlee.svg#iconfont') format('svg');
 }
 .iconfont.data-v-3f31fffd {
 	font-family: "iconfont" !important;
@@ -1170,12 +1231,12 @@ to {
 /* 文章场景相关 */
 @font-face {
   font-family: 'iconfont';  /* project id 1077313 */
-  src: url('https://at.alicdn.com/t/font_1077313_cphg4fgnd3f.eot');
-  src: url('https://at.alicdn.com/t/font_1077313_cphg4fgnd3f.eot?#iefix') format('embedded-opentype'),
-  url('https://at.alicdn.com/t/font_1077313_cphg4fgnd3f.woff2') format('woff2'),
-  url('https://at.alicdn.com/t/font_1077313_cphg4fgnd3f.woff') format('woff'),
-  url('https://at.alicdn.com/t/font_1077313_cphg4fgnd3f.ttf') format('truetype'),
-  url('https://at.alicdn.com/t/font_1077313_cphg4fgnd3f.svg#iconfont') format('svg');
+  src: url('https://at.alicdn.com/t/font_1077313_d5nwzskdlee.eot');
+  src: url('https://at.alicdn.com/t/font_1077313_d5nwzskdlee.eot?#iefix') format('embedded-opentype'),
+  url('https://at.alicdn.com/t/font_1077313_d5nwzskdlee.woff2') format('woff2'),
+  url('https://at.alicdn.com/t/font_1077313_d5nwzskdlee.woff') format('woff'),
+  url('https://at.alicdn.com/t/font_1077313_d5nwzskdlee.ttf') format('truetype'),
+  url('https://at.alicdn.com/t/font_1077313_d5nwzskdlee.svg#iconfont') format('svg');
 }
 .iconfont.data-v-26476136 {
 	font-family: "iconfont" !important;
@@ -1196,10 +1257,10 @@ page.data-v-26476136 {
 }
 .content.data-v-26476136 {
   position: relative;
-  width: 582rpx;
+  width: 630rpx;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  padding: 78rpx 0 0 48rpx;
+  padding: 78rpx  48rpx 0;
 }
 .drawingsMask.data-v-26476136 {
   display: none;
@@ -1338,7 +1399,6 @@ page.data-v-26476136 {
           align-items: center;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  padding-left: 95rpx;
 }
 .user-mobile text.data-v-26476136 {
     font-family: PingFang-SC-Medium;

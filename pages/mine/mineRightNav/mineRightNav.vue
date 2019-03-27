@@ -1,5 +1,6 @@
 <template>
 	<view class="mine-box">
+
 		<view v-if="showComponente[0].isShow"><order-form></order-form></view>
 
 		<view v-else-if="showComponente[1].isShow"><coupons></coupons></view>
@@ -9,9 +10,9 @@
 		<view v-else-if="showComponente[3].isShow"><about-us></about-us></view>
 
 		<view v-else><mine-index></mine-index></view>
-		
+
 		<view class="right-mask">
-			<view class="logOut"><text>登出</text></view>
+			<view class="logOut"><text  v-if="false" >登出</text></view>
 
 			<view class="mask">
 				<view
@@ -27,8 +28,10 @@
 					<view class="sub-user-info" @tap="hideUserIcon(5)">
 						<view
 							:class="{ icon: navIndex < 5 && navIndex >= 0, leftShift: userIconPop }"
+							:style="{ background: 'url(' + userIcon + ') center center / 100% 100% ' }"
 							@tap="userIconleftShift"
-						></view>
+						>
+						</view>
 					</view>
 				</view>
 				<view
@@ -116,7 +119,8 @@ export default {
 					isShow: false,
 					id: 4
 				}
-			]
+			],
+			userIcon: '',
 		};
 	},
 	methods: {
@@ -148,21 +152,26 @@ export default {
 		},
 		userIconleftShift() {
 			this.userIconPop = true;
-		}
+		},
 	},
 	onLoad() {
 		this.userIconPop = true;
-		// 		uni.showLoading({
-		// 			title: '加载中'
-		// 		});
-		//
-		// 		setTimeout(function() {
-		// 			uni.hideLoading();
-		// 		}, 500);
+		
+		const userInfo = uni.getStorageSync('userInfo');
+
+		if (userInfo.avatarUrl) {
+			this.userIcon = userInfo.avatarUrl;
+		}
 	}
 };
 </script>
 <style lang="scss" scoped>
+button {
+	position: fixed;
+	top: 30upx;
+	left: 0;
+	z-index: 1000;
+}
 body {
 	background: #fff;
 }
@@ -170,7 +179,6 @@ body {
 
 .mine-box {
 	position: relative;
-	
 }
 .right-mask {
 	position: fixed;
@@ -202,14 +210,16 @@ body {
 				position: absolute;
 				top: 0;
 				width: 100%;
-				background: #7185ea;
+				background: #ccc;
+
 				border-radius: 0px 0px 0px 40upx;
 
 				view {
 					// display: none;
 					// 					width: 75upx;
 					// 					height: 75upx;
-					background: #fff;
+					background-color: #fff;
+					
 					border-radius: 50%;
 					// margin: 140upx auto 0;
 					position: absolute;
@@ -217,15 +227,20 @@ body {
 					top: 0;
 					left: 50%;
 					transform: translateX(-50%);
+// 					background-size: 100% 100%;
+					// background-position: ;
+
+					
 				}
 				.icon {
 					// display: block;
 					width: 75upx;
 					height: 75upx;
 					top: 140upx;
+					
 				}
 				.leftShift {
-					transform: scale(2.2) translate(-166upx, 55upx);
+					transform: scale(2.2) translate(-186upx, 55upx);
 					width: 75upx;
 					height: 75upx;
 					background: red;
@@ -311,7 +326,6 @@ body {
 		position: fixed;
 		font-size: 26upx;
 		font-family: PingFang-SC-Light;
-		font-weight: bold;
 		color: #fefefe;
 		top: 940upx;
 		background: #7185ea;

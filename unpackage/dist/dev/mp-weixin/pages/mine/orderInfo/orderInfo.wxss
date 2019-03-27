@@ -26,12 +26,12 @@
 /* 文章场景相关 */
 @font-face {
   font-family: 'iconfont';  /* project id 1077313 */
-  src: url('https://at.alicdn.com/t/font_1077313_cphg4fgnd3f.eot');
-  src: url('https://at.alicdn.com/t/font_1077313_cphg4fgnd3f.eot?#iefix') format('embedded-opentype'),
-  url('https://at.alicdn.com/t/font_1077313_cphg4fgnd3f.woff2') format('woff2'),
-  url('https://at.alicdn.com/t/font_1077313_cphg4fgnd3f.woff') format('woff'),
-  url('https://at.alicdn.com/t/font_1077313_cphg4fgnd3f.ttf') format('truetype'),
-  url('https://at.alicdn.com/t/font_1077313_cphg4fgnd3f.svg#iconfont') format('svg');
+  src: url('https://at.alicdn.com/t/font_1077313_d5nwzskdlee.eot');
+  src: url('https://at.alicdn.com/t/font_1077313_d5nwzskdlee.eot?#iefix') format('embedded-opentype'),
+  url('https://at.alicdn.com/t/font_1077313_d5nwzskdlee.woff2') format('woff2'),
+  url('https://at.alicdn.com/t/font_1077313_d5nwzskdlee.woff') format('woff'),
+  url('https://at.alicdn.com/t/font_1077313_d5nwzskdlee.ttf') format('truetype'),
+  url('https://at.alicdn.com/t/font_1077313_d5nwzskdlee.svg#iconfont') format('svg');
 }
 .iconfont {
 	font-family: "iconfont" !important;
@@ -47,7 +47,7 @@
 	content: "\E604";
 }
 page {
-  background: #F4F6FB;
+  background: #f4f6fb;
 }
 .order-content {
   width: 100%;
@@ -58,7 +58,6 @@ page {
 .order-content .orderNumber {
     font-size: 30rpx;
     font-family: PingFang-SC-Light;
-    font-weight: bold;
     color: #474747;
     display: -webkit-box;
     display: -webkit-flex;
@@ -76,7 +75,7 @@ page {
 }
 .order-content .orderNumber text:nth-child(2) {
       font-size: 24rpx;
-      color: #7185EA;
+      color: #7185ea;
 }
 .order-content .use-info {
     width: 654rpx;
@@ -86,10 +85,9 @@ page {
             box-sizing: border-box;
     font-size: 24rpx;
     font-family: PingFang-SC-Light;
-    font-weight: bold;
     color: #474747;
     margin-bottom: 32rpx;
-    background: #FFFFFF;
+    background: #ffffff;
     -webkit-box-shadow: 0px 10rpx 20rpx 0px rgba(146, 151, 183, 0.77);
             box-shadow: 0px 10rpx 20rpx 0px rgba(146, 151, 183, 0.77);
 }
@@ -127,7 +125,7 @@ page {
       line-height: 46rpx;
 }
 .order-content .use-info .tips2 {
-      line-height: 36rpx;
+      line-height: 48rpx;
       display: -webkit-box;
       display: -webkit-flex;
       display: -ms-flexbox;

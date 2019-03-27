@@ -159,26 +159,32 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
+  return _c("view", { staticClass: "content" }, [
+    _vm._m(0),
+    _c("view", { staticClass: "pay-btn" }, [_vm._v("立即支付")]),
+    _c(
+      "view",
+      { staticClass: "tips" },
+      [
+        _vm._v("资费标准：1小时/1元、2小时/2元、3小时/3元，选择"),
+        _c("br"),
+        _vm._v("充电时长即扣去相应时长资费，超过时长将自动 扣费，"),
+        _c("br"),
+        _vm._v("使用完成请立即归还。")
+      ],
+      1
+    )
+  ])
 }
 var staticRenderFns = [
   function() {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("view", { staticClass: "content" }, [
-      _c("view", { staticClass: "title" }, [_vm._v("选择时长")]),
-      _c("view", { staticClass: "select-time" }, [
-        _c("text", [_vm._v("一小时/1元")]),
-        _c("text", { staticClass: "bg-color" }, [_vm._v("五小时/5元")]),
-        _c("text", [_vm._v("十二小时/12元")])
-      ]),
-      _c("view", { staticClass: "pay-btn" }, [_vm._v("立即支付")]),
-      _c("view", { staticClass: "tips" }, [
-        _vm._v(
-          "资费标准：1小时/1元、2小时/2元、3小时/3元，选择\n充电时长即扣去相应时长资费，使用完成请立即归还。"
-        )
-      ])
+    return _c("view", { staticClass: "select-time" }, [
+      _c("text", { staticClass: "bg-color" }, [_vm._v("一小时｜1元")]),
+      _c("text", [_vm._v("五小时｜5元")]),
+      _c("text", [_vm._v("十二小｜12元")])
     ])
   }
 ]

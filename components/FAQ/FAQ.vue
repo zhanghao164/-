@@ -144,7 +144,6 @@ export default {
 		position: relative;
 		font-size: 26upx;
 		font-family: PingFang-SC-Light;
-		font-weight: bold;
 		color: rgba(71, 71, 71, 1);
 		height: 94upx;
 		transition: all 0.4s;
@@ -224,7 +223,6 @@ export default {
 		text {
 			font-size: 24upx;
 			font-family: PingFang-SC-Light;
-			font-weight: bold;
 			color: rgba(153, 153, 153, 1);
 		}
 	}
@@ -253,7 +251,6 @@ export default {
 			box-sizing: border-box;
 			color: rgba(153, 153, 153, 1);
 			font-size: 24upx;
-			font-weight: bold;
 		}
 		.feedback-redact {
 			textarea {
@@ -292,7 +289,6 @@ export default {
 			.text {
 				font-size: 30upx;
 				font-family: PingFang-SC-Light;
-				font-weight: bold;
 				color: rgba(102, 102, 102, 1);
 				margin-top: 23upx;
 				text-align: center;
@@ -303,7 +299,6 @@ export default {
 				text {
 					font-size: 26upx;
 					font-family: PingFang-SC-Light;
-					font-weight: bold;
 					color: rgba(128, 102, 255, 1);
 				}
 			}

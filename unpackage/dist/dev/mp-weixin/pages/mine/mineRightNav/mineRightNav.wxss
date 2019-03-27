@@ -26,12 +26,12 @@
 /* 文章场景相关 */
 @font-face {
   font-family: 'iconfont';  /* project id 1077313 */
-  src: url('https://at.alicdn.com/t/font_1077313_cphg4fgnd3f.eot');
-  src: url('https://at.alicdn.com/t/font_1077313_cphg4fgnd3f.eot?#iefix') format('embedded-opentype'),
-  url('https://at.alicdn.com/t/font_1077313_cphg4fgnd3f.woff2') format('woff2'),
-  url('https://at.alicdn.com/t/font_1077313_cphg4fgnd3f.woff') format('woff'),
-  url('https://at.alicdn.com/t/font_1077313_cphg4fgnd3f.ttf') format('truetype'),
-  url('https://at.alicdn.com/t/font_1077313_cphg4fgnd3f.svg#iconfont') format('svg');
+  src: url('https://at.alicdn.com/t/font_1077313_d5nwzskdlee.eot');
+  src: url('https://at.alicdn.com/t/font_1077313_d5nwzskdlee.eot?#iefix') format('embedded-opentype'),
+  url('https://at.alicdn.com/t/font_1077313_d5nwzskdlee.woff2') format('woff2'),
+  url('https://at.alicdn.com/t/font_1077313_d5nwzskdlee.woff') format('woff'),
+  url('https://at.alicdn.com/t/font_1077313_d5nwzskdlee.ttf') format('truetype'),
+  url('https://at.alicdn.com/t/font_1077313_d5nwzskdlee.svg#iconfont') format('svg');
 }
 .iconfont.data-v-28dbcde6 {
 	font-family: "iconfont" !important;
@@ -45,6 +45,12 @@
 }
 .icon-cuo.data-v-28dbcde6:before {
 	content: "\E604";
+}
+._button.data-v-28dbcde6 {
+  position: fixed;
+  top: 30rpx;
+  left: 0;
+  z-index: 1000;
 }
 page.data-v-28dbcde6 {
   background: #fff;
@@ -84,11 +90,11 @@ page.data-v-28dbcde6 {
         position: absolute;
         top: 0;
         width: 100%;
-        background: #7185ea;
+        background: #ccc;
         border-radius: 0px 0px 0px 40rpx;
 }
 .right-mask .mask .top .sub-user-info view.data-v-28dbcde6 {
-          background: #fff;
+          background-color: #fff;
           border-radius: 50%;
           position: absolute;
           -webkit-transition: all 0.5s;
@@ -106,9 +112,9 @@ page.data-v-28dbcde6 {
           top: 140rpx;
 }
 .right-mask .mask .top .sub-user-info .leftShift.data-v-28dbcde6 {
-          -webkit-transform: scale(2.2) translate(-166rpx, 55rpx);
-              -ms-transform: scale(2.2) translate(-166rpx, 55rpx);
-                  transform: scale(2.2) translate(-166rpx, 55rpx);
+          -webkit-transform: scale(2.2) translate(-186rpx, 55rpx);
+              -ms-transform: scale(2.2) translate(-186rpx, 55rpx);
+                  transform: scale(2.2) translate(-186rpx, 55rpx);
           width: 75rpx;
           height: 75rpx;
           background: red;
@@ -207,7 +213,6 @@ page.data-v-28dbcde6 {
     position: fixed;
     font-size: 26rpx;
     font-family: PingFang-SC-Light;
-    font-weight: bold;
     color: #fefefe;
     top: 940rpx;
     background: #7185ea;

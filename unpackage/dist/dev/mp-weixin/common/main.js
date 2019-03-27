@@ -647,10 +647,34 @@ store;exports.default = _default;
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _default =
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _default =
 {
-  onLaunch: function onLaunch() {
-    console.log('App Launch');
+  onLaunch: function onLaunch() {var _this = this;
+    wx.getSetting({
+      success: function success(res) {
+        if (res.authSetting['scope.userInfo']) {
+          // 已经授权，可以直接调用 getUserInfo 获取头像昵称，不会弹框
+
+          // console.log(1)
+          wx.getUserInfo({
+            success: function success(res) {
+              // console.log(res.userInfo);
+              // 可以将 res 发送给后台解码出 unionId
+              var userInfo = res.userInfo;
+              uni.setStorageSync('userInfo', userInfo);
+              // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
+              // 所以此处加入 callback 以防止这种情况
+              if (_this.userInfoReadyCallback) {
+                _this.userInfoReadyCallback(res);
+              }
+            } });
+
+          uni.reLaunch({
+            url: '/pages/near/near' });
+
+        }
+      } });
+
   },
   onShow: function onShow() {
     console.log('App Show');
@@ -658,6 +682,7 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
   onHide: function onHide() {
     console.log('App Hide');
   } };exports.default = _default;
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ "./node_modules/@dcloudio/uni-mp-weixin/dist/index.js")["default"]))
 
 /***/ }),
 
@@ -971,195 +996,47 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 {
   data: function data() {
     return {
-      toggleText: '查看已失效' };
+      toggleText: '查看已失效',
+      items: [
+      {
+        id: 0,
+        popMasking: -1 },
+
+      {
+        id: 1,
+        popMasking: -1 },
+
+      {
+        id: 2,
+        popMasking: -1 },
+
+      {
+        id: 3,
+        popMasking: -1 },
+
+      {
+        id: 4,
+        popMasking: -1 },
+
+      {
+        id: 5,
+        popMasking: -1 },
+
+      {
+        id: 6,
+        popMasking: -1 },
+
+      {
+        id: 7,
+        popMasking: -1 }] };
+
+
 
   },
   onLoad: function onLoad() {
-
     console.log(this.toggleText);
     // 		uni.showLoading({
     // 			title: '加载中'
@@ -1180,6 +1057,20 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
       }
 
       console.log(this.toggleText);
+    },
+    toOrderInfo: function toOrderInfo(e, idx) {var _this = this;
+      // windowHeight = (res.windowHeight * (750 / res.windowWidth));
+      var clientX = e.clientX;
+
+      if (clientX > 167) {
+        this.items[idx].popMasking = 1;
+      } else {
+        this.items[idx].popMasking = 0;
+      }
+
+      setTimeout(function () {
+        _this.items[idx].popMasking = -1;
+      }, 300);
     } } };exports.default = _default;
 
 /***/ }),
@@ -1285,7 +1176,7 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
   data: function data() {
     return {
       showMask: false,
-      userName: '输入手机',
+      userName: '',
       extractSucceed: false //  判断用户是否  用户是否需要提现
     };
   },
@@ -1323,10 +1214,7 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
     } },
 
   onShow: function onShow() {
-    if (uni.getStorageSync('userMobile')) {
-      //到本地  取出用户昵称
-      this.userName = uni.getStorageSync('userMobile');
-    }
+
 
     // 隐藏遮罩层
     this.showMask = false;
@@ -1339,6 +1227,14 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
     // 		setTimeout(function() {
     // 			uni.hideLoading();
     // 		}, 500);
+
+    var userInfo = uni.getStorageSync('userInfo');
+
+    if (userInfo.nickName) {
+      this.userName = userInfo.nickName;
+    }
+
+
   } };exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ "./node_modules/@dcloudio/uni-mp-weixin/dist/index.js")["default"]))
 
@@ -1352,63 +1248,7 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _default =
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _default =
 
 
 
@@ -1442,16 +1282,84 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 
 
 {
+  data: function data() {
+    return {
+      maskingDirection: -1, // 判断 蒙版  移动方向
+      items: [
+      {
+        id: 0,
+        popMasking: -1 },
 
+      {
+        id: 1,
+        popMasking: -1 },
+
+      {
+        id: 2,
+        popMasking: -1 },
+
+      {
+        id: 3,
+        popMasking: -1 },
+
+      {
+        id: 4,
+        popMasking: -1 },
+
+      {
+        id: 5,
+        popMasking: -1 },
+
+      {
+        id: 6,
+        popMasking: -1 },
+
+      {
+        id: 7,
+        popMasking: -1 }] };
+
+
+
+  },
   onLoad: function onLoad() {
     // 		uni.showLoading({
     // 			title: '加载中'
     // 		});
-    // 	
+    //
     // 		setTimeout(function() {
     // 			uni.hideLoading();
     // 		}, 2000);
+  },
+  methods: {
+    toOrderInfo: function toOrderInfo(e, idx) {
+      // windowHeight = (res.windowHeight * (750 / res.windowWidth));
+      var clientX = e.clientX;
+
+      if (clientX > 167) {
+        this.items[idx].popMasking = 1;
+      } else {
+        this.items[idx].popMasking = 0;
+      }
+      console.log(0);
+      setTimeout(function () {
+        uni.navigateTo(
+        {
+          url: '/pages/mine/orderInfo/orderInfo' });
+
+
+
+      }, 200);
+
+
+      console.log(1);
+    } },
+
+  onShow: function onShow() {
+    this.items.forEach(function (v) {
+      v.popMasking = -1;
+    });
   } };exports.default = _default;
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ "./node_modules/@dcloudio/uni-mp-weixin/dist/index.js")["default"]))
 
 /***/ }),
 
@@ -1782,310 +1690,105 @@ var render = function() {
               value: "",
               placeholder: "输入兑换码",
               "placeholder-style":
-                "font-size:20upx;font-family:PingFang-SC-Light;font-weight:bold;color:#999999;"
+                "font-size:20upx;font-family:PingFang-SC-Light;color:#999999;"
             }
           }),
           _c("text", [_vm._v("兑换")])
         ]),
         _vm.toggleText == "查看已失效"
-          ? _c("view", { staticClass: "valid" }, [
-              _c("view", { staticClass: "coupons" }, [
-                _c("view", { staticClass: "coupons-right" }, [
-                  _vm._v("立即使用")
-                ]),
-                _c("view", { staticClass: "coupons-left" }, [
-                  _c("view", { staticClass: "tips" }, [
-                    _c("text", { staticClass: "top" }),
-                    _c("text", { staticClass: "bottom" })
-                  ]),
-                  _c("text", [_vm._v("3元通用代金券")]),
-                  _c("text", { staticClass: "fontWeight" }, [
-                    _vm._v("截止日期2019.9.23")
-                  ])
-                ])
-              ]),
-              _c("view", { staticClass: "coupons" }, [
-                _c("view", { staticClass: "coupons-right" }, [
-                  _vm._v("立即使用")
-                ]),
-                _c("view", { staticClass: "coupons-left" }, [
-                  _c("view", { staticClass: "tips" }, [
-                    _c("text", { staticClass: "top" }),
-                    _c("text", { staticClass: "bottom" })
-                  ]),
-                  _c("text", [_vm._v("3元通用代金券")]),
-                  _c("text", { staticClass: "fontWeight" }, [
-                    _vm._v("截止日期2019.9.23")
-                  ])
-                ])
-              ]),
-              _c("view", { staticClass: "coupons" }, [
-                _c("view", { staticClass: "coupons-right" }, [
-                  _vm._v("立即使用")
-                ]),
-                _c("view", { staticClass: "coupons-left" }, [
-                  _c("view", { staticClass: "tips" }, [
-                    _c("text", { staticClass: "top" }),
-                    _c("text", { staticClass: "bottom" })
-                  ]),
-                  _c("text", [_vm._v("3元通用代金券")]),
-                  _c("text", { staticClass: "fontWeight" }, [
-                    _vm._v("截止日期2019.9.23")
-                  ])
-                ])
-              ]),
-              _c("view", { staticClass: "coupons" }, [
-                _c("view", { staticClass: "coupons-right" }, [
-                  _vm._v("立即使用")
-                ]),
-                _c("view", { staticClass: "coupons-left" }, [
-                  _c("view", { staticClass: "tips" }, [
-                    _c("text", { staticClass: "top" }),
-                    _c("text", { staticClass: "bottom" })
-                  ]),
-                  _c("text", [_vm._v("3元通用代金券")]),
-                  _c("text", { staticClass: "fontWeight" }, [
-                    _vm._v("截止日期2019.9.23")
-                  ])
-                ])
-              ]),
-              _c("view", { staticClass: "coupons" }, [
-                _c("view", { staticClass: "coupons-right" }, [
-                  _vm._v("立即使用")
-                ]),
-                _c("view", { staticClass: "coupons-left" }, [
-                  _c("view", { staticClass: "tips" }, [
-                    _c("text", { staticClass: "top" }),
-                    _c("text", { staticClass: "bottom" })
-                  ]),
-                  _c("text", [_vm._v("3元通用代金券")]),
-                  _c("text", { staticClass: "fontWeight" }, [
-                    _vm._v("截止日期2019.9.23")
-                  ])
-                ])
-              ]),
-              _c("view", { staticClass: "coupons" }, [
-                _c("view", { staticClass: "coupons-right" }, [
-                  _vm._v("立即使用")
-                ]),
-                _c("view", { staticClass: "coupons-left" }, [
-                  _c("view", { staticClass: "tips" }, [
-                    _c("text", { staticClass: "top" }),
-                    _c("text", { staticClass: "bottom" })
-                  ]),
-                  _c("text", [_vm._v("3元通用代金券")]),
-                  _c("text", { staticClass: "fontWeight" }, [
-                    _vm._v("截止日期2019.9.23")
-                  ])
-                ])
-              ]),
-              _c("view", { staticClass: "coupons" }, [
-                _c("view", { staticClass: "coupons-right" }, [
-                  _vm._v("立即使用")
-                ]),
-                _c("view", { staticClass: "coupons-left" }, [
-                  _c("view", { staticClass: "tips" }, [
-                    _c("text", { staticClass: "top" }),
-                    _c("text", { staticClass: "bottom" })
-                  ]),
-                  _c("text", [_vm._v("3元通用代金券")]),
-                  _c("text", { staticClass: "fontWeight" }, [
-                    _vm._v("截止日期2019.9.23")
-                  ])
-                ])
-              ]),
-              _c("view", { staticClass: "coupons" }, [
-                _c("view", { staticClass: "coupons-right" }, [
-                  _vm._v("立即使用")
-                ]),
-                _c("view", { staticClass: "coupons-left" }, [
-                  _c("view", { staticClass: "tips" }, [
-                    _c("text", { staticClass: "top" }),
-                    _c("text", { staticClass: "bottom" })
-                  ]),
-                  _c("text", [_vm._v("3元通用代金券")]),
-                  _c("text", { staticClass: "fontWeight" }, [
-                    _vm._v("截止日期2019.9.23")
-                  ])
-                ])
-              ]),
-              _c("view", { staticClass: "coupons" }, [
-                _c("view", { staticClass: "coupons-right" }, [
-                  _vm._v("立即使用")
-                ]),
-                _c("view", { staticClass: "coupons-left" }, [
-                  _c("view", { staticClass: "tips" }, [
-                    _c("text", { staticClass: "top" }),
-                    _c("text", { staticClass: "bottom" })
-                  ]),
-                  _c("text", [_vm._v("3元通用代金券")]),
-                  _c("text", { staticClass: "fontWeight" }, [
-                    _vm._v("截止日期2019.9.23")
-                  ])
-                ])
-              ]),
-              _c("view", { staticClass: "coupons" }, [
-                _c("view", { staticClass: "coupons-right" }, [
-                  _vm._v("立即使用")
-                ]),
-                _c("view", { staticClass: "coupons-left" }, [
-                  _c("view", { staticClass: "tips" }, [
-                    _c("text", { staticClass: "top" }),
-                    _c("text", { staticClass: "bottom" })
-                  ]),
-                  _c("text", [_vm._v("3元通用代金券")]),
-                  _c("text", { staticClass: "fontWeight" }, [
-                    _vm._v("截止日期2019.9.23")
-                  ])
-                ])
-              ])
-            ])
+          ? _c(
+              "view",
+              { staticClass: "valid" },
+              _vm._l(_vm.items, function(item, i) {
+                return _c(
+                  "view",
+                  {
+                    key: item.id,
+                    staticClass: "coupons",
+                    attrs: { eventid: "38c82c84-0-" + i },
+                    on: {
+                      tap: function($event) {
+                        _vm.toOrderInfo($event, i)
+                      }
+                    }
+                  },
+                  [
+                    _c("view", { staticClass: "coupons-right" }, [
+                      _vm._v("立即使用")
+                    ]),
+                    _c("view", { staticClass: "coupons-left" }, [
+                      _c("view", { staticClass: "tips" }, [
+                        _c("text", { staticClass: "top" }),
+                        _c("text", { staticClass: "bottom" })
+                      ]),
+                      _c("text", [_vm._v("3元通用代金券")]),
+                      _c("text", { staticClass: "fontWeight" }, [
+                        _vm._v("截止日期2019.9.23")
+                      ])
+                    ]),
+                    _c("view", {
+                      staticClass: "maskingRight masking",
+                      class: { maskingRightShow: _vm.items[i].popMasking == 0 }
+                    }),
+                    _c("view", {
+                      staticClass: "maskingLeft masking",
+                      class: { maskingLeftShow: _vm.items[i].popMasking == 1 }
+                    })
+                  ]
+                )
+              })
+            )
           : _vm._e(),
         _vm.toggleText == "查看可使用"
-          ? _c("view", { staticClass: "valid past-due" }, [
-              _c("view", { staticClass: "coupons" }, [
-                _c("view", { staticClass: "coupons-right" }, [
-                  _vm._v("已失效")
-                ]),
-                _c("view", { staticClass: "coupons-left" }, [
-                  _c("view", { staticClass: "tips" }, [
-                    _c("text", { staticClass: "top" }),
-                    _c("text", { staticClass: "bottom" })
-                  ]),
-                  _c("text", [_vm._v("3元通用代金券")]),
-                  _c("text", { staticClass: "fontWeight" }, [
-                    _vm._v("失效原因：过期未使用")
-                  ])
-                ])
-              ]),
-              _c("view", { staticClass: "coupons" }, [
-                _c("view", { staticClass: "coupons-right" }, [
-                  _vm._v("已失效")
-                ]),
-                _c("view", { staticClass: "coupons-left" }, [
-                  _c("view", { staticClass: "tips" }, [
-                    _c("text", { staticClass: "top" }),
-                    _c("text", { staticClass: "bottom" })
-                  ]),
-                  _c("text", [_vm._v("3元通用代金券")]),
-                  _c("text", { staticClass: "fontWeight" }, [
-                    _vm._v("失效原因：过期未使用")
-                  ])
-                ])
-              ]),
-              _c("view", { staticClass: "coupons" }, [
-                _c("view", { staticClass: "coupons-right" }, [
-                  _vm._v("已失效")
-                ]),
-                _c("view", { staticClass: "coupons-left" }, [
-                  _c("view", { staticClass: "tips" }, [
-                    _c("text", { staticClass: "top" }),
-                    _c("text", { staticClass: "bottom" })
-                  ]),
-                  _c("text", [_vm._v("3元通用代金券")]),
-                  _c("text", { staticClass: "fontWeight" }, [
-                    _vm._v("失效原因：过期未使用")
-                  ])
-                ])
-              ]),
-              _c("view", { staticClass: "coupons" }, [
-                _c("view", { staticClass: "coupons-right" }, [
-                  _vm._v("已失效")
-                ]),
-                _c("view", { staticClass: "coupons-left" }, [
-                  _c("view", { staticClass: "tips" }, [
-                    _c("text", { staticClass: "top" }),
-                    _c("text", { staticClass: "bottom" })
-                  ]),
-                  _c("text", [_vm._v("3元通用代金券")]),
-                  _c("text", { staticClass: "fontWeight" }, [
-                    _vm._v("失效原因：过期未使用")
-                  ])
-                ])
-              ]),
-              _c("view", { staticClass: "coupons" }, [
-                _c("view", { staticClass: "coupons-right" }, [
-                  _vm._v("已失效")
-                ]),
-                _c("view", { staticClass: "coupons-left" }, [
-                  _c("view", { staticClass: "tips" }, [
-                    _c("text", { staticClass: "top" }),
-                    _c("text", { staticClass: "bottom" })
-                  ]),
-                  _c("text", [_vm._v("3元通用代金券")]),
-                  _c("text", { staticClass: "fontWeight" }, [
-                    _vm._v("失效原因：过期未使用")
-                  ])
-                ])
-              ]),
-              _c("view", { staticClass: "coupons" }, [
-                _c("view", { staticClass: "coupons-right" }, [
-                  _vm._v("已失效")
-                ]),
-                _c("view", { staticClass: "coupons-left" }, [
-                  _c("view", { staticClass: "tips" }, [
-                    _c("text", { staticClass: "top" }),
-                    _c("text", { staticClass: "bottom" })
-                  ]),
-                  _c("text", [_vm._v("3元通用代金券")]),
-                  _c("text", { staticClass: "fontWeight" }, [
-                    _vm._v("失效原因：过期未使用")
-                  ])
-                ])
-              ]),
-              _c("view", { staticClass: "coupons" }, [
-                _c("view", { staticClass: "coupons-right" }, [
-                  _vm._v("已失效")
-                ]),
-                _c("view", { staticClass: "coupons-left" }, [
-                  _c("view", { staticClass: "tips" }, [
-                    _c("text", { staticClass: "top" }),
-                    _c("text", { staticClass: "bottom" })
-                  ]),
-                  _c("text", [_vm._v("3元通用代金券")]),
-                  _c("text", { staticClass: "fontWeight" }, [
-                    _vm._v("失效原因：过期未使用")
-                  ])
-                ])
-              ]),
-              _c("view", { staticClass: "coupons" }, [
-                _c("view", { staticClass: "coupons-right" }, [
-                  _vm._v("已失效")
-                ]),
-                _c("view", { staticClass: "coupons-left" }, [
-                  _c("view", { staticClass: "tips" }, [
-                    _c("text", { staticClass: "top" }),
-                    _c("text", { staticClass: "bottom" })
-                  ]),
-                  _c("text", [_vm._v("3元通用代金券")]),
-                  _c("text", { staticClass: "fontWeight" }, [
-                    _vm._v("失效原因：过期未使用")
-                  ])
-                ])
-              ]),
-              _c("view", { staticClass: "coupons" }, [
-                _c("view", { staticClass: "coupons-right" }, [
-                  _vm._v("已失效")
-                ]),
-                _c("view", { staticClass: "coupons-left" }, [
-                  _c("view", { staticClass: "tips" }, [
-                    _c("text", { staticClass: "top" }),
-                    _c("text", { staticClass: "bottom" })
-                  ]),
-                  _c("text", [_vm._v("3元通用代金券")]),
-                  _c("text", { staticClass: "fontWeight" }, [
-                    _vm._v("失效原因：过期未使用")
-                  ])
-                ])
-              ])
-            ])
+          ? _c(
+              "view",
+              { staticClass: "valid past-due" },
+              _vm._l(_vm.items, function(item, i) {
+                return _c(
+                  "view",
+                  {
+                    key: item.id,
+                    staticClass: "coupons",
+                    attrs: { eventid: "38c82c84-1-" + i },
+                    on: {
+                      tap: function($event) {
+                        _vm.toOrderInfo($event, i)
+                      }
+                    }
+                  },
+                  [
+                    _c("view", { staticClass: "coupons-right" }, [
+                      _vm._v("已失效")
+                    ]),
+                    _c("view", { staticClass: "coupons-left" }, [
+                      _c("view", { staticClass: "tips" }, [
+                        _c("text", { staticClass: "top" }),
+                        _c("text", { staticClass: "bottom" })
+                      ]),
+                      _c("text", [_vm._v("3元通用代金券")]),
+                      _c("text", { staticClass: "fontWeight" }, [
+                        _vm._v("失效原因：过期未使用")
+                      ])
+                    ]),
+                    _c("view", {
+                      staticClass: "maskingRight masking",
+                      class: { maskingRightShow: _vm.items[i].popMasking == 0 }
+                    }),
+                    _c("view", {
+                      staticClass: "maskingLeft masking",
+                      class: { maskingLeftShow: _vm.items[i].popMasking == 1 }
+                    })
+                  ]
+                )
+              })
+            )
           : _vm._e()
       ]),
       _c(
         "view",
         {
           staticClass: "expired",
-          attrs: { eventid: "38c82c84-0" },
+          attrs: { eventid: "38c82c84-2" },
           on: { tap: _vm.toggleExpired }
         },
         [
@@ -2316,150 +2019,65 @@ var render = function() {
   return _c(
     "view",
     { staticClass: "order-form-content" },
-    [
-      _c(
-        "navigator",
+    _vm._l(_vm.items, function(item, i) {
+      return _c(
+        "view",
         {
+          key: item.id,
           staticClass: "order-list",
-          attrs: { url: "/pages/mine/orderInfo/orderInfo" }
+          attrs: { eventid: "8db242e4-0-" + i },
+          on: {
+            tap: function($event) {
+              _vm.toOrderInfo($event, item.id)
+            }
+          }
         },
         [
-          _c("view", { staticClass: "order-num" }, [
-            _c("text", { staticClass: "left" }, [_vm._v("订单号245678987")]),
-            _c("text", { staticClass: "right" }, [
-              _vm._v("2019-10-10 10:10:10")
-            ])
-          ]),
-          _c("view", { staticClass: "order-site" }, [
-            _c("text", { staticClass: "left" }, [_vm._v("租借地点")]),
-            _c("text", { staticClass: "right" }, [_vm._v("尚艺时光(坂田电)")])
-          ]),
-          _c("view", { staticClass: "order-cost" }, [
-            _c("text", { staticClass: "left" }, [_vm._v("合计费用")]),
-            _c("text", { staticClass: "right" }, [_vm._v("￥6.00")])
-          ])
-        ]
-      ),
-      _c(
-        "navigator",
-        {
-          staticClass: "order-list",
-          attrs: { url: "/pages/mine/orderInfo/orderInfo" }
-        },
-        [
-          _c("view", { staticClass: "order-num" }, [
-            _c("text", { staticClass: "left" }, [_vm._v("订单号245678987")]),
-            _c("text", { staticClass: "right" }, [
-              _vm._v("2019-10-10 10:10:10")
-            ])
-          ]),
-          _c("view", { staticClass: "order-site" }, [
-            _c("text", { staticClass: "left" }, [_vm._v("租借地点")]),
-            _c("text", { staticClass: "right" }, [_vm._v("尚艺时光(坂田电)")])
-          ]),
-          _c("view", { staticClass: "order-cost" }, [
-            _c("text", { staticClass: "left" }, [_vm._v("合计费用")]),
-            _c("text", { staticClass: "right" }, [_vm._v("￥6.00")])
-          ])
-        ]
-      ),
-      _c(
-        "navigator",
-        {
-          staticClass: "order-list",
-          attrs: { url: "/pages/mine/orderInfo/orderInfo" }
-        },
-        [
-          _c("view", { staticClass: "order-num" }, [
-            _c("text", { staticClass: "left" }, [_vm._v("订单号245678987")]),
-            _c("text", { staticClass: "right" }, [
-              _vm._v("2019-10-10 10:10:10")
-            ])
-          ]),
-          _c("view", { staticClass: "order-site" }, [
-            _c("text", { staticClass: "left" }, [_vm._v("租借地点")]),
-            _c("text", { staticClass: "right" }, [_vm._v("尚艺时光(坂田电)")])
-          ]),
-          _c("view", { staticClass: "order-cost" }, [
-            _c("text", { staticClass: "left" }, [_vm._v("合计费用")]),
-            _c("text", { staticClass: "right" }, [_vm._v("￥6.00")])
-          ])
-        ]
-      ),
-      _c(
-        "navigator",
-        {
-          staticClass: "order-list",
-          attrs: { url: "/pages/mine/orderInfo/orderInfo" }
-        },
-        [
-          _c("view", { staticClass: "order-num" }, [
-            _c("text", { staticClass: "left" }, [_vm._v("订单号245678987")]),
-            _c("text", { staticClass: "right" }, [
-              _vm._v("2019-10-10 10:10:10")
-            ])
-          ]),
-          _c("view", { staticClass: "order-site" }, [
-            _c("text", { staticClass: "left" }, [_vm._v("租借地点")]),
-            _c("text", { staticClass: "right" }, [_vm._v("尚艺时光(坂田电)")])
-          ]),
-          _c("view", { staticClass: "order-cost" }, [
-            _c("text", { staticClass: "left" }, [_vm._v("合计费用")]),
-            _c("text", { staticClass: "right" }, [_vm._v("￥6.00")])
-          ])
-        ]
-      ),
-      _c(
-        "navigator",
-        {
-          staticClass: "order-list",
-          attrs: { url: "/pages/mine/orderInfo/orderInfo" }
-        },
-        [
-          _c("view", { staticClass: "order-num" }, [
-            _c("text", { staticClass: "left" }, [_vm._v("订单号245678987")]),
-            _c("text", { staticClass: "right" }, [
-              _vm._v("2019-10-10 10:10:10")
-            ])
-          ]),
-          _c("view", { staticClass: "order-site" }, [
-            _c("text", { staticClass: "left" }, [_vm._v("租借地点")]),
-            _c("text", { staticClass: "right" }, [_vm._v("尚艺时光(坂田电)")])
-          ]),
-          _c("view", { staticClass: "order-cost" }, [
-            _c("text", { staticClass: "left" }, [_vm._v("合计费用")]),
-            _c("text", { staticClass: "right" }, [_vm._v("￥6.00")])
-          ])
-        ]
-      ),
-      _c(
-        "navigator",
-        {
-          staticClass: "order-list",
-          attrs: { url: "/pages/mine/orderInfo/orderInfo" }
-        },
-        [
-          _c("view", { staticClass: "order-num" }, [
-            _c("text", { staticClass: "left" }, [_vm._v("订单号245678987")]),
-            _c("text", { staticClass: "right" }, [
-              _vm._v("2019-10-10 10:10:10")
-            ])
-          ]),
-          _c("view", { staticClass: "order-site" }, [
-            _c("text", { staticClass: "left" }, [_vm._v("租借地点")]),
-            _c("text", { staticClass: "right" }, [_vm._v("尚艺时光(坂田电)")])
-          ]),
-          _c("view", { staticClass: "order-cost" }, [
-            _c("text", { staticClass: "left" }, [_vm._v("合计费用")]),
-            _c("text", { staticClass: "right" }, [_vm._v("￥6.00")])
-          ])
+          _vm._m(0, true),
+          _vm._m(1, true),
+          _vm._m(2, true),
+          _c("view", {
+            staticClass: "maskingRight masking",
+            class: { maskingRightShow: _vm.items[i].popMasking == 0 }
+          }),
+          _c("view", {
+            staticClass: "maskingLeft masking",
+            class: { maskingLeftShow: _vm.items[i].popMasking == 1 }
+          })
         ]
       )
-    ],
-    1
+    })
   )
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("view", { staticClass: "order-num" }, [
+      _c("text", { staticClass: "left" }, [_vm._v("订单号245678987")]),
+      _c("text", { staticClass: "right" }, [_vm._v("2019-10-10 10:10:10")])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("view", { staticClass: "order-site" }, [
+      _c("text", { staticClass: "left" }, [_vm._v("租借地点")]),
+      _c("text", { staticClass: "right" }, [_vm._v("尚艺时光(坂田电)")])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("view", { staticClass: "order-cost" }, [
+      _c("text", { staticClass: "left" }, [_vm._v("合计费用")]),
+      _c("text", { staticClass: "right" }, [_vm._v("￥6.00")])
+    ])
+  }
+]
 render._withStripped = true
 
 

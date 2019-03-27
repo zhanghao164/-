@@ -28,13 +28,13 @@
 <script>
 export default {};
 </script>
-<style lang="scss">
+<style lang="scss" scoped>
 .toUp-content {
 	padding: 0 49upx;
 	.icon {
 		width: 207upx;
 		height: 212upx;
-		margin: 112upx auto 0;
+		margin: 240upx auto 0;
 		background: blue;
 	}
 	.title {

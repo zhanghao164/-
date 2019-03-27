@@ -24,10 +24,12 @@
 /* 垂直间距 */
 /* 透明度 */
 /* 文章场景相关 */
+page {
+  background: #f4f6fb;
+}
 .content {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  padding-top: 90rpx;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -42,15 +44,9 @@
       -ms-flex-align: center;
           align-items: center;
 }
-.content .title {
-    font-size: 32rpx;
-    font-family: PingFang-SC-Medium;
-    font-weight: bold;
-    color: #474747;
-}
 .content .select-time {
     width: 100%;
-    margin-top: 208rpx;
+    margin-top: 104rpx;
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -67,43 +63,41 @@
 }
 .content .select-time text {
       width: 654rpx;
-      height: 79rpx;
+      height: 157rpx;
       background: white;
-      border-radius: 40rpx;
+      border-radius: 20rpx;
       font-size: 30rpx;
       font-family: PingFang-SC-Light;
-      font-weight: bold;
       color: #474747;
-      margin-bottom: 54rpx;
+      margin-bottom: 28rpx;
       text-align: center;
-      line-height: 79rpx;
+      line-height: 157rpx;
 }
 .content .select-time .bg-color {
-      background: #a896ff;
-      color: #fefefe;
+      background: #7185ea;
+      color: #fff;
 }
 .content .pay-btn {
     width: 300rpx;
     height: 80rpx;
-    background: #8066ff;
-    -webkit-box-shadow: 0px 17rpx 32rpx 0px rgba(164, 128, 255, 0.77);
-            box-shadow: 0px 17rpx 32rpx 0px rgba(164, 128, 255, 0.77);
+    background: #7185ea;
+    -webkit-box-shadow: 0px 17rpx 32rpx 0px rgba(155, 162, 214, 0.77);
+            box-shadow: 0px 17rpx 32rpx 0px rgba(155, 162, 214, 0.77);
     border-radius: 40rpx;
     font-size: 28rpx;
     font-family: PingFang-SC-Medium;
-    font-weight: bold;
     color: white;
     text-align: center;
     line-height: 80rpx;
-    margin-top: 56rpx;
+    margin-top: 48rpx;
 }
 .content .tips {
     width: 604rpx;
     font-size: 24rpx;
     font-family: PingFang-SC-Light;
-    font-weight: bold;
     color: #474747;
     line-height: 50rpx;
-    margin-top: 202rpx;
+    margin-top: 208rpx;
+    text-align: center;
 }
 

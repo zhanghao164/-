@@ -1,0 +1,2 @@
+<import src="./theLoanTwo.vue.wxml" />
+    <template is="433415c4" data="{{ ...$root['0'], $root }}"/>

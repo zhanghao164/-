@@ -26,12 +26,12 @@
 /* 文章场景相关 */
 @font-face {
   font-family: 'iconfont';  /* project id 1077313 */
-  src: url('https://at.alicdn.com/t/font_1077313_cphg4fgnd3f.eot');
-  src: url('https://at.alicdn.com/t/font_1077313_cphg4fgnd3f.eot?#iefix') format('embedded-opentype'),
-  url('https://at.alicdn.com/t/font_1077313_cphg4fgnd3f.woff2') format('woff2'),
-  url('https://at.alicdn.com/t/font_1077313_cphg4fgnd3f.woff') format('woff'),
-  url('https://at.alicdn.com/t/font_1077313_cphg4fgnd3f.ttf') format('truetype'),
-  url('https://at.alicdn.com/t/font_1077313_cphg4fgnd3f.svg#iconfont') format('svg');
+  src: url('https://at.alicdn.com/t/font_1077313_d5nwzskdlee.eot');
+  src: url('https://at.alicdn.com/t/font_1077313_d5nwzskdlee.eot?#iefix') format('embedded-opentype'),
+  url('https://at.alicdn.com/t/font_1077313_d5nwzskdlee.woff2') format('woff2'),
+  url('https://at.alicdn.com/t/font_1077313_d5nwzskdlee.woff') format('woff'),
+  url('https://at.alicdn.com/t/font_1077313_d5nwzskdlee.ttf') format('truetype'),
+  url('https://at.alicdn.com/t/font_1077313_d5nwzskdlee.svg#iconfont') format('svg');
 }
 .iconfont {
 	font-family: "iconfont" !important;
@@ -50,7 +50,7 @@ page {
   background: #f4f6fb;
 }
 .deal-list {
-  padding: 43rpx 48rpx 0;
+  padding: 43rpx 48rpx 0 48rpx;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
@@ -63,12 +63,11 @@ page {
     border-radius: 20rpx;
     font-size: 24rpx;
     font-family: PingFang-SC-Light;
-    font-weight: bold;
     color: #474747;
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
     padding: 32rpx 39rpx 31rpx 40rpx;
-    line-height: 38rpx;
+    line-height: 42rpx;
     margin-bottom: 28rpx;
 }
 .deal-list .deal-info view text:nth-child(2) {

@@ -1,1 +1,6 @@
-{}
+{
+  "navigationBarTitleText": "选择时长",
+  "navigationBarBackgroundColor": "#F4F6FB",
+  "navigationStyle": "default",
+  "navigationBarTextStyle": "black"
+}

@@ -200,6 +200,7 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 
 
 
+
 {};exports.default = _default;
 
 /***/ }),
@@ -272,16 +273,16 @@ var staticRenderFns = [
           _c("text")
         ]),
         _c("view", { staticClass: "tips" }, [
-          _c("text", [_vm._v("租借地点")]),
-          _c("text", [_vm._v("尚艺时光(坂田电)")])
+          _c("text", [_vm._v("计费标准")]),
+          _c("text", [_vm._v("1元/1小时")])
         ]),
         _c("view", { staticClass: "tips" }, [
-          _c("text", [_vm._v("租借时间")]),
-          _c("text", [_vm._v("2019-01-31 16:37:13")])
+          _c("text", [_vm._v("使用时长")]),
+          _c("text", [_vm._v("1小时22分钟")])
         ]),
         _c("view", { staticClass: "tips" }, [
-          _c("text", [_vm._v("归还时间")]),
-          _c("text", [_vm._v("2019-01-31 17:58:32")])
+          _c("text", [_vm._v("租金总额")]),
+          _c("text", [_vm._v("2元")])
         ]),
         _c("view", { staticClass: "tips" }, [
           _c("text", [_vm._v("归还地点")]),
@@ -304,19 +305,21 @@ var staticRenderFns = [
         ]),
         _c("view", { staticClass: "tips2" }, [
           _c("text", [_vm._v("(1)")]),
-          _c("text", [
-            _vm._v(
-              "尚艺时光(坂田电)尚艺时光(坂田电)尚艺时光(坂田电)尚艺时光(坂田电)尚艺时光(坂田电)尚艺时光(坂田电)尚艺时光(坂田电)尚艺时光(坂田电)尚艺时光(坂田电)尚艺时光(坂田电)"
-            )
-          ])
+          _c("text", [_vm._v("自借出后开始计时，前10分钟内免费。")])
         ]),
         _c("view", { staticClass: "tips2" }, [
           _c("text", [_vm._v("(2)")]),
-          _c("text", [_vm._v("2019-01-31 16:37:13")])
+          _c("text", [
+            _vm._v("超出部分按每1小时1元计费，不足1小时按1小 时计算。")
+          ])
         ]),
         _c("view", { staticClass: "tips2" }, [
           _c("text", [_vm._v("(3)")]),
-          _c("text", [_vm._v("2019-01-31 17:58:32")])
+          _c("text", [
+            _vm._v(
+              "每24小时10元封顶(该计费规则为订单计费规则，\n\t\t\t\t即租借时商家设定的计费规则，订单开始后计费 规则不会变更)"
+            )
+          ])
         ])
       ])
     ])

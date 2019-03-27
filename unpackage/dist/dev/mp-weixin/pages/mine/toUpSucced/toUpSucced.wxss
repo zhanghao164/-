@@ -24,16 +24,16 @@
 /* 垂直间距 */
 /* 透明度 */
 /* 文章场景相关 */
-.toUp-content {
+.toUp-content.data-v-bb5eeda6 {
   padding: 0 49rpx;
 }
-.toUp-content .icon {
+.toUp-content .icon.data-v-bb5eeda6 {
     width: 207rpx;
     height: 212rpx;
-    margin: 112rpx auto 0;
+    margin: 240rpx auto 0;
     background: blue;
 }
-.toUp-content .title {
+.toUp-content .title.data-v-bb5eeda6 {
     font-size: 32rpx;
     font-family: PingFang-SC-Medium;
     font-weight: bold;
@@ -41,7 +41,7 @@
     text-align: center;
     margin: 41rpx 0 70rpx;
 }
-.toUp-content .addMoneyInfo view {
+.toUp-content .addMoneyInfo view.data-v-bb5eeda6 {
     height: 58rpx;
     line-height: 48rpx;
     font-size: 28rpx;
@@ -57,10 +57,10 @@
         -ms-flex-pack: justify;
             justify-content: space-between;
 }
-.toUp-content .addMoneyInfo view text:nth-child(2) {
+.toUp-content .addMoneyInfo view text.data-v-bb5eeda6:nth-child(2) {
       font-family: PingFang-SC-Light;
 }
-.toUp-content .toHome-btn {
+.toUp-content .toHome-btn.data-v-bb5eeda6 {
     width: 300rpx;
     height: 80rpx;
     background: #7185EA;

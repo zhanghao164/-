@@ -36,16 +36,16 @@
 				<text></text>
 			</view>
 			<view class="tips">
-				<text>租借地点</text>
-				<text>尚艺时光(坂田电)</text>
+				<text>计费标准</text>
+				<text>1元/1小时</text>
 			</view>
 			<view class="tips">
-				<text>租借时间</text>
-				<text>2019-01-31 16:37:13</text>
+				<text>使用时长</text>
+				<text>1小时22分钟</text>
 			</view>
 			<view class="tips">
-				<text>归还时间</text>
-				<text>2019-01-31 17:58:32</text>
+				<text>租金总额</text>
+				<text>2元</text>
 			</view>
 			<view class="tips">
 				<text>归还地点</text>
@@ -69,17 +69,18 @@
 			</view>
 			<view class="tips2">
 				<text>(1)</text>
-				<text>
-					尚艺时光(坂田电)尚艺时光(坂田电)尚艺时光(坂田电)尚艺时光(坂田电)尚艺时光(坂田电)尚艺时光(坂田电)尚艺时光(坂田电)尚艺时光(坂田电)尚艺时光(坂田电)尚艺时光(坂田电)
-				</text>
+				<text>自借出后开始计时，前10分钟内免费。</text>
 			</view>
 			<view class="tips2">
 				<text>(2)</text>
-				<text>2019-01-31 16:37:13</text>
+				<text>超出部分按每1小时1元计费，不足1小时按1小 时计算。</text>
 			</view>
 			<view class="tips2">
 				<text>(3)</text>
-				<text>2019-01-31 17:58:32</text>
+				<text>
+					每24小时10元封顶(该计费规则为订单计费规则，
+					即租借时商家设定的计费规则，订单开始后计费 规则不会变更)
+				</text>
 			</view>
 		</view>
 	</view>
@@ -90,7 +91,7 @@ export default {};
 <style lang="scss">
 @import '../../../common/iconfont.css';
 body {
-	background: #F4F6FB;
+	background: #f4f6fb;
 }
 .order-content {
 	width: 100%;
@@ -100,7 +101,6 @@ body {
 	.orderNumber {
 		font-size: 30upx;
 		font-family: PingFang-SC-Light;
-		font-weight: bold;
 		color: #474747;
 		display: flex;
 		align-items: center;
@@ -109,7 +109,7 @@ body {
 
 		text:nth-child(2) {
 			font-size: 24upx;
-			color: #7185EA;
+			color: #7185ea;
 		}
 	}
 	.use-info {
@@ -119,11 +119,10 @@ body {
 		box-sizing: border-box;
 		font-size: 24upx;
 		font-family: PingFang-SC-Light;
-		font-weight: bold;
 		color: rgba(71, 71, 71, 1);
 		margin-bottom: 32upx;
 
-		background: #FFFFFF;
+		background: #ffffff;
 		box-shadow: 0px 10upx 20upx 0px rgba(146, 151, 183, 0.77);
 
 		.title {
@@ -146,7 +145,7 @@ body {
 			line-height: 46upx;
 		}
 		.tips2 {
-			line-height: 36upx;
+			line-height: 48upx;
 			display: flex;
 		}
 	}

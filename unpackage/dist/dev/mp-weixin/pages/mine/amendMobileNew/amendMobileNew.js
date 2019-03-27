@@ -151,6 +151,8 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 
 
 
+
+
 {
   data: function data() {
     return {
@@ -235,22 +237,24 @@ var staticRenderFns = [
       _c("view", { staticClass: "mobileNum" }, [
         _c("input", {
           attrs: {
-            type: "text",
+            type: "number",
             value: "",
+            maxlength: "11",
             placeholder: " 请输入新手机号",
             "placeholder-style":
-              "font-size:24upx;font-family:PingFang-SC-Light;color:#999999;"
+              "font-size:24upx;font-family:PingFang-SC-Light;color:#cdcdcd;"
           }
         })
       ]),
       _c("view", { staticClass: "codeNum" }, [
         _c("input", {
           attrs: {
-            type: "text",
+            type: "number",
+            maxlength: "6",
             value: "",
             placeholder: " 请输入验证码",
             "placeholder-style":
-              "font-size:24upx;font-family:PingFang-SC-Light;color:#999999;"
+              "font-size:24upx;font-family:PingFang-SC-Light;color:#cdcdcd;"
           }
         })
       ])

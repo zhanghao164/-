@@ -1,21 +1,24 @@
 <template>
 	<view class="content">
-		<!-- 有效 -->
-
 		<scroll-view scroll-y="true">
 			<view class="exchange-btn">
 				<input
 					type="text"
 					value=""
 					placeholder="输入兑换码"
-					placeholder-style="font-size:20upx;font-family:PingFang-SC-Light;font-weight:bold;color:#999999;"
+					placeholder-style="font-size:20upx;font-family:PingFang-SC-Light;color:#999999;"
 				/>
 				<text>兑换</text>
 			</view>
 
 			<!-- 有效 -->
 			<view class="valid" v-if="toggleText == '查看已失效'">
-				<view class="coupons">
+				<view
+					class="coupons"
+					@tap="toOrderInfo($event, i)"
+					v-for="(item, i) in items"
+					:key="item.id"
+				>
 					<view class="coupons-right">立即使用</view>
 					<view class="coupons-left">
 						<view class="tips">
@@ -26,120 +29,25 @@
 						<text>3元通用代金券</text>
 						<text class="fontWeight">截止日期2019.9.23</text>
 					</view>
-				</view>
-				<view class="coupons">
-					<view class="coupons-right">立即使用</view>
-					<view class="coupons-left">
-						<view class="tips">
-							<text class="top"></text>
-							<text class="bottom"></text>
-						</view>
-
-						<text>3元通用代金券</text>
-						<text class="fontWeight">截止日期2019.9.23</text>
-					</view>
-				</view>
-				<view class="coupons">
-					<view class="coupons-right">立即使用</view>
-					<view class="coupons-left">
-						<view class="tips">
-							<text class="top"></text>
-							<text class="bottom"></text>
-						</view>
-
-						<text>3元通用代金券</text>
-						<text class="fontWeight">截止日期2019.9.23</text>
-					</view>
-				</view>
-				<view class="coupons">
-					<view class="coupons-right">立即使用</view>
-					<view class="coupons-left">
-						<view class="tips">
-							<text class="top"></text>
-							<text class="bottom"></text>
-						</view>
-
-						<text>3元通用代金券</text>
-						<text class="fontWeight">截止日期2019.9.23</text>
-					</view>
-				</view>
-				<view class="coupons">
-					<view class="coupons-right">立即使用</view>
-					<view class="coupons-left">
-						<view class="tips">
-							<text class="top"></text>
-							<text class="bottom"></text>
-						</view>
-
-						<text>3元通用代金券</text>
-						<text class="fontWeight">截止日期2019.9.23</text>
-					</view>
-				</view>
-				<view class="coupons">
-					<view class="coupons-right">立即使用</view>
-					<view class="coupons-left">
-						<view class="tips">
-							<text class="top"></text>
-							<text class="bottom"></text>
-						</view>
-
-						<text>3元通用代金券</text>
-						<text class="fontWeight">截止日期2019.9.23</text>
-					</view>
-				</view>
-				<view class="coupons">
-					<view class="coupons-right">立即使用</view>
-					<view class="coupons-left">
-						<view class="tips">
-							<text class="top"></text>
-							<text class="bottom"></text>
-						</view>
-
-						<text>3元通用代金券</text>
-						<text class="fontWeight">截止日期2019.9.23</text>
-					</view>
-				</view>
-				<view class="coupons">
-					<view class="coupons-right">立即使用</view>
-					<view class="coupons-left">
-						<view class="tips">
-							<text class="top"></text>
-							<text class="bottom"></text>
-						</view>
-
-						<text>3元通用代金券</text>
-						<text class="fontWeight">截止日期2019.9.23</text>
-					</view>
-				</view>
-				<view class="coupons">
-					<view class="coupons-right">立即使用</view>
-					<view class="coupons-left">
-						<view class="tips">
-							<text class="top"></text>
-							<text class="bottom"></text>
-						</view>
-
-						<text>3元通用代金券</text>
-						<text class="fontWeight">截止日期2019.9.23</text>
-					</view>
-				</view>
-				<view class="coupons">
-					<view class="coupons-right">立即使用</view>
-					<view class="coupons-left">
-						<view class="tips">
-							<text class="top"></text>
-							<text class="bottom"></text>
-						</view>
-
-						<text>3元通用代金券</text>
-						<text class="fontWeight">截止日期2019.9.23</text>
-					</view>
+					<view
+						class="maskingRight masking"
+						:class="{ maskingRightShow: items[i].popMasking == 0 }"
+					></view>
+					<view
+						class="maskingLeft masking"
+						:class="{ maskingLeftShow: items[i].popMasking == 1 }"
+					></view>
 				</view>
 			</view>
 
 			<!-- 无效 -->
-			<view class="valid past-due"  v-if="toggleText == '查看可使用'">
-				<view class="coupons">
+			<view class="valid past-due" v-if="toggleText == '查看可使用'">
+				<view
+					class="coupons"
+					@tap="toOrderInfo($event, i)"
+					v-for="(item, i) in items"
+					:key="item.id"
+				>
 					<view class="coupons-right">已失效</view>
 					<view class="coupons-left">
 						<view class="tips">
@@ -150,103 +58,14 @@
 						<text>3元通用代金券</text>
 						<text class="fontWeight">失效原因：过期未使用</text>
 					</view>
-				</view>
-				<view class="coupons">
-					<view class="coupons-right">已失效</view>
-					<view class="coupons-left">
-						<view class="tips">
-							<text class="top"></text>
-							<text class="bottom"></text>
-						</view>
-
-						<text>3元通用代金券</text>
-						<text class="fontWeight">失效原因：过期未使用</text>
-					</view>
-				</view>
-				<view class="coupons">
-					<view class="coupons-right">已失效</view>
-					<view class="coupons-left">
-						<view class="tips">
-							<text class="top"></text>
-							<text class="bottom"></text>
-						</view>
-
-						<text>3元通用代金券</text>
-						<text class="fontWeight">失效原因：过期未使用</text>
-					</view>
-				</view>
-				<view class="coupons">
-					<view class="coupons-right">已失效</view>
-					<view class="coupons-left">
-						<view class="tips">
-							<text class="top"></text>
-							<text class="bottom"></text>
-						</view>
-
-						<text>3元通用代金券</text>
-						<text class="fontWeight">失效原因：过期未使用</text>
-					</view>
-				</view>
-				<view class="coupons">
-					<view class="coupons-right">已失效</view>
-					<view class="coupons-left">
-						<view class="tips">
-							<text class="top"></text>
-							<text class="bottom"></text>
-						</view>
-
-						<text>3元通用代金券</text>
-						<text class="fontWeight">失效原因：过期未使用</text>
-					</view>
-				</view>
-				<view class="coupons">
-					<view class="coupons-right">已失效</view>
-					<view class="coupons-left">
-						<view class="tips">
-							<text class="top"></text>
-							<text class="bottom"></text>
-						</view>
-
-						<text>3元通用代金券</text>
-						<text class="fontWeight">失效原因：过期未使用</text>
-					</view>
-				</view>
-
-				<view class="coupons">
-					<view class="coupons-right">已失效</view>
-					<view class="coupons-left">
-						<view class="tips">
-							<text class="top"></text>
-							<text class="bottom"></text>
-						</view>
-
-						<text>3元通用代金券</text>
-						<text class="fontWeight">失效原因：过期未使用</text>
-					</view>
-				</view>
-				<view class="coupons">
-					<view class="coupons-right">已失效</view>
-					<view class="coupons-left">
-						<view class="tips">
-							<text class="top"></text>
-							<text class="bottom"></text>
-						</view>
-
-						<text>3元通用代金券</text>
-						<text class="fontWeight">失效原因：过期未使用</text>
-					</view>
-				</view>
-				<view class="coupons">
-					<view class="coupons-right">已失效</view>
-					<view class="coupons-left">
-						<view class="tips">
-							<text class="top"></text>
-							<text class="bottom"></text>
-						</view>
-
-						<text>3元通用代金券</text>
-						<text class="fontWeight">失效原因：过期未使用</text>
-					</view>
+					<view
+						class="maskingRight masking"
+						:class="{ maskingRightShow: items[i].popMasking == 0 }"
+					></view>
+					<view
+						class="maskingLeft masking"
+						:class="{ maskingLeftShow: items[i].popMasking == 1 }"
+					></view>
 				</view>
 			</view>
 		</scroll-view>
@@ -261,12 +80,45 @@
 export default {
 	data() {
 		return {
-			toggleText: '查看已失效'
+			toggleText: '查看已失效',
+			items: [
+				{
+					id: 0,
+					popMasking: -1
+				},
+				{
+					id: 1,
+					popMasking: -1
+				},
+				{
+					id: 2,
+					popMasking: -1
+				},
+				{
+					id: 3,
+					popMasking: -1
+				},
+				{
+					id: 4,
+					popMasking: -1
+				},
+				{
+					id: 5,
+					popMasking: -1
+				},
+				{
+					id: 6,
+					popMasking: -1
+				},
+				{
+					id: 7,
+					popMasking: -1
+				}
+			]
 		};
 	},
 	onLoad() {
-		
-		console.log(this.toggleText)
+		console.log(this.toggleText);
 		// 		uni.showLoading({
 		// 			title: '加载中'
 		// 		});
@@ -284,8 +136,22 @@ export default {
 			} else {
 				this.toggleText = '查看已失效';
 			}
-			
-			console.log(this.toggleText)
+
+			console.log(this.toggleText);
+		},
+		toOrderInfo(e, idx) {
+			// windowHeight = (res.windowHeight * (750 / res.windowWidth));
+			let clientX = e.clientX;
+
+			if (clientX > 167) {
+				this.items[idx].popMasking = 1;
+			} else {
+				this.items[idx].popMasking = 0;
+			}
+
+						setTimeout(() => {
+							this.items[idx].popMasking = -1;
+						}, 300);
 		}
 	}
 };
@@ -317,6 +183,8 @@ export default {
 				box-sizing: border-box;
 				padding-right: 12upx;
 				color: #fff;
+				overflow: hidden;
+				position: relative;
 
 				.coupons-right {
 					width: 60upx;
@@ -324,7 +192,6 @@ export default {
 					float: right;
 					font-size: 20upx;
 					font-family: PingFang-SC-Medium;
-					font-weight: bold;
 					display: flex;
 					flex-direction: column;
 					justify-content: center;
@@ -382,7 +249,6 @@ export default {
 					text {
 						font-size: 28upx;
 						font-family: PingFang-SC-Medium;
-						font-weight: bold;
 					}
 					text:last-child {
 						font-size: 20upx;
@@ -423,7 +289,6 @@ export default {
 			padding-left: 30upx;
 			font-size: 20upx;
 			font-family: PingFang-SC-Light;
-			font-weight: bold;
 			color: rgba(153, 153, 153, 1);
 			text-align: center;
 		}
@@ -435,7 +300,6 @@ export default {
 			border-radius: 30upx;
 			font-size: 28upx;
 			font-family: PingFang-SC-Medium;
-			font-weight: bold;
 			color: #fff;
 			text-align: center;
 		}
@@ -444,7 +308,6 @@ export default {
 	.expired {
 		font-size: 24upx;
 		font-family: PingFang-SC-Medium;
-		font-weight: bold;
 		color: #7185ea;
 		position: absolute;
 		top: 93%;

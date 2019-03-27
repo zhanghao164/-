@@ -7,18 +7,20 @@
 		<view class="mobile-code">
 			<view class="mobileNum">
 				<input
-					type="text"
+					type="number"
 					value=""
+					maxlength="11"
 					placeholder=" 请输入新手机号"
-					placeholder-style="font-size:24upx;font-family:PingFang-SC-Light;color:#999999;"
+					placeholder-style="font-size:24upx;font-family:PingFang-SC-Light;color:#cdcdcd;"
 				/>
 			</view>
 			<view class="codeNum">
 				<input
-					type="text"
+					type="number"
+					maxlength="6"
 					value=""
 					placeholder=" 请输入验证码"
-					placeholder-style="font-size:24upx;font-family:PingFang-SC-Light;color:#999999;"
+					placeholder-style="font-size:24upx;font-family:PingFang-SC-Light;color:#cdcdcd;"
 				/>
 			</view>
 		</view>
@@ -97,8 +99,7 @@ export default {
 				border-radius: 45upx;
 				font-size: 24upx;
 				font-family: PingFang-SC-Light;
-				font-weight: bold;
-				color: rgba(153, 153, 153, 1);
+				color: #666;
 				margin: 0 auto;
 				text-align: center;
 			}

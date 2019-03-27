@@ -52,7 +52,7 @@ body {
 }
 
 .deal-list {
-	padding: 43upx 48upx 0;
+	padding: 43upx 48upx 0 48upx;
 	box-sizing: border-box;
 	.deal-info {
 		width: 654upx;
@@ -62,12 +62,11 @@ body {
 		border-radius: 20upx;
 		font-size: 24upx;
 		font-family: PingFang-SC-Light;
-		font-weight: bold;
 		color: #474747;
 		// line-height: 72upx;
 		box-sizing: border-box;
 		padding: 32upx 39upx 31upx 40upx;
-		line-height: 38upx;
+		line-height: 42upx;
 		margin-bottom: 28upx;
 		view {
 			text:nth-child(2) {

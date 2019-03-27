@@ -203,6 +203,9 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
+
+
 {
   data: function data() {
     return {
@@ -229,9 +232,10 @@ __webpack_require__.r(__webpack_exports__);
 
       {
         isShow: false,
-        id: 4 }] };
+        id: 4 }],
 
 
+      userIcon: '' };
 
   },
   methods: {
@@ -267,13 +271,12 @@ __webpack_require__.r(__webpack_exports__);
 
   onLoad: function onLoad() {
     this.userIconPop = true;
-    // 		uni.showLoading({
-    // 			title: '加载中'
-    // 		});
-    //
-    // 		setTimeout(function() {
-    // 			uni.hideLoading();
-    // 		}, 500);
+
+    var userInfo = uni.getStorageSync('userInfo');
+
+    if (userInfo.avatarUrl) {
+      this.userIcon = userInfo.avatarUrl;
+    }
   } };exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ "./node_modules/@dcloudio/uni-mp-weixin/dist/index.js")["default"]))
 
@@ -316,7 +319,9 @@ var render = function() {
       ? _c("view", [_c("about-us", { attrs: { mpcomid: "b1166460-3" } })], 1)
       : _c("view", [_c("mine-index", { attrs: { mpcomid: "b1166460-4" } })], 1),
     _c("view", { staticClass: "right-mask" }, [
-      _vm._m(0),
+      _c("view", { staticClass: "logOut" }, [
+        false ? undefined : _vm._e()
+      ]),
       _c("view", { staticClass: "mask" }, [
         _c(
           "view",
@@ -347,6 +352,10 @@ var render = function() {
                   class: {
                     icon: _vm.navIndex < 5 && _vm.navIndex >= 0,
                     leftShift: _vm.userIconPop
+                  },
+                  style: {
+                    background:
+                      "url(" + _vm.userIcon + ") center center / 100% 100% "
                   },
                   attrs: { eventid: "b1166460-0" },
                   on: { tap: _vm.userIconleftShift }
@@ -480,14 +489,7 @@ var render = function() {
     ])
   ])
 }
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("view", { staticClass: "logOut" }, [_c("text", [_vm._v("登出")])])
-  }
-]
+var staticRenderFns = []
 render._withStripped = true
 
 
