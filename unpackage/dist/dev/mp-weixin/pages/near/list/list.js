@@ -205,7 +205,7 @@ var _vuex = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.j
       return uni.upx2px(this.onDistance) + 'px';
     },
     halfHeight: function halfHeight() {
-      return uni.upx2px(wx.getMenuButtonBoundingClientRect().bottom * 2 + 40) + 'px';
+      return uni.upx2px(wx.getMenuButtonBoundingClientRect().bottom * 2 + 60) + 'px';
     } }) };exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ "./node_modules/@dcloudio/uni-mp-weixin/dist/index.js")["default"]))
 
@@ -339,8 +339,8 @@ var render = function() {
                             1
                           )
                         : _vm._e(),
-                      _c("span", { staticClass: "also" }, [_vm._v("可借")]),
-                      _c("span", { staticClass: "borrow" }, [_vm._v("可还")])
+                      _c("span", { staticClass: "also" }, [_vm._v("可借:")]),
+                      _c("span", { staticClass: "borrow" }, [_vm._v("可还:")])
                     ],
                     1
                   ),

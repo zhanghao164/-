@@ -1,42 +1,41 @@
 {
-	"description": "项目配置文件。",
-	"packOptions": {
-		"ignore": []
-	},
-	"setting": {
-		"urlCheck": true,
-		"minified": true,
-		"postcss": true,
-		"es6": false,
-		"newFeature": true
-	},
-	"compileType": "miniprogram",
-	"libVersion": "",
-	"appid": "wx89c6aa5c90625c86",
-	"projectname": "%E6%8C%81%E7%94%B5",
-	"condition": {
-		"search": {
-			"current": -1,
-			"list": []
-		},
-		"conversation": {
-			"current": -1,
-			"list": []
-		},
-		"game": {
-			"current": -1,
-			"list": []
-		},
-		"miniprogram": {
-			"current": 0,
-			"list": [
-				{
-					"name": "",
-					"path": "",
-					"query": "",
-					"id": 0
-				}
-			]
-		}
-	}
+  "description": "项目配置文件。",
+  "packOptions": {
+    "ignore": []
+  },
+  "setting": {
+    "urlCheck": true,
+    "minified": true,
+    "postcss": true,
+    "es6": false
+  },
+  "compileType": "miniprogram",
+  "libVersion": "",
+  "appid": "wx89c6aa5c90625c86",
+  "projectname": "持电",
+  "condition": {
+    "search": {
+      "current": -1,
+      "list": []
+    },
+    "conversation": {
+      "current": -1,
+      "list": []
+    },
+    "game": {
+      "current": -1,
+      "list": []
+    },
+    "miniprogram": {
+      "current": 0,
+      "list": [
+        {
+          "name": "",
+          "path": "",
+          "query": "",
+          "id": 0
+        }
+      ]
+    }
+  }
 }

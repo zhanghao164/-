@@ -26,8 +26,8 @@
 							详细地址
 							<p>{{ item.address }}</p>
 						</view>
-						<span class="also">可借</span>
-						<span class="borrow">可还</span>
+						<span class="also">可借:</span>
+						<span class="borrow">可还:</span>
 					</view>
 					<view class="distance">
 						<view class="iconfont">&#xe649;</view>
@@ -79,7 +79,7 @@ export default {
 			return uni.upx2px(this.onDistance) + 'px';
 		},
 		halfHeight() {
-			return uni.upx2px(wx.getMenuButtonBoundingClientRect().bottom * 2+40) + 'px';
+			return uni.upx2px(wx.getMenuButtonBoundingClientRect().bottom * 2+60) + 'px';
 		}
 	}
 };
@@ -90,22 +90,29 @@ export default {
 // 店铺图片动画
 @keyframes myfirst {
 	0% {
-		right: -372upx;
-		height: 140upx;
+		width: 104upx;
+		height: 104upx;
+		margin: 26upx 34upx 25upx 48upx;
 	}
 	100% {
 		height: 342upx;
-		right: 0upx;
+		left: 0upx;
+		margin: 0;
 		transition: 0.5 linear;
 	}
 }
 // 返回店铺图片动画
 @keyframes return-myfirst {
 	0% {
-		position: relative;
-		margin-left: -100upx;
+		width: 313upx;
+		border-radius: 20upx;
+		height: 342upx;
+		margin: 0;
 	}
 	100% {
+		border-radius: 50%;
+		width: 104upx;
+		height: 104upx;
 		margin: 26upx 34upx 25upx 48upx;
 		transition: 0.5 linear;
 	}
@@ -113,20 +120,20 @@ export default {
 // 距离位置动画
 @keyframes distance {
 	0% {
-		top: 0upx;
-		right: -372upx;
+		top: 238upx;
+		left: -48upx;
+		transform: scale(0, 0);
 	}
 	100% {
-		width: 104upx;
-		height: 130upx;
+		width: 70upx;
+		height: 104upx;
 		text-align: center;
 		background-color: #fff;
-		border-radius: 20upx 20upx 0 0;
+		border-radius:0 20upx;
 		position: absolute;
-		right: 237upx;
-		top: 212upx;
-		bottom: 0;
-		transition: 0.5 linear;
+		left: 0;
+		top: 238upx;
+		transform: scale(1, 1);
 	}
 }
 
@@ -139,10 +146,8 @@ export default {
 		background-color: #fff;
 		border-radius: 20upx 20upx 0 0;
 		position: absolute;
-		right: 237upx;
-		top: 212upx;
-		bottom: 0;
-		transition: 0.5 linear;
+		right: -104upx;
+		top: 34upx;
 	}
 	100% {
 		position: absolute;
@@ -153,23 +158,46 @@ export default {
 // 列表文字动画
 @keyframes information {
 	0% {
+		top: 0;
 		display: inline-block;
-		width: 267px;
+		width: 0;
 		height: 342upx;
 		margin-left: 152upx;
-		transform: scale(0.2, 0.2);
+		opacity: 0;
+		// transform: scale(0.2, 0.2);
 	}
 	100% {
+		opacity: 1;
+		margin-left: 353upx;
+		width: 300upx;
+		// transform: scale(1, 1);
+		// transition: 0.5 linear;
+	}
+}
+// 返回列表文字动画
+@keyframes return-information {
+	0% {
+		margin-left: 353upx;
 		transform: scale(1, 1);
 		transition: 0.5 linear;
+	}
+	100% {
+		display: inline-block;
+		width: 0;
+		height: 342upx;
+		margin-left: 152upx;
+		opacity: 0;
+		transform: scale(0.2, 0.2);
 	}
 }
 // 单个列表项动画
 @keyframes Drag {
 	0% {
+		width: 654upx;
 		height: 155upx;
 	}
 	100% {
+		width: 654upx;
 		height: 342upx;
 		transition: 0.5 linear;
 	}
@@ -185,16 +213,16 @@ export default {
 	}
 }
 // 可归还按钮动画
-@keyframes borrow {
-	0% {
-		left: 0upx;
-	}
-	100% {
-		left: 204upx;
-		transition: 0.8 linear;
-	}
-}
-
+// @keyframes borrow {
+// 	0% {
+// 		left: 0upx;
+// 	}
+// 	100% {
+// 		left: 204upx;
+// 		transition: 0.8 linear;
+// 	}
+// }
+// 
 .shops-list {
 	position: fixed;
 	top: 0;
@@ -261,36 +289,36 @@ export default {
 	width: 100%;
 	padding: 200upx 0 900upx;
 	.Drag {
-		width: 100%;
 		height: 342upx;
-		background-color: #f4f6fb;
+		background-color: #fff;
 		animation: Drag 0.55s;
 		img {
 			position: absolute;
-			width: 372upx;
+			width: 313upx;
 			height: 342upx;
 			animation: myfirst 0.55s;
 			border-radius: 0%;
 			background-color: #000;
 			margin: 0;
-			right: 0;
-			border-radius: 20upx 0 0 20upx;
+			left: 0;
+			border-radius: 20upx;
 		}
 		.information {
 			display: inline-block;
-			width: 267px;
+			width: 300upx;
 			height: 342upx;
-			margin-left: 72upx;
+			position: absolute;
+			margin-left: 353upx;
 			animation: information 0.55s;
 			h2 {
 				overflow: hidden;
+				width: 300upx;
 				height: 80upx;
-				font-size: 35upx;
+				font-size: 30upx;
 				color: #474747;
 				position: absolute;
 				top: 26upx;
-				font-weight: 700;
-				line-height: 36upx;
+				line-height: 30upx;
 			}
 			span {
 				font-size: 28upx;
@@ -303,8 +331,8 @@ export default {
 			}
 			.borrow {
 				color: #4680ff;
-				left: 274upx;
-				animation: borrow 0.55s;
+				left: 160upx;
+// 				animation: borrow 0.55s;
 			}
 			.address {
 				position: absolute;
@@ -322,18 +350,24 @@ export default {
 			}
 		}
 		.distance {
-			width: 104upx;
-			height: 110upx;
+			width: 70upx;
+			height: 104upx;
 			text-align: center;
 			background-color: #fff;
-			border-radius: 20upx 20upx 0 0;
+			border-radius:0 20upx;
 			position: absolute;
-			right: 237upx;
-			top: 212upx;
-			bottom: 0;
+			top: 238upx;
+			left: 0;
 			animation: distance 0.55s;
-			transition: 0.5 linear;
 			padding-top: 21upx;
+			view{
+				font-size: 27upx;
+			}
+			.detailedDistance {
+				margin-top: 9upx;
+				font-size: 18upx;
+				color: #878383;
+			}
 		}
 	}
 }
@@ -344,7 +378,7 @@ export default {
 	height: 155upx;
 	border-radius: 20upx;
 	background-color: #fff;
-	animation: return-Drag 0.55s;
+	animation: return-Drag 0.35s;
 	overflow: hidden;
 	img {
 		display: inline-block;
@@ -353,11 +387,11 @@ export default {
 		border-radius: 50%;
 		background-color: #000;
 		margin: 26upx 34upx 25upx 48upx;
-		animation: return-myfirst 0.55s;
+		animation: return-myfirst 0.35s;
 	}
 	.information {
 		display: inline-block;
-		transition: 0.5 linear;
+		// animation: return-information 0.55s;
 		h2 {
 			font-size: 24upx;
 			width: 280upx;
@@ -369,7 +403,7 @@ export default {
 			color: #474747;
 			position: absolute;
 			top: 49upx;
-			font-weight: 700;
+			transition: 0.35s all;
 		}
 		span {
 			font-size: 20upx;
@@ -388,6 +422,7 @@ export default {
 		position: absolute;
 		top: 34upx;
 		right: 48upx;
+		animation: return-distance 0.35s;
 		view {
 			font-size: 54upx;
 			color: #92b4ff;

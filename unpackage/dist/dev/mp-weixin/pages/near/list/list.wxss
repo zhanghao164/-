@@ -48,12 +48,14 @@
 }
 @-webkit-keyframes myfirst {
 0% {
-    right: -372rpx;
-    height: 140rpx;
+    width: 104rpx;
+    height: 104rpx;
+    margin: 26rpx 34rpx 25rpx 48rpx;
 }
 100% {
     height: 342rpx;
-    right: 0rpx;
+    left: 0rpx;
+    margin: 0;
     -webkit-transition: 0.5 linear;
     -o-transition: 0.5 linear;
     transition: 0.5 linear;
@@ -61,12 +63,14 @@
 }
 @keyframes myfirst {
 0% {
-    right: -372rpx;
-    height: 140rpx;
+    width: 104rpx;
+    height: 104rpx;
+    margin: 26rpx 34rpx 25rpx 48rpx;
 }
 100% {
     height: 342rpx;
-    right: 0rpx;
+    left: 0rpx;
+    margin: 0;
     -webkit-transition: 0.5 linear;
     -o-transition: 0.5 linear;
     transition: 0.5 linear;
@@ -74,10 +78,15 @@
 }
 @-webkit-keyframes return-myfirst {
 0% {
-    position: relative;
-    margin-left: -100rpx;
+    width: 313rpx;
+    border-radius: 20rpx;
+    height: 342rpx;
+    margin: 0;
 }
 100% {
+    border-radius: 50%;
+    width: 104rpx;
+    height: 104rpx;
     margin: 26rpx 34rpx 25rpx 48rpx;
     -webkit-transition: 0.5 linear;
     -o-transition: 0.5 linear;
@@ -86,10 +95,15 @@
 }
 @keyframes return-myfirst {
 0% {
-    position: relative;
-    margin-left: -100rpx;
+    width: 313rpx;
+    border-radius: 20rpx;
+    height: 342rpx;
+    margin: 0;
 }
 100% {
+    border-radius: 50%;
+    width: 104rpx;
+    height: 104rpx;
     margin: 26rpx 34rpx 25rpx 48rpx;
     -webkit-transition: 0.5 linear;
     -o-transition: 0.5 linear;
@@ -98,42 +112,42 @@
 }
 @-webkit-keyframes distance {
 0% {
-    top: 0rpx;
-    right: -372rpx;
+    top: 238rpx;
+    left: -48rpx;
+    -webkit-transform: scale(0, 0);
+            transform: scale(0, 0);
 }
 100% {
-    width: 104rpx;
-    height: 130rpx;
+    width: 70rpx;
+    height: 104rpx;
     text-align: center;
     background-color: #fff;
-    border-radius: 20rpx 20rpx 0 0;
+    border-radius: 0 20rpx;
     position: absolute;
-    right: 237rpx;
-    top: 212rpx;
-    bottom: 0;
-    -webkit-transition: 0.5 linear;
-    -o-transition: 0.5 linear;
-    transition: 0.5 linear;
+    left: 0;
+    top: 238rpx;
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
 }
 }
 @keyframes distance {
 0% {
-    top: 0rpx;
-    right: -372rpx;
+    top: 238rpx;
+    left: -48rpx;
+    -webkit-transform: scale(0, 0);
+            transform: scale(0, 0);
 }
 100% {
-    width: 104rpx;
-    height: 130rpx;
+    width: 70rpx;
+    height: 104rpx;
     text-align: center;
     background-color: #fff;
-    border-radius: 20rpx 20rpx 0 0;
+    border-radius: 0 20rpx;
     position: absolute;
-    right: 237rpx;
-    top: 212rpx;
-    bottom: 0;
-    -webkit-transition: 0.5 linear;
-    -o-transition: 0.5 linear;
-    transition: 0.5 linear;
+    left: 0;
+    top: 238rpx;
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
 }
 }
 @-webkit-keyframes return-distance {
@@ -144,12 +158,8 @@
     background-color: #fff;
     border-radius: 20rpx 20rpx 0 0;
     position: absolute;
-    right: 237rpx;
-    top: 212rpx;
-    bottom: 0;
-    -webkit-transition: 0.5 linear;
-    -o-transition: 0.5 linear;
-    transition: 0.5 linear;
+    right: -104rpx;
+    top: 34rpx;
 }
 100% {
     position: absolute;
@@ -165,12 +175,8 @@
     background-color: #fff;
     border-radius: 20rpx 20rpx 0 0;
     position: absolute;
-    right: 237rpx;
-    top: 212rpx;
-    bottom: 0;
-    -webkit-transition: 0.5 linear;
-    -o-transition: 0.5 linear;
-    transition: 0.5 linear;
+    right: -104rpx;
+    top: 34rpx;
 }
 100% {
     position: absolute;
@@ -180,43 +186,79 @@
 }
 @-webkit-keyframes information {
 0% {
+    top: 0;
     display: inline-block;
-    width: 267px;
+    width: 0;
     height: 342rpx;
     margin-left: 152rpx;
-    -webkit-transform: scale(0.2, 0.2);
-            transform: scale(0.2, 0.2);
+    opacity: 0;
 }
 100% {
-    -webkit-transform: scale(1, 1);
-            transform: scale(1, 1);
-    -webkit-transition: 0.5 linear;
-    -o-transition: 0.5 linear;
-    transition: 0.5 linear;
+    opacity: 1;
+    margin-left: 353rpx;
+    width: 300rpx;
 }
 }
 @keyframes information {
 0% {
+    top: 0;
     display: inline-block;
-    width: 267px;
+    width: 0;
     height: 342rpx;
     margin-left: 152rpx;
-    -webkit-transform: scale(0.2, 0.2);
-            transform: scale(0.2, 0.2);
+    opacity: 0;
 }
 100% {
+    opacity: 1;
+    margin-left: 353rpx;
+    width: 300rpx;
+}
+}
+@-webkit-keyframes return-information {
+0% {
+    margin-left: 353rpx;
     -webkit-transform: scale(1, 1);
             transform: scale(1, 1);
     -webkit-transition: 0.5 linear;
     -o-transition: 0.5 linear;
     transition: 0.5 linear;
 }
+100% {
+    display: inline-block;
+    width: 0;
+    height: 342rpx;
+    margin-left: 152rpx;
+    opacity: 0;
+    -webkit-transform: scale(0.2, 0.2);
+            transform: scale(0.2, 0.2);
+}
+}
+@keyframes return-information {
+0% {
+    margin-left: 353rpx;
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+    -webkit-transition: 0.5 linear;
+    -o-transition: 0.5 linear;
+    transition: 0.5 linear;
+}
+100% {
+    display: inline-block;
+    width: 0;
+    height: 342rpx;
+    margin-left: 152rpx;
+    opacity: 0;
+    -webkit-transform: scale(0.2, 0.2);
+            transform: scale(0.2, 0.2);
+}
 }
 @-webkit-keyframes Drag {
 0% {
+    width: 654rpx;
     height: 155rpx;
 }
 100% {
+    width: 654rpx;
     height: 342rpx;
     -webkit-transition: 0.5 linear;
     -o-transition: 0.5 linear;
@@ -225,9 +267,11 @@
 }
 @keyframes Drag {
 0% {
+    width: 654rpx;
     height: 155rpx;
 }
 100% {
+    width: 654rpx;
     height: 342rpx;
     -webkit-transition: 0.5 linear;
     -o-transition: 0.5 linear;
@@ -254,28 +298,6 @@
 }
 100% {
     height: 155rpx;
-}
-}
-@-webkit-keyframes borrow {
-0% {
-    left: 0rpx;
-}
-100% {
-    left: 204rpx;
-    -webkit-transition: 0.8 linear;
-    -o-transition: 0.8 linear;
-    transition: 0.8 linear;
-}
-}
-@keyframes borrow {
-0% {
-    left: 0rpx;
-}
-100% {
-    left: 204rpx;
-    -webkit-transition: 0.8 linear;
-    -o-transition: 0.8 linear;
-    transition: 0.8 linear;
 }
 }
 .shops-list {
@@ -346,41 +368,41 @@
   padding: 200rpx 0 900rpx;
 }
 .shops-list_view .Drag {
-    width: 100%;
     height: 342rpx;
-    background-color: #f4f6fb;
+    background-color: #fff;
     -webkit-animation: Drag 0.55s;
             animation: Drag 0.55s;
 }
 .shops-list_view .Drag ._img {
       position: absolute;
-      width: 372rpx;
+      width: 313rpx;
       height: 342rpx;
       -webkit-animation: myfirst 0.55s;
               animation: myfirst 0.55s;
       border-radius: 0%;
       background-color: #000;
       margin: 0;
-      right: 0;
-      border-radius: 20rpx 0 0 20rpx;
+      left: 0;
+      border-radius: 20rpx;
 }
 .shops-list_view .Drag .information {
       display: inline-block;
-      width: 267px;
+      width: 300rpx;
       height: 342rpx;
-      margin-left: 72rpx;
+      position: absolute;
+      margin-left: 353rpx;
       -webkit-animation: information 0.55s;
               animation: information 0.55s;
 }
 .shops-list_view .Drag .information ._h2 {
         overflow: hidden;
+        width: 300rpx;
         height: 80rpx;
-        font-size: 35rpx;
+        font-size: 30rpx;
         color: #474747;
         position: absolute;
         top: 26rpx;
-        font-weight: 700;
-        line-height: 36rpx;
+        line-height: 30rpx;
 }
 .shops-list_view .Drag .information ._span {
         font-size: 28rpx;
@@ -395,9 +417,7 @@
 }
 .shops-list_view .Drag .information .borrow {
         color: #4680ff;
-        left: 274rpx;
-        -webkit-animation: borrow 0.55s;
-                animation: borrow 0.55s;
+        left: 160rpx;
 }
 .shops-list_view .Drag .information .address {
         position: absolute;
@@ -414,21 +434,25 @@
           overflow: hidden;
 }
 .shops-list_view .Drag .distance {
-      width: 104rpx;
-      height: 110rpx;
+      width: 70rpx;
+      height: 104rpx;
       text-align: center;
       background-color: #fff;
-      border-radius: 20rpx 20rpx 0 0;
+      border-radius: 0 20rpx;
       position: absolute;
-      right: 237rpx;
-      top: 212rpx;
-      bottom: 0;
+      top: 238rpx;
+      left: 0;
       -webkit-animation: distance 0.55s;
               animation: distance 0.55s;
-      -webkit-transition: 0.5 linear;
-      -o-transition: 0.5 linear;
-      transition: 0.5 linear;
       padding-top: 21rpx;
+}
+.shops-list_view .Drag .distance view {
+        font-size: 27rpx;
+}
+.shops-list_view .Drag .distance .detailedDistance {
+        margin-top: 9rpx;
+        font-size: 18rpx;
+        color: #878383;
 }
 .list {
   margin: 0 auto 32rpx;
@@ -437,8 +461,8 @@
   height: 155rpx;
   border-radius: 20rpx;
   background-color: #fff;
-  -webkit-animation: return-Drag 0.55s;
-          animation: return-Drag 0.55s;
+  -webkit-animation: return-Drag 0.35s;
+          animation: return-Drag 0.35s;
   overflow: hidden;
 }
 .list ._img {
@@ -448,14 +472,11 @@
     border-radius: 50%;
     background-color: #000;
     margin: 26rpx 34rpx 25rpx 48rpx;
-    -webkit-animation: return-myfirst 0.55s;
-            animation: return-myfirst 0.55s;
+    -webkit-animation: return-myfirst 0.35s;
+            animation: return-myfirst 0.35s;
 }
 .list .information {
     display: inline-block;
-    -webkit-transition: 0.5 linear;
-    -o-transition: 0.5 linear;
-    transition: 0.5 linear;
 }
 .list .information ._h2 {
       font-size: 24rpx;
@@ -469,7 +490,9 @@
       color: #474747;
       position: absolute;
       top: 49rpx;
-      font-weight: 700;
+      -webkit-transition: 0.35s all;
+      -o-transition: 0.35s all;
+      transition: 0.35s all;
 }
 .list .information ._span {
       font-size: 20rpx;
@@ -487,6 +510,8 @@
     position: absolute;
     top: 34rpx;
     right: 48rpx;
+    -webkit-animation: return-distance 0.35s;
+            animation: return-distance 0.35s;
 }
 .list .distance view {
       font-size: 54rpx;
