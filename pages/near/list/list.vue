@@ -29,7 +29,7 @@
 						<span class="also">可借:</span>
 						<span class="borrow">可还:</span>
 					</view>
-					<view class="distance">
+					<view @click.stop="todistance(item)" class="distance">
 						<view class="iconfont">&#xe649;</view>
 						<view class="detailedDistance">{{ distance }}m</view>
 					</view>
@@ -65,11 +65,18 @@ export default {
 			uni.navigateBack({
 				delta: 1
 			});
+		},
+		todistance(data) {
+			console.log(data)
+			uni.navigateTo({
+				// url: '../locationInformation/locationInformation?markes=' +data.longitude+','+data.latitude
+				url: '../locationInformation/locationInformation?markes=' +data.longitude+'&latitude='+data.latitude
+			});
 		}
 	},
 	onLoad(data) {
 		this.counts = data.counts;
-		this.topDistance = data.counts * 100;
+		this.topDistance = (data.counts-1) * 100;
 		this.onDistance = wx.getMenuButtonBoundingClientRect().top * 2;
 		console.log(wx.getMenuButtonBoundingClientRect());
 	},
@@ -79,7 +86,7 @@ export default {
 			return uni.upx2px(this.onDistance) + 'px';
 		},
 		halfHeight() {
-			return uni.upx2px(wx.getMenuButtonBoundingClientRect().bottom * 2+60) + 'px';
+			return uni.upx2px(wx.getMenuButtonBoundingClientRect().bottom * 2+40) + 'px';
 		}
 	}
 };

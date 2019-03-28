@@ -191,11 +191,18 @@ var _vuex = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.j
       uni.navigateBack({
         delta: 1 });
 
+    },
+    todistance: function todistance(data) {
+      console.log(data);
+      uni.navigateTo({
+        // url: '../locationInformation/locationInformation?markes=' +data.longitude+','+data.latitude
+        url: '../locationInformation/locationInformation?markes=' + data.longitude + '&latitude=' + data.latitude });
+
     } },
 
   onLoad: function onLoad(data) {
     this.counts = data.counts;
-    this.topDistance = data.counts * 100;
+    this.topDistance = (data.counts - 1) * 100;
     this.onDistance = wx.getMenuButtonBoundingClientRect().top * 2;
     console.log(wx.getMenuButtonBoundingClientRect());
   },
@@ -205,7 +212,7 @@ var _vuex = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.j
       return uni.upx2px(this.onDistance) + 'px';
     },
     halfHeight: function halfHeight() {
-      return uni.upx2px(wx.getMenuButtonBoundingClientRect().bottom * 2 + 60) + 'px';
+      return uni.upx2px(wx.getMenuButtonBoundingClientRect().bottom * 2 + 40) + 'px';
     } }) };exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ "./node_modules/@dcloudio/uni-mp-weixin/dist/index.js")["default"]))
 
@@ -311,7 +318,7 @@ var render = function() {
                     Drag: _vm.counts == key,
                     correction: _vm.counts != -1
                   },
-                  attrs: { eventid: "b0492636-2-" + key },
+                  attrs: { eventid: "b0492636-3-" + key },
                   on: {
                     click: function($event) {
                       _vm.details(key)
@@ -344,12 +351,25 @@ var render = function() {
                     ],
                     1
                   ),
-                  _c("view", { staticClass: "distance" }, [
-                    _c("view", { staticClass: "iconfont" }, [_vm._v("")]),
-                    _c("view", { staticClass: "detailedDistance" }, [
-                      _vm._v(_vm._s(_vm.distance) + "m")
-                    ])
-                  ])
+                  _c(
+                    "view",
+                    {
+                      staticClass: "distance",
+                      attrs: { eventid: "b0492636-2-" + key },
+                      on: {
+                        click: function($event) {
+                          $event.stopPropagation()
+                          _vm.todistance(item)
+                        }
+                      }
+                    },
+                    [
+                      _c("view", { staticClass: "iconfont" }, [_vm._v("")]),
+                      _c("view", { staticClass: "detailedDistance" }, [
+                        _vm._v(_vm._s(_vm.distance) + "m")
+                      ])
+                    ]
+                  )
                 ]
               )
             })

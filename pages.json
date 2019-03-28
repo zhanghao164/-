@@ -136,6 +136,10 @@
             "path" : "pages/theLoan/theLoanThree/theLoanThree",
             "style" : {}
         }
+        ,{
+            "path" : "pages/near/locationInformation/locationInformation",
+            "style" : {}
+        }
     ],
     "permission" : {
         "scope.userLocation" : { 

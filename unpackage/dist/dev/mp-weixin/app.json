@@ -21,7 +21,8 @@
     "pages/mine/connectGif/connectGif",
     "pages/theLoan/theLoanOne/theLoanOne",
     "pages/theLoan/theLoanTwo/theLoanTwo",
-    "pages/theLoan/theLoanThree/theLoanThree"
+    "pages/theLoan/theLoanThree/theLoanThree",
+    "pages/near/locationInformation/locationInformation"
   ],
   "subPackages": [],
   "window": {
