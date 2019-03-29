@@ -1,7 +1,7 @@
 <template>
 	<!-- 点击详情导航页面 -->
 	<view class="near">
-		<view class="page-body">
+		<!-- <view class="page-body">
 			<view class="page-section page-section-gap">
 				<map
 					style="width: 100%;height: 100%;"
@@ -10,13 +10,11 @@
 					id="mymap"
 					show-location="true"
 					:markers="covers"
+					@markertap='markertap'
 				>
 				</map>
 			</view>
-		</view>
-		<view>
-			<button @click="tobtn"></button>
-		</view>
+		</view> -->
 	</view>
 </template>
 
@@ -58,8 +56,8 @@ import amap from '../../../common/amap-wx.js';
 					});
 					// this.getWalkingRoute();
 					wx.openLocation({
-					  latitude:res.latitude,
-					  longitude: res.longitude,
+					  latitude:parseFloat(this.covers[0].latitude),
+					  longitude:parseFloat( this.covers[0].longitude),
 					  scale: 18
 					})
 				}
@@ -80,8 +78,12 @@ import amap from '../../../common/amap-wx.js';
 					}
 				})
 			},
-			tobtn() {
-				
+			markertap() {
+				wx.openLocation({
+				  latitude:this.covers[0].latitude,
+				  longitude: this.covers[0].longitude,
+				  scale: 18
+				})
 			}
 		}
 	}
@@ -100,7 +102,7 @@ map {
 	top: 0;
 	left: 0;
 	right: 0;
-	bottom: 100upx;
+	bottom: 0upx;
 }
 .controls-play {
 	display: block;

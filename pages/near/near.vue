@@ -82,7 +82,7 @@ export default {
 			title: 'map',
 			latitude: 22.604519815689297,
 			longitude: 114.05640721816943,
-			scale: 15, //地图层级
+			scale: 18, //地图层级
 			covers: [
 				{
 					latitude: 22.604519815689296, //纬度
@@ -186,7 +186,9 @@ export default {
 		};
 	},
 	onLoad() {
+		// #ifdef  MP-WEIXIN
 		this.onDistance = wx.getMenuButtonBoundingClientRect().top * 2;
+		// #endif
 		uni.getLocation({
 			//获取当前的位置坐标
 			type: 'gcj02',
@@ -219,7 +221,7 @@ export default {
 	computed: {
 		...mapState(['token', 'id', 'type', 'username', 'theIndex', 'markers']),
 		halfWidth() {
-			return uni.upx2px(this.onDistance-5) + 'px';
+			return uni.upx2px(this.onDistance - 5) + 'px';
 		}
 	},
 	mounted() {},

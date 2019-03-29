@@ -134,8 +134,6 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-
-
 var _amapWx = _interopRequireDefault(__webpack_require__(/*! ../../../common/amap-wx.js */ "../../../../webpack/theElectricity/common/amap-wx.js"));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}var _default =
 {
   data: function data() {
@@ -173,8 +171,8 @@ var _amapWx = _interopRequireDefault(__webpack_require__(/*! ../../../common/ama
 
         // this.getWalkingRoute();
         wx.openLocation({
-          latitude: res.latitude,
-          longitude: res.longitude,
+          latitude: parseFloat(_this.covers[0].latitude),
+          longitude: parseFloat(_this.covers[0].longitude),
           scale: 18 });
 
       } });
@@ -195,7 +193,11 @@ var _amapWx = _interopRequireDefault(__webpack_require__(/*! ../../../common/ama
         } });
 
     },
-    tobtn: function tobtn() {
+    markertap: function markertap() {
+      wx.openLocation({
+        latitude: this.covers[0].latitude,
+        longitude: this.covers[0].longitude,
+        scale: 18 });
 
     } } };exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ "./node_modules/@dcloudio/uni-mp-weixin/dist/index.js")["default"]))
@@ -228,37 +230,7 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("view", { staticClass: "near" }, [
-    _c("view", { staticClass: "page-body" }, [
-      _c(
-        "view",
-        { staticClass: "page-section page-section-gap" },
-        [
-          _c("map", {
-            staticStyle: { width: "100%", height: "100%" },
-            attrs: {
-              latitude: _vm.latitude,
-              longitude: _vm.longitude,
-              id: "mymap",
-              "show-location": "true",
-              markers: _vm.covers
-            }
-          })
-        ],
-        1
-      )
-    ]),
-    _c(
-      "view",
-      [
-        _c("button", {
-          attrs: { eventid: "42d7b556-0" },
-          on: { click: _vm.tobtn }
-        })
-      ],
-      1
-    )
-  ])
+  return _c("view", { staticClass: "near" })
 }
 var staticRenderFns = []
 render._withStripped = true

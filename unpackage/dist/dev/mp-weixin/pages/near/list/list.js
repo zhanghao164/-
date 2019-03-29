@@ -166,6 +166,9 @@ module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAu4AAAC1CAYAAAAA
 
 
 
+
+
+
 var _vuex = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.js");function _objectSpread(target) {for (var i = 1; i < arguments.length; i++) {var source = arguments[i] != null ? arguments[i] : {};var ownKeys = Object.keys(source);if (typeof Object.getOwnPropertySymbols === 'function') {ownKeys = ownKeys.concat(Object.getOwnPropertySymbols(source).filter(function (sym) {return Object.getOwnPropertyDescriptor(source, sym).enumerable;}));}ownKeys.forEach(function (key) {_defineProperty(target, key, source[key]);});}return target;}function _defineProperty(obj, key, value) {if (key in obj) {Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true });} else {obj[key] = value;}return obj;}var _default =
 {
   data: function data() {
@@ -194,17 +197,41 @@ var _vuex = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.j
     },
     todistance: function todistance(data) {
       console.log(data);
-      uni.navigateTo({
-        // url: '../locationInformation/locationInformation?markes=' +data.longitude+','+data.latitude
-        url: '../locationInformation/locationInformation?markes=' + data.longitude + '&latitude=' + data.latitude });
+      // 			uni.navigateTo({
+      // 				// url: '../locationInformation/locationInformation?markes=' +data.longitude+','+data.latitude
+      // 				url: '../locationInformation/locationInformation?markes=' +data.longitude+'&latitude='+data.latitude
+      // 			});
+      // 			uni.getLocation({
+      // 				//获取当前的位置坐标
+      // 				type: 'gcj02',
+      // 				success: res => {
+      // 					this.longitude = res.longitude;
+      // 					this.latitude = res.latitude;
+      // 					this.origin =res.longitude+','+res.latitude
+      // 					this.amapPlugin = new amap.AMapWX({
+      // 						key: this.key
+      // 					});
+      // this.getWalkingRoute();
 
+      wx.openLocation({
+        latitude: parseFloat(data.latitude),
+        longitude: parseFloat(data.longitude),
+        name: data.name,
+        address: data.address,
+        scale: 18 });
+
+
+      // 				}
+      // 			});
     } },
 
   onLoad: function onLoad(data) {
     this.counts = data.counts;
     this.topDistance = (data.counts - 1) * 100;
+
     this.onDistance = wx.getMenuButtonBoundingClientRect().top * 2;
     console.log(wx.getMenuButtonBoundingClientRect());
+
   },
   computed: _objectSpread({},
   (0, _vuex.mapState)(['markers']), {
@@ -212,7 +239,9 @@ var _vuex = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.j
       return uni.upx2px(this.onDistance) + 'px';
     },
     halfHeight: function halfHeight() {
+
       return uni.upx2px(wx.getMenuButtonBoundingClientRect().bottom * 2 + 40) + 'px';
+
     } }) };exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ "./node_modules/@dcloudio/uni-mp-weixin/dist/index.js")["default"]))
 

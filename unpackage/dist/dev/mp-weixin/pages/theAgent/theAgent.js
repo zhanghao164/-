@@ -105,94 +105,6 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "../../../../webpack/theElectricity/static/daili/bottom.png":
-/*!*********************************************************!*\
-  !*** E:/webpack/theElectricity/static/daili/bottom.png ***!
-  \*********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__.p + "static/img/bottom.5a0de8f8.png";
-
-/***/ }),
-
-/***/ "../../../../webpack/theElectricity/static/daili/center.png":
-/*!*********************************************************!*\
-  !*** E:/webpack/theElectricity/static/daili/center.png ***!
-  \*********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__.p + "static/img/center.c34fdf1e.png";
-
-/***/ }),
-
-/***/ "../../../../webpack/theElectricity/static/daili/theAgentfive.png":
-/*!***************************************************************!*\
-  !*** E:/webpack/theElectricity/static/daili/theAgentfive.png ***!
-  \***************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__.p + "static/img/theAgentfive.f980c5e5.png";
-
-/***/ }),
-
-/***/ "../../../../webpack/theElectricity/static/daili/theAgentfour.png":
-/*!***************************************************************!*\
-  !*** E:/webpack/theElectricity/static/daili/theAgentfour.png ***!
-  \***************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__.p + "static/img/theAgentfour.afb3bc3d.png";
-
-/***/ }),
-
-/***/ "../../../../webpack/theElectricity/static/daili/theAgentone.png":
-/*!**************************************************************!*\
-  !*** E:/webpack/theElectricity/static/daili/theAgentone.png ***!
-  \**************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__.p + "static/img/theAgentone.9867d7ab.png";
-
-/***/ }),
-
-/***/ "../../../../webpack/theElectricity/static/daili/theAgentthree.png":
-/*!****************************************************************!*\
-  !*** E:/webpack/theElectricity/static/daili/theAgentthree.png ***!
-  \****************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__.p + "static/img/theAgentthree.7fbaac84.png";
-
-/***/ }),
-
-/***/ "../../../../webpack/theElectricity/static/daili/theAgenttwo.png":
-/*!**************************************************************!*\
-  !*** E:/webpack/theElectricity/static/daili/theAgenttwo.png ***!
-  \**************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__.p + "static/img/theAgenttwo.86644732.png";
-
-/***/ }),
-
-/***/ "../../../../webpack/theElectricity/static/daili/top.png":
-/*!******************************************************!*\
-  !*** E:/webpack/theElectricity/static/daili/top.png ***!
-  \******************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__.p + "static/img/top.b366b1ae.png";
-
-/***/ }),
-
 /***/ "./node_modules/babel-loader/lib/index.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader/index.js?!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader/index.js?!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/script.js!./node_modules/vue-loader/lib/index.js?!../../../../webpack/theElectricity/pages/theAgent/theAgent.vue?vue&type=script&lang=js&":
 /*!*************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--12-1!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--18-0!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/script.js!./node_modules/vue-loader/lib??vue-loader-options!E:/webpack/theElectricity/pages/theAgent/theAgent.vue?vue&type=script&lang=js& ***!
@@ -303,82 +215,33 @@ var render = function() {
         },
         [
           _c("swiper-item", { attrs: { mpcomid: "6c0cc7f2-0" } }, [
-            _c("view", { staticClass: "theAgent-view" }, [
-              _c("img", {
-                staticClass: "img-top",
-                attrs: { src: __webpack_require__(/*! ../../static/daili/top.png */ "../../../../webpack/theElectricity/static/daili/top.png"), alt: "" }
-              }),
-              _c("img", {
-                staticClass: "img-center",
-                attrs: {
-                  src: __webpack_require__(/*! ../../static/daili/center.png */ "../../../../webpack/theElectricity/static/daili/center.png"),
-                  alt: ""
-                }
-              }),
-              _c("img", {
-                staticClass: "img-bottom",
-                attrs: {
-                  src: __webpack_require__(/*! ../../static/daili/bottom.png */ "../../../../webpack/theElectricity/static/daili/bottom.png"),
-                  alt: ""
-                }
-              })
-            ])
+            _c("view", { staticClass: "theAgent-view" })
           ]),
           _c("swiper-item", { attrs: { mpcomid: "6c0cc7f2-1" } }, [
             _c("view", { staticClass: "theAgents theAgentone" }, [
               _c("span", { staticClass: "spanone" }, [
                 _vm._v("猜猜你的月收入多少")
-              ]),
-              _c("img", {
-                attrs: {
-                  src: __webpack_require__(/*! ../../static/daili/theAgentone.png */ "../../../../webpack/theElectricity/static/daili/theAgentone.png"),
-                  alt: ""
-                }
-              })
+              ])
             ])
           ]),
           _c("swiper-item", { attrs: { mpcomid: "6c0cc7f2-2" } }, [
             _c("view", { staticClass: "theAgents theAgenttwo" }, [
-              _c("span", [_vm._v("猜猜你的月收入多少")]),
-              _c("img", {
-                attrs: {
-                  src: __webpack_require__(/*! ../../static/daili/theAgenttwo.png */ "../../../../webpack/theElectricity/static/daili/theAgenttwo.png"),
-                  alt: ""
-                }
-              })
+              _c("span", [_vm._v("猜猜你的月收入多少")])
             ])
           ]),
           _c("swiper-item", { attrs: { mpcomid: "6c0cc7f2-3" } }, [
             _c("view", { staticClass: "theAgents theAgentthree" }, [
-              _c("span", [_vm._v("猜猜你的月收入多少")]),
-              _c("img", {
-                attrs: {
-                  src: __webpack_require__(/*! ../../static/daili/theAgentthree.png */ "../../../../webpack/theElectricity/static/daili/theAgentthree.png"),
-                  alt: ""
-                }
-              })
+              _c("span", [_vm._v("猜猜你的月收入多少")])
             ])
           ]),
           _c("swiper-item", { attrs: { mpcomid: "6c0cc7f2-4" } }, [
             _c("view", { staticClass: "theAgents theAgentfour" }, [
-              _c("span", [_vm._v("猜猜你的月收入多少")]),
-              _c("img", {
-                attrs: {
-                  src: __webpack_require__(/*! ../../static/daili/theAgentfour.png */ "../../../../webpack/theElectricity/static/daili/theAgentfour.png"),
-                  alt: ""
-                }
-              })
+              _c("span", [_vm._v("猜猜你的月收入多少")])
             ])
           ]),
           _c("swiper-item", { attrs: { mpcomid: "6c0cc7f2-5" } }, [
             _c("view", { staticClass: "theAgents theAgentfour" }, [
-              _c("span", [_vm._v("猜猜你的月收入多少")]),
-              _c("img", {
-                attrs: {
-                  src: __webpack_require__(/*! ../../static/daili/theAgentfive.png */ "../../../../webpack/theElectricity/static/daili/theAgentfive.png"),
-                  alt: ""
-                }
-              })
+              _c("span", [_vm._v("猜猜你的月收入多少")])
             ])
           ])
         ],

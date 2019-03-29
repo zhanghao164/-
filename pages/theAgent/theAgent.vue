@@ -2,38 +2,38 @@
 	<view class="theAgent">
 		<swiper class="swiper" skip-hidden-item-layout="true" circular="true">
 			<swiper-item><view class="theAgent-view">
-			<img class='img-top' src="../../static/daili/top.png" alt="">
-			<img class='img-center' src="../../static/daili/center.png" alt="">
-			<img class='img-bottom' src="../../static/daili/bottom.png" alt="">
+			<!-- <img class='img-top' src="../../static/daili/top.png" alt=""> -->
+			<!-- <img class='img-center' src="../../static/daili/center.png" alt=""> -->
+			<!-- <img class='img-bottom' src="../../static/daili/bottom.png" alt=""> -->
 			</view></swiper-item>
 			<swiper-item>
 				<view class="theAgents theAgentone">
 					<span class='spanone'>猜猜你的月收入多少</span>
-					<img src="../../static/daili/theAgentone.png" alt="" />
+					<!-- <img src="../../static/daili/theAgentone.png" alt="" /> -->
 				</view>
 			</swiper-item>
 			<swiper-item>
 				<view class="theAgents theAgenttwo">
 					<span>猜猜你的月收入多少</span>
-					<img src="../../static/daili/theAgenttwo.png" alt="" />
+					<!-- <img src="../../static/daili/theAgenttwo.png" alt="" /> -->
 				</view>
 			</swiper-item>
 			<swiper-item>
 				<view class="theAgents theAgentthree">
 					<span>猜猜你的月收入多少</span>
-					<img src="../../static/daili/theAgentthree.png" alt="" />
+					<!-- <img src="../../static/daili/theAgentthree.png" alt="" /> -->
 				</view>
 			</swiper-item>
 			<swiper-item>
 				<view class="theAgents theAgentfour">
 					<span>猜猜你的月收入多少</span>
-					<img src="../../static/daili/theAgentfour.png" alt="" />
+					<!-- <img src="../../static/daili/theAgentfour.png" alt="" /> -->
 				</view>
 			</swiper-item>
 			<swiper-item>
 				<view class="theAgents theAgentfour">
 					<span>猜猜你的月收入多少</span>
-					<img src="../../static/daili/theAgentfive.png" alt="" />
+					<!-- <img src="../../static/daili/theAgentfive.png" alt="" /> -->
 				</view>
 			</swiper-item>
 		</swiper>

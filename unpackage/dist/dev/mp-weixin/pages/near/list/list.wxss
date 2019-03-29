@@ -326,7 +326,7 @@
       line-height: 64rpx;
       position: fixed;
       left: 36rpx;
-      color: #7185EA;
+      color: #7185ea;
       -webkit-box-shadow: 0px 4px 13px 0px rgba(159, 167, 215, 0.45);
               box-shadow: 0px 4px 13px 0px rgba(159, 167, 215, 0.45);
       border-radius: 50%;
@@ -345,7 +345,7 @@
       -webkit-box-shadow: 0px 4px 13px 0px rgba(159, 167, 215, 0.45);
               box-shadow: 0px 4px 13px 0px rgba(159, 167, 215, 0.45);
       padding-left: 42rpx;
-      color: #7185EA;
+      color: #7185ea;
       z-index: 999;
       -webkit-box-sizing: border-box;
               box-sizing: border-box;
@@ -354,7 +354,7 @@
         display: inline-block;
         width: 270rpx;
         border-radius: 0 32rpx 32rpx 0;
-        color: #7185EA;
+        color: #7185ea;
         margin-left: 10rpx;
         font-size: 24rpx;
 }

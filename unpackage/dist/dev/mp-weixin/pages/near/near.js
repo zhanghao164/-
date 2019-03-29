@@ -197,7 +197,7 @@ var _vuex = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.j
       title: 'map',
       latitude: 22.604519815689297,
       longitude: 114.05640721816943,
-      scale: 15, //地图层级
+      scale: 18, //地图层级
       covers: [
       {
         latitude: 22.604519815689296, //纬度
@@ -301,7 +301,9 @@ var _vuex = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.j
 
   },
   onLoad: function onLoad() {var _this = this;
+
     this.onDistance = wx.getMenuButtonBoundingClientRect().top * 2;
+
     uni.getLocation({
       //获取当前的位置坐标
       type: 'gcj02',

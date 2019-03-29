@@ -1,15 +1,18 @@
 <template>
 	<view class="shops-list">
 		<scroll-view scroll-y="true" scroll-with-animation="true" :scroll-top="topDistance">
-			<img src='../../../static/bgc.png' :style="{ height: halfHeight }" class="bg_color" />
-			<view
-				class="iconfont fanhui"
-				@click="toSuperior"
-				:style="{ top: halfWidth }"
-			>&#xe62f;</view>
+			<img src="../../../static/bgc.png" :style="{ height: halfHeight }" class="bg_color" />
+			<view class="iconfont fanhui" @click="toSuperior" :style="{ top: halfWidth }">
+				&#xe62f;
+			</view>
 			<view :style="{ top: halfWidth }" class="search iconfont">
 				&#xe937;
-				<input type="text" placeholder-style="#7185EA" placeholder="搜索"  v-model="search"/>
+				<input
+					type="text"
+					placeholder-style="#7185EA"
+					placeholder="搜索"
+					v-model="search"
+				/>
 			</view>
 			<view class="shops-list_view">
 				<view
@@ -49,7 +52,7 @@ export default {
 			counts: -1,
 			topDistance: 0,
 			onDistance: 52,
-			search: '',
+			search: ''
 		};
 	},
 	methods: {
@@ -67,18 +70,42 @@ export default {
 			});
 		},
 		todistance(data) {
-			console.log(data)
-			uni.navigateTo({
-				// url: '../locationInformation/locationInformation?markes=' +data.longitude+','+data.latitude
-				url: '../locationInformation/locationInformation?markes=' +data.longitude+'&latitude='+data.latitude
+			console.log(data);
+			// 			uni.navigateTo({
+			// 				// url: '../locationInformation/locationInformation?markes=' +data.longitude+','+data.latitude
+			// 				url: '../locationInformation/locationInformation?markes=' +data.longitude+'&latitude='+data.latitude
+			// 			});
+			// 			uni.getLocation({
+			// 				//获取当前的位置坐标
+			// 				type: 'gcj02',
+			// 				success: res => {
+			// 					this.longitude = res.longitude;
+			// 					this.latitude = res.latitude;
+			// 					this.origin =res.longitude+','+res.latitude
+			// 					this.amapPlugin = new amap.AMapWX({
+			// 						key: this.key
+			// 					});
+			// this.getWalkingRoute();
+			// #ifdef  MP-WEIXIN
+			wx.openLocation({
+				latitude: parseFloat(data.latitude),
+				longitude: parseFloat(data.longitude),
+				name: data.name,
+				address: data.address,
+				scale: 18
 			});
+			// #endif
+			// 				}
+			// 			});
 		}
 	},
 	onLoad(data) {
 		this.counts = data.counts;
-		this.topDistance = (data.counts-1) * 100;
+		this.topDistance = (data.counts - 1) * 100;
+		// #ifdef  MP-WEIXIN
 		this.onDistance = wx.getMenuButtonBoundingClientRect().top * 2;
 		console.log(wx.getMenuButtonBoundingClientRect());
+		// #endif
 	},
 	computed: {
 		...mapState(['markers']),
@@ -86,7 +113,9 @@ export default {
 			return uni.upx2px(this.onDistance) + 'px';
 		},
 		halfHeight() {
-			return uni.upx2px(wx.getMenuButtonBoundingClientRect().bottom * 2+40) + 'px';
+			// #ifdef  MP-WEIXIN
+			return uni.upx2px(wx.getMenuButtonBoundingClientRect().bottom * 2 + 40) + 'px';
+			// #endif
 		}
 	}
 };
@@ -136,7 +165,7 @@ export default {
 		height: 104upx;
 		text-align: center;
 		background-color: #fff;
-		border-radius:0 20upx;
+		border-radius: 0 20upx;
 		position: absolute;
 		left: 0;
 		top: 238upx;
@@ -229,7 +258,7 @@ export default {
 // 		transition: 0.8 linear;
 // 	}
 // }
-// 
+//
 .shops-list {
 	position: fixed;
 	top: 0;
@@ -240,7 +269,7 @@ export default {
 	// box-sizing: border-box;
 	scroll-view {
 		height: 100%;
-		.bg_color{
+		.bg_color {
 			width: 100%;
 			position: fixed;
 			top: 0;
@@ -255,8 +284,8 @@ export default {
 			line-height: 64upx;
 			position: fixed;
 			left: 36upx;
-			color: #7185EA;
-			box-shadow:0px 4px 13px 0px rgba(159,167,215,0.45);
+			color: #7185ea;
+			box-shadow: 0px 4px 13px 0px rgba(159, 167, 215, 0.45);
 			border-radius: 50%;
 			text-align: center;
 			background-color: #fff;
@@ -270,16 +299,16 @@ export default {
 			position: fixed;
 			left: 122upx;
 			background-color: #fff;
-			box-shadow:0px 4px 13px 0px rgba(159,167,215,0.45);
+			box-shadow: 0px 4px 13px 0px rgba(159, 167, 215, 0.45);
 			padding-left: 42upx;
-			color: #7185EA;
+			color: #7185ea;
 			z-index: 999;
 			box-sizing: border-box;
 			input {
 				display: inline-block;
 				width: 270upx;
 				border-radius: 0 32upx 32upx 0;
-				color: #7185EA;
+				color: #7185ea;
 				margin-left: 10upx;
 				font-size: 24upx;
 			}
@@ -339,7 +368,7 @@ export default {
 			.borrow {
 				color: #4680ff;
 				left: 160upx;
-// 				animation: borrow 0.55s;
+				// 				animation: borrow 0.55s;
 			}
 			.address {
 				position: absolute;
@@ -361,13 +390,13 @@ export default {
 			height: 104upx;
 			text-align: center;
 			background-color: #fff;
-			border-radius:0 20upx;
+			border-radius: 0 20upx;
 			position: absolute;
 			top: 238upx;
 			left: 0;
 			animation: distance 0.55s;
 			padding-top: 21upx;
-			view{
+			view {
 				font-size: 27upx;
 			}
 			.detailedDistance {
